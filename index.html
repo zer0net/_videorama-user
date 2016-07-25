@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html ng-app="ngZeroBlog" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+  <title>NG ZER0BLOG</title>
+  
+  <!-- CSS -->
+    <!-- lib -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="assets/lib/angular-material/angular-material.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="assets/lib/text-angular/dist/text-angular.css"/>
+    <link rel="stylesheet" href="assets/lib/md-color-picker/dist/md-color-picker.min.css"/>
+    <!-- app -->
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css"/>
+  <!-- /CSS -->
+
+  <!-- HTML5 Shim -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <!--<base href="/">-->
+
+</head>
+
+<body class="ng-cloak" ng-view ui-event ng-controller="MainCtrl" ng-init="initBlog()">
+
+  <style type="text/css">
+
+    body {
+      background-image: url('{{config.bg_image}}');
+      background-color: {{config.bg_color}};
+      color: {{config.text_color}};
+    }
+
+    a {
+      color: {{config.link_color}};
+    }
+
+    md-content.main-content {
+      background-image: url('{{config.bg_image}}');
+      background-color: {{config.bg_color}};
+    }
+
+    figure.banner {
+      background-image:url('{{config.bg_image_header}}');
+      background-color: {{config.header_bg_color}};
+    }
+
+    header.main-header .title h1,    
+    header.main-header h2 {color: {{config.header_text_color}}}
+
+    .foreground {
+      background-color: {{config.fg_color}};
+    }
+
+  </style>
+
+  <!-- HEADER -->
+  <header class="main-header md-whiteframe-1dp {{headerClass}}" ng-hide="loading">
+    <figure class="banner">
+        <div class="container" layout="row" flex="100">
+          <div class="header-left" flex="{{headerWidthLeft}}">
+            <div class="title">
+              <figure><img ng-src="{{config.logo}}"/></figure><h1>{{config.title}}</h1>
+            </div>
+            <div class="description">
+              <h2>{{config.description}}</h2>
+            </div>
+          </div>
+          <div class="header-right" flex="{{headerWidthRight}}">
+            <ul site-menu ng-init="siteMenu()">
+              <li>
+                <md-button class="md-primary md-raised edgePadding">
+                  <a href="?">Home</a>
+                </md-button>           
+              </li>
+              <li>
+                <md-button class="md-primary md-raised edgePadding">
+                  <a href="admin/">
+                    Admin Panel
+                  </a>
+                </md-button>           
+              </li>
+              <li ng-repeat="item in menu">
+                <md-button class="md-primary md-raised edgePadding" ng-click="menuItemClicked(item)" >
+                  <a ng-if="item.view_type === 'category'" href="?Category:{{item.view_item_id}}">{{item.label}}</a>
+                  <a ng-if="item.view_type === 'post'" href="?Post:{{item.view_item_id}}">{{item.label}}</a>
+                </md-button>           
+              </li>              
+            </ul>
+          </div>
+        </div>
+    </figure>
+  </header>
+  <!-- /HEADER -->
+
+  <!-- MAIN -->
+  <md-content class="main-content" ng-hide="loading">
+    <div class="container main-container" layout="row" flex="100" ng-if="config" flex>
+
+      <!-- POSTS -->
+      <div layout="column" layout-padding flex="75" ng-controller="PostsCtrl" ng-if="section === 'posts'">
+
+        <!-- post list view -->
+        <div post-list
+          ng-init="initPostList()" 
+          ng-if="layout === 'list'" 
+          class="post-list foreground md-whiteframe-1dp">
+
+          <!-- post list nav -->
+          <div class="post-list-nav" ng-show="category">
+            <a href="?">Home</a> / <span ng-bind="category.category_title"></span>
+          </div>
+          <!-- /post list nav -->
+
+          <!-- posts -->
+          <div post
+            ng-repeat="post in posts"
+            ng-init="initPostItem(post)"
+            class="post md-whiteframe-1dp"
+            layout-padding flex="100" layout="row">
+
+            <figure flex="20" >
+              <img ng-src="{{post.image}}" class="md-whiteframe-1dp"/>
+            </figure>
+
+            <div flex="80">
+              <div class="post-header">
+                <h2><a href="?Post:{{post.post_id}}" ng-bind="post.title"></a></h2>
+              </div>
+              <div class="post-subheader">
+                <span ng-bind="post.user_id"></span>
+                <span>in <a href="?Category:{{item.view_item_id}}">{{post.category_title}}</span>
+                <span am-time-ago="post.date_added"></span>
+                <span>{{post.commentCount}} Comments</span>
+                <span> 
+                  <a class="like" votes ng-class="{'active':post.voted === true}" ng-click="likePost(post)">
+                    <div class="icon-heart">
+                      <span class="before"></span><span class="after"></span>
+                    </div>
+                    <div class="icon-heart icon-heart-anim">
+                      <span class="before"></span><span class="after"></span>                      
+                    </div>
+                    <span class="num">{{post.votes.length}}</span>
+                  </a>
+                </span>
+              </div>
+              <div class="post-description"><p>{{post.body | htmlToPlaintext}}</p></div>
+            </div>
+
+          </div>
+          <!-- posts -->
+
+          <div paging flex="100" layout="row" class="pagination"
+            page="pagination.page" 
+            page-size="pagination.itemsPerPage" 
+            total="pagination.total"
+            paging-action="pageChanged(page)">
+          </div>
+
+        </div>
+        <!-- /post list view -->
+
+        <!-- single post view -->
+        <div ng-if="layout === 'post'" layout-padding post ng-init="initPostView(post)" class="post-view md-whiteframe-1dp foreground">
+
+          <div class="post-nav">
+            <md-button class="md-primary md-raised edgePadding"><a href="?">GO BACK</a></md-button>
+          </div>
+
+          <div class="post-header">
+            <h2 ng-bind="post.title"></h2>
+          </div>
+
+          <div class="post-subheader">
+            <span ng-bind="post.user_id"></span>
+            <span>in <a href="?Category:{{post.category_id}}">{{post.category_title}}</a></span>
+            <span am-time-ago="post.date_added"></span>
+            <span>{{post.commentCount}} Comments</span>
+            <span> 
+              <a class="like" votes ng-class="{'active':post.voted === true}" ng-click="likePost(post)">
+                <div class="icon-heart">
+                  <span class="before"></span><span class="after"></span>
+                </div>
+                <div class="icon-heart icon-heart-anim">
+                  <span class="before"></span><span class="after"></span>                      
+                </div>
+                <span class="num">{{post.votes.length}}</span>
+              </a>
+            </span>
+          </div>
+
+          <figure class="post-image" ng-if="post.image">
+            <img ng-src="{{post.image}}"/>
+          </figure>
+
+          <div class="post-content">
+            <div ng-bind-html="post.content"></div>
+          </div>
+
+          <div class="post-comments md-whiteframe-1dp">
+            <form comment class="post-comment-form">
+              <md-input-container class="md-block" flex layout="row">
+                <label id="select_user" ng-bind="user" ng-click="selectUser()">Select user</label>
+                <input flex="75" ng-model="comment" class="comment-input">
+                <md-button class="md-primary md-raised edgePadding comment-button"  
+                  id="comment-btn" value="Comment!" 
+                  ng-click="createComment(post,comment)">Comment</md-button>
+              </md-input-container>
+            </form>
+            <ul class="comment-list" comments ng-init="getComments()">
+             <li ng-repeat="comment in post.comments | orderBy:'-comment_id'">
+                <figure class="user-avatar">
+                  <identicon class="md-whiteframe-1dp" username="comment.user_id" size="64"></identicon>
+                </figure>
+                <div class="header">
+                  <span ng-bind="comment.user_id"></span>
+                  <i am-time-ago="comment.date_added"></i>
+                </div>
+                <div class="content">
+                  <p data-ng-bind="comment.body"></p>
+                </div>
+             </li>
+            </ul>
+          </div>
+
+        </div>
+        <!-- single post view -->
+      
+      </div>
+      <!-- /POSTS -->
+
+
+      <!-- SIDEBAR -->
+      <div class="sidebar" flex="25" layout-padding  ng-if="section === 'posts'">
+
+        <!-- author info -->
+        <div class="md-whiteframe-1dp author-info foreground" flex>
+          <div class="author-header" layout="row">
+            <figure flex="25">
+              <identicon class="user-avatar md-whiteframe-1dp" username="config.author_id" size="64"></identicon>
+            </figure>
+            <h2 flex="75" ng-bind="config.author_name"></h2>
+          </div>
+          <div class="author-about">
+            <h3 ng-bind="config.author_about"></h3>
+          </div>
+        </div>
+        <!-- /author info -->
+
+        <!-- latest comments -->
+        <div class="latest-comments md-whiteframe-1dp foreground" flex comments ng-init="getLatestComments()">
+          <h2>latest comments</h2>
+          <ul>
+            <li ng-repeat="comment in comments">
+              <div class="header">
+                <identicon class="user-avatar  md-whiteframe-1dp" username="comment.user_id" size="32"></identicon>
+                <span data-ng-bind="comment.user_id"></span>
+              </div>
+              <div class="content">
+                <span ng-bind="comment.body"></span><br/>
+                <i am-time-ago="comment.date_added"></i><br/>
+                <a href="?Post:{{comment.post_id}}">@{{comment.title}}</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- /latest comments -->
+
+      </div>
+      <!-- /SIDEBAR -->
+
+      <!-- ADMIN -->
+      <div class="admin-section" layout="column" flex="100" ng-controller="AdminCtrl" ng-init="init()" ng-if="section === 'admin'">
+
+        <md-content layout-padding class="foreground">
+
+          <div flex="100" layout="row">
+
+            <!-- ADMIN SIDEBAR -->
+            <aside class="admin-sidebar" flex="20">
+              <ul>
+                <li ng-repeat="item in adminMenu">
+                  <md-button class="md-primary-1 md-raised edgePadding" ng-class="{'active':adminSection == item.section}">
+                    <a href="?Admin:{{item.section}}">{{item.label}}</a>
+                  </md-button>
+                </li>
+              </ul>
+            </aside>
+            <!-- ADMIN SIDEBAR -->
+
+            <!-- ADMIN MAIN -->
+            <div class="admin-main" flex="80">
+
+                <md-content>
+                  
+                  <h2 class="section-title">{{adminSection}}</h2>
+
+                  <!-- general section -->
+                  <section ng-if="adminSection === 'general'" class="general admin-section md-padding">
+                    <md-tabs md-dynamic-height md-border-bottom flex="100">
+                      <md-tab label="Layout">
+                        <md-content>
+                          <h3>Images</h3>
+                          <hr/>
+                          <div flex="100" layout="row" class="preview-field">
+                            <figure flex="10">
+                              <img src="{{config.logo}}" class="md-whiteframe-1dp"/>
+                            </figure>
+                            <md-input-container class="md-block" flex="90">
+                              <label>Logo</label>
+                              <input ng-model="config.logo">
+                            </md-input-container>
+                          </div>    
+                          <div flex="100" layout="row" class="preview-field">
+                            <figure flex="10">
+                              <img src="{{config.bg_image}}" class="md-whiteframe-1dp"/>
+                            </figure>
+                            <md-input-container class="md-block" flex="90">
+                              <label>Background Image</label>
+                              <input ng-model="config.bg_image">
+                            </md-input-container>
+                          </div>
+                          <div flex="100" layout="row" class="preview-field">
+                            <figure flex="10">
+                              <img src="{{config.bg_image_header}}" class="md-whiteframe-1dp"/>
+                            </figure>
+                            <md-input-container class="md-block" flex="90">
+                              <label>Header Image</label>
+                              <input ng-model="config.bg_image_header">
+                            </md-input-container>
+                          </div>
+                          <h3>Colors</h3>
+                          <hr/>
+                          <div layout="row" flex="100">
+                            <div flex="50" md-color-picker label="Background Color" ng-model="config.bg_color"></div>
+                            <div flex="50" md-color-picker label="Foreground Color" ng-model="config.fg_color"></div>
+                          </div>
+                          <div layout="row" flex="100">
+                            <div flex="50" md-color-picker label="Text Color" ng-model="config.text_color"></div>
+                            <div flex="50" md-color-picker label="Link Color" ng-model="config.link_color"></div>
+                          </div>
+                          <div layout="row" flex="100">
+                            <div flex="50" md-color-picker label="Header Background Color" ng-model="config.header_bg_color"></div>
+                            <div flex="50" md-color-picker label="Header Text Color" ng-model="config.header_text_color"></div>
+                          </div>
+                        </md-content>
+                      </md-tab>                      
+                      <md-tab label="Info">
+                        <md-content>
+                          <div layout="row" flex="100">
+                            <md-input-container class="md-block" flex-gt-sm>
+                              <label>Blog Title</label>
+                              <input ng-model="config.title">
+                            </md-input-container>
+                            <md-input-container class="md-block" flex-gt-sm>
+                              <label>Blog Description</label>
+                              <input ng-model="config.description">
+                            </md-input-container>
+                          </div>
+                          <div layout="row" flex="100">
+                            <md-input-container class="md-block" flex-gt-sm>
+                              <label>Author Name</label>
+                              <input ng-model="config.author_name">
+                            </md-input-container>
+                            <md-input-container class="md-block" flex-gt-sm>
+                              <label>Author About</label>
+                              <input ng-model="config.author_about">
+                            </md-input-container>
+                            </div>
+                        </md-content>
+                      </md-tab>
+                    </md-tabs>
+                  </section>
+                  <!-- /general section -->
+
+                  <!-- menus section -->
+                  <section ng-if="adminSection === 'menus'" class="menus admin-section md-padding">
+                    <md-content>
+                      <ul class="admin-table"  layout="column" flex="100">
+                        <li class="table-header" flex="100" layout="row">
+                          <div flex="30"><span>label</span></div>
+                          <div flex="30"><span>type</span></div>
+                          <div flex="30"><span>item ID</span></div>
+                          <div flex="10"><span>delete</span></div>
+                        </li>
+                        <li ng-repeat="item in menu" flex="100" layout="row">
+                          <div flex="30"><span ng-bind="item.label"></span></div>
+                          <div flex="30"><span ng-bind="item.view_type"></span></div>
+                          <div flex="30"><span ng-bind="item.view_item_id"></span></div>
+                          <div flex="10"><a ng-click="deleteItem(item.menu_item_id)"><span class="glyphicon glyphicon-remove"></span></a></div>
+                        </li>
+                      </ul>
+                      <form name="createMenuItem" layout="row" flex="100">
+                        <md-input-container flex="40">
+                          <label>Label</label>
+                          <input ng-model="menuItem.label"/>
+                        </md-input-container>
+                        <md-input-container flex="20">
+                          <label>Type</label>
+                          <md-select ng-model="menuItem.view_type">
+                            <md-option ng-repeat="item in menuItemViewTypes" value="{{item.value}}">
+                              {{item.key}}
+                            </md-option>
+                          </md-select>
+                        </md-input-container>
+                        <md-input-container flex="20" ng-if="menuItem.view_type === 'post'">
+                          <label>Item</label>
+                          <md-select post-list ng-init="getPosts()" ng-model="menuItem.view_item_id">
+                            <md-option ng-repeat="post in posts" value="{{post.post_id}}">
+                              {{post.title}}
+                            </md-option>
+                          </md-select>
+                        </md-input-container>
+                        <md-input-container flex="20"  ng-if="menuItem.view_type === 'category'">
+                          <label>Category</label>
+                          <md-select categories ng-init="getCategories()" ng-model="menuItem.view_item_id">
+                            <md-option ng-repeat="category in categories" value="{{category.category_id}}">
+                              {{category.category_title}}
+                            </md-option>
+                          </md-select>
+                        </md-input-container>
+                        <md-input-container flex="20">
+                          <md-button class="md-primary md-raised edgePadding" ng-click="createItem(menuItem)" >
+                            create menu item!
+                          </md-button>
+                        </md-input-container>
+                      </form>
+                    </md-content>
+                  </section>
+                  <!-- /menus section -->
+
+                  <!-- categories section -->
+                  <section categories ng-if="adminSection === 'categories'" class="categories admin-section md-padding">
+                    <ul ng-init="getCategories()" class="admin-table"  layout="column" flex="100">
+                      <li class="table-header" flex="100" layout="row">
+                        <div flex="90"><span>title</span></div>
+                        <div flex="10"><span>delete</span></div>
+                      </li>
+                      <li ng-repeat="category in categories" flex="100" layout="row">
+                        <div flex="90"><span ng-bind="category.category_title"></span></div>
+                        <div flex="10"><a ng-click="deleteCategory(category,$index)"><span class="glyphicon glyphicon-remove"></span></a></div>
+                      </li>
+                    </ul>
+                    <form class="post-comment-form">
+                      <md-input-container class="md-block" flex layout="row">
+                        <label>Category Title</label>
+                        <input flex="75" ng-model="category.title">
+                        <md-button class="md-primary md-raised edgePadding"  
+                          id="category-create-btn" value="Create Category!" 
+                          ng-click="createCategory(category)">Create Category</md-button>
+                      </md-input-container>
+                    </form>
+                  </section>
+                  <!-- /categories section -->
+
+                  <!-- posts section -->
+                  <section ng-if="adminSection === 'posts'" class="posts admin-section md-padding">
+                    <md-content layout="column" flex="100">
+                      <h3>List</h3>
+                      <div layout="row" flex="100">
+                        <md-input-container class="md-block" flex="40">
+                          <label>Order Posts By</label>
+                          <md-select ng-model="config.postsOrderBy">
+                            <md-option ng-repeat="item in postsOrderByOptions" value="{{item.value}}">
+                              {{item.key}}
+                            </md-option>
+                          </md-select>
+                        </md-input-container>
+                        <md-input-container class="md-block" flex="40">
+                          <label>Order Direction</label>
+                          <md-select ng-model="config.postsOrderDir">
+                            <md-option ng-repeat="item in postsOrderDirOptions" value="{{item.value}}">
+                              {{item.key}}
+                            </md-option>
+                          </md-select>
+                        </md-input-container>  
+                        <md-input-container class="md-block" flex="20">
+                          <label>Posts Per Page</label>
+                          <input ng-model="config.postsPerPage">
+                        </md-input-container>
+                      </div>
+                      <h3>
+                        <span>Items</span>
+                        <md-button class="md-primary md-raised edgePadding pull-right" href="?Admin:createPost">
+                          New Post
+                        </md-button>
+                      </h3>
+                      <div layout="row" flex="100">
+                        <ul post-list ng-init="getPosts()" class="admin-table"  layout="column" flex="100">
+                          <li class="table-header" flex="100" layout="row">
+                            <div flex="90"><span>title</span></div>
+                            <div flex="5"><span>edit</span></div>
+                            <div flex="5"><span>delete</span></div>
+                          </li>
+                          <li ng-repeat="post in posts" flex="100" layout="row">
+                            <div flex="90"><span ng-bind="post.title"></span></div>
+                            <div flex="5"><a href="?Admin:editP:{{post.post_id}}"><span class="glyphicon glyphicon-pencil"></span></a></div>
+                            <div flex="5"><a ng-click="deletePost(post)"><span class="glyphicon glyphicon-remove"></span></a></div>
+                          </li>
+                        </ul>
+                      </div>
+                    </md-content>
+                  </section>
+                  <!-- /posts section -->
+
+                  <!-- create / edit post section -->
+                  <section ng-if="adminSection === 'createPost' || adminSection === 'editPost'" class="create-post admin-section md-padding">
+                    <md-content layout-padding class="md-whiteframe-1dp">
+                      <form name="createPostForm" post ng-init="initPostForm()">
+
+                        <md-input-container class="md-block" flex-gt-sm>
+                          <label>Title</label>
+                          <input ng-model="post.title">
+                        </md-input-container>
+
+                        <md-input-container categories ng-init="getCategories()" class="md-block" flex-gt-sm>
+                          <label>Category</label>
+                          <md-select ng-model="post.category_id">
+                            <md-option ng-repeat="category in categories" value="{{category.category_id}}">
+                              {{category.category_title}}
+                            </md-option>
+                          </md-select>
+                        </md-input-container>
+
+                        <md-input-container class="md-block" flex-gt-sm>
+                          <label>Image</label>
+                          <input ng-model="post.image">
+                          <img ng-src="{{post.image}}" ng-show="post.image" />
+                        </md-input-container>
+
+                        <md-input-container class="md-block" flex-gt-sm>
+                          <h3>Content</h3>
+                          <text-angular ng-model="post.body"></text-angular>
+                          {{post.body}}
+                        </md-input-container>
+
+                        <!--<md-input-container  tags ng-init="getTags()" class="md-block" flex-gt-sm>
+                          <label>tags:</label>
+                          <md-select ng-model="post.tag" ng-change="tagSelected(tag)">
+                            <md-option ng-repeat="tag in tags" value="{{tag}}" ng-disabled="$index === 1">
+                              {{tag.name}}
+                            </md-option>
+                          </md-select>
+                        </md-input-container>
+                        <span ng-repeat="tag in selectedTags">{{tag.name}}</span>-->
+
+                        <md-button class="md-primary md-raised edgePadding pull-right" ng-click="createPost(post)" >
+                          Create Post!
+                        </md-button>
+
+                      </form>
+                    </md-content>
+                  </section>
+                  <!-- /create post section -->
+
+                  <!-- comments section -->
+                  <section ng-if="adminSection === 'comments'" class="comments admin-section md-padding">
+                    <md-content>
+                      <ul comments ng-init="getAllComments()" class="admin-table"  layout="column" flex="100">
+                        <li class="table-header" flex="100" layout="row">
+                          <div flex="30"><span>comment</span></div>
+                          <div flex="30"><span>user</span></div>
+                          <div flex="30"><span>post</span></div>
+                          <div flex="10"><span>delete</span></div>
+                        </li>
+                        <li ng-repeat="comment in comments" flex="100" layout="row">
+                          <div flex="30"><span ng-bind="comment.body"></span></div>
+                          <div flex="30"><span ng-bind="comment.user_id"></span></div>
+                          <div flex="30"><span ng-bind="comment.title"></span></div>
+                          <div flex="10"><a ng-click="deleteComment(post)"><span class="glyphicon glyphicon-remove"></span></a></div>
+                        </li>
+                      </ul>
+                    </md-content>
+                  </section>
+                  <!-- /comments section -->
+
+                </md-content>
+
+            </div>
+            <!-- /ADMIN MAIN -->
+
+          </div>
+
+        </md-content>
+
+      </div>
+      <!-- /ADMIN -->
+
+    </div>
+  </md-content>
+  <!-- /MAIN -->
+
+  <!-- JS -->
+
+    <!-- lib -->
+    <script type="text/javascript" src="assets/lib/zeronet/ZeroFrame.js"></script>
+    <script type="text/javascript" src="assets/lib/zeronet/ZeroChat.js"></script>
+    <script type="text/javascript" src="assets/lib/moment/moment.js"></script>
+    <script type="text/javascript" src="assets/lib/angular/angular.min.js"></script>
+    <script type="text/javascript" src="assets/lib/angular/angular-route.min.js"></script>
+    <script type="text/javascript" src="assets/lib/angular/angular-animate.min.js"></script>
+    <script type="text/javascript" src="assets/lib/angular/angular-aria.min.js"></script>
+    <script type="text/javascript" src="assets/lib/angular-material/angular-material.min.js"></script>          
+    <script type="text/javascript" src="assets/lib/angular-sanitize/angular-sanitize.min.js"></script>
+    <script type="text/javascript" src="assets/lib/angular-moment/angular-moment.js"></script>
+    <script type="text/javascript" src="assets/lib/angular-paging/dist/paging.min.js"></script>
+    <script type="text/javascript" src="assets/lib/text-angular/dist/text-angular-rangy.min.js"></script>
+    <script type="text/javascript" src="assets/lib/text-angular/dist/text-angular-sanitize.min.js"></script>
+    <script type="text/javascript" src="assets/lib/text-angular/dist/text-angular.min.js"></script>
+    <script type="text/javascript" src="assets/lib/identicon/pnglib.js"></script>
+    <script type="text/javascript" src="assets/lib/identicon/identicon.js"></script>
+    <script type="text/javascript" src="assets/lib/angular-identicon/dist/angular-identicon.min.js"></script>
+    <script type="text/javascript" src="assets/lib/tinycolor/dist/tinycolor-min.js"></script>
+    <script type="text/javascript" src="assets/lib/md-color-picker/dist/md-color-picker.js"></script>
+    <script type="text/javascript" src="assets/lib/angular-file-upload/dist/angular-file-upload.js"></script>
+
+    <!-- app -->
+    <script type="text/javascript" src="app/application.js"></script>
+    <script type="text/javascript" src="app/modules/core/controllers/main.ctrl.js"></script>
+    <script type="text/javascript" src="app/modules/core/controllers/admin.ctrl.js"></script>
+    <script type="text/javascript" src="app/modules/core/directives/menu.directive.js"></script>
+    <script type="text/javascript" src="app/modules/core/directives/ui-event.directive.js"></script>
+    <script type="text/javascript" src="app/modules/core/filters/remove-html.filter.js"></script>
+    <script type="text/javascript" src="app/modules/core/services/config.service.js"></script>
+    <script type="text/javascript" src="app/modules/core/services/comments.service.js"></script>
+    <script type="text/javascript" src="app/modules/core/services/posts.service.js"></script>
+    <script type="text/javascript" src="app/modules/categories/directives/categories.directive.js"></script>
+    <script type="text/javascript" src="app/modules/comments/directives/comment.directive.js"></script>
+    <script type="text/javascript" src="app/modules/comments/directives/comments.directive.js"></script>
+    <script type="text/javascript" src="app/modules/posts/controllers/posts.ctrl.js"></script>
+    <script type="text/javascript" src="app/modules/posts/directives/post-list.directive.js"></script>
+    <script type="text/javascript" src="app/modules/posts/directives/post.directive.js"></script>
+    <script type="text/javascript" src="app/modules/tags/directives/tags.directive.js"></script>
+    <script type="text/javascript" src="app/modules/votes/directives/votes.directive.js"></script>
+
+  <!-- /JS -->  
+
+  <!--[if lt IE 9]>
+  <section class="browsehappy jumbotron hide">
+    <h1>Hello there!</h1>
+    <p>You are using an old browser which we unfortunately do not support.</p>
+    <p>Please <a href="http://browsehappy.com/">click here</a> to update your browser before using the website.</p>
+    <p><a href="http://browsehappy.com" class="btn btn-primary btn-lg" role="button">Yes, upgrade my browser!</a></p>
+  </section>
+  <![endif]-->
+
+</body>
+
+</html>

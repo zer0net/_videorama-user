@@ -1,0 +1,95 @@
+{
+  "_args": [
+    [
+      "angular-sanitize",
+      "/Users/davidnelband/Sites/Zeronet/data/1KayTcmUqhHc41MdiPjCSqV2oKf7phenp6"
+    ]
+  ],
+  "_from": "angular-sanitize@latest",
+  "_id": "angular-sanitize@1.5.0",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/angular-sanitize",
+  "_nodeVersion": "4.2.6",
+  "_npmOperationalInternal": {
+    "host": "packages-9-west.internal.npmjs.com",
+    "tmp": "tmp/angular-sanitize-1.5.0.tgz_1454673812158_0.897649428807199"
+  },
+  "_npmUser": {
+    "email": "angular-core+npm@google.com",
+    "name": "angularcore"
+  },
+  "_npmVersion": "2.14.12",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "angular-sanitize",
+    "raw": "angular-sanitize",
+    "rawSpec": "",
+    "scope": null,
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/angular-sanitize/-/angular-sanitize-1.5.0.tgz",
+  "_shasum": "7b9a01dd6b5736d0d5872933f03d1cfb9c188d2a",
+  "_shrinkwrap": null,
+  "_spec": "angular-sanitize",
+  "_where": "/Users/davidnelband/Sites/Zeronet/data/1KayTcmUqhHc41MdiPjCSqV2oKf7phenp6",
+  "author": {
+    "email": "angular-core+npm@google.com",
+    "name": "Angular Core Team"
+  },
+  "bugs": {
+    "url": "https://github.com/angular/angular.js/issues"
+  },
+  "dependencies": {},
+  "description": "AngularJS module for sanitizing HTML",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "7b9a01dd6b5736d0d5872933f03d1cfb9c188d2a",
+    "tarball": "http://registry.npmjs.org/angular-sanitize/-/angular-sanitize-1.5.0.tgz"
+  },
+  "gitHead": "ba852e624a011a529197a53957063712094898bf",
+  "homepage": "http://angularjs.org",
+  "keywords": [
+    "angular",
+    "browser",
+    "client-side",
+    "framework",
+    "html"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "name": "akalinovski",
+      "email": "a.kalinovski@gmail.com"
+    },
+    {
+      "name": "angularcore",
+      "email": "angular-core+npm@google.com"
+    },
+    {
+      "name": "petebd",
+      "email": "pete@bacondarwin.com"
+    },
+    {
+      "name": "pitbeast",
+      "email": "PitBeast777@gmail.com"
+    }
+  ],
+  "name": "angular-sanitize",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angular/angular.js.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.5.0"
+}

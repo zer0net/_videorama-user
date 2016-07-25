@@ -1,0 +1,1 @@
+angular.module('ngZeroBlog',['ngMaterial','angularMoment','ui.identicon','textAngular','bw.paging','mdColorPicker','angularFileUpload']);
