@@ -1,0 +1,339 @@
+{
+ "address": "1N8yMhHBPuXgS4iegJ39vaBBgSEejkaKJ7",
+ "description": "",
+ "files": {
+  ".git/FETCH_HEAD": {
+   "sha512": "9b34014d3374138fe61e000d3031be67d8f04a14017942a1f88ab4aa1cb190c0",
+   "size": 97
+  },
+  ".git/HEAD": {
+   "sha512": "76b199f1bffdc6d21547895431b0f85f3857df400225cbd1ae55e7ded09786a8",
+   "size": 23
+  },
+  ".git/config": {
+   "sha512": "c805bf4c7651677ad290d3f0a278c5e449a10108cae2a8cd4caef94d3914bbba",
+   "size": 309
+  },
+  ".git/index": {
+   "sha512": "dda9d779e9239200648c045df18bb11d507ca5ab3cdaa47fb3aa3ad6d7767b2e",
+   "size": 58000
+  },
+  ".git/logs/HEAD": {
+   "sha512": "7ddf5138307283dd73ab6a96f7ffac5cc9a9627f4f946daf965900714fc65792",
+   "size": 186
+  },
+  ".git/logs/refs/heads/master": {
+   "sha512": "7ddf5138307283dd73ab6a96f7ffac5cc9a9627f4f946daf965900714fc65792",
+   "size": 186
+  },
+  ".git/logs/refs/remotes/origin/HEAD": {
+   "sha512": "7ddf5138307283dd73ab6a96f7ffac5cc9a9627f4f946daf965900714fc65792",
+   "size": 186
+  },
+  ".git/objects/pack/pack-ca0bb53b65624b9d84e7ded5a46b48ed1201c92f.idx": {
+   "sha512": "d3aea711fb6e34f053c084fbb82a53a170006b7616da18bddded53bf0953a26e",
+   "size": 18236
+  },
+  ".git/objects/pack/pack-ca0bb53b65624b9d84e7ded5a46b48ed1201c92f.pack": {
+   "sha512": "19cc1207cbf7c09bd4b55e7ac5f86951aa6123cc5b1aee6507ddba9f25777076",
+   "size": 1821880
+  },
+  ".git/packed-refs": {
+   "sha512": "05b8b3f1b220ed8db26acc2ae5e2c7a71bace26445f3fd53327484b18564e61b",
+   "size": 107
+  },
+  ".git/refs/heads/master": {
+   "sha512": "c37006778380d8b348ac0a22ab5a82fac8182c7c46adf8fb5748b649d4c70f18",
+   "size": 41
+  },
+  ".git/refs/remotes/origin/HEAD": {
+   "sha512": "0d686b330d5704fdbb9588d62bbddda273f86b24db52ddbdb73c0c304aabb8e6",
+   "size": 32
+  },
+  ".git/sourcetreeconfig": {
+   "sha512": "80421203aa7694acf009aac80bfbd6f2c0ffb7d00deeeae2ef23b8382917a733",
+   "size": 353
+  },
+  "app/application.js": {
+   "sha512": "8e543fb77050c75eb154027b03a7e94b10610fed89a9e9abd0ac87215ea7a7fb",
+   "size": 34
+  },
+  "app/core/controllers/main.ctrl.js": {
+   "sha512": "0f1ae4f0b127a00b37609c92401056ad9eb24ae5763fdbbf4fbd4ac115227ad5",
+   "size": 627
+  },
+  "app/core/directives/file-model.directive.js": {
+   "sha512": "925c41c1a0ceb8d5c5a5e0008b731af15ddc53f75253fcde7a2ac290b6136689",
+   "size": 481
+  },
+  "assets/lib/angular-file-reader/Gruntfile.js": {
+   "sha512": "36b7fae7878da93b72147bea39048da58472422c9327b12cdf63e8d3f07de359",
+   "size": 927
+  },
+  "assets/lib/angular-file-reader/LICENSE": {
+   "sha512": "a833d4c964058e92f563d5bc84cfbf2e42d63cb74179b6f26cc8750f17ac8043",
+   "size": 1079
+  },
+  "assets/lib/angular-file-reader/README.md": {
+   "sha512": "8ad54f81e9877551c57f0535c15d6ef0295859cf750158a351b0248cfcdbd3b2",
+   "size": 2309
+  },
+  "assets/lib/angular-file-reader/bower.json": {
+   "sha512": "2d9d6401eb88dce290aa7a90c5f921575503ea3545b83235c09651c8d53836f1",
+   "size": 449
+  },
+  "assets/lib/angular-file-reader/example/index.html": {
+   "sha512": "1b238d57f277190b72fe35cf9aa7f0d6752547c13b44dc014a32f573080e15a6",
+   "size": 1371
+  },
+  "assets/lib/angular-file-reader/images/screenprint.png": {
+   "sha512": "8fc64ffdcf05e49d099b98833bb379e365ca22964eacce325621317ed632b279",
+   "size": 131157
+  },
+  "assets/lib/angular-file-reader/package.json": {
+   "sha512": "3a6f6f369dfdb65ff36660c450816967e923ded0bf721ead4083d398222af013",
+   "size": 458
+  },
+  "assets/lib/angular-file-reader/src/ngFileReader.js": {
+   "sha512": "15ffd0caaf1f674b8ab9ccd261a66e1dbf0c37c56b2375eb117122375a67143e",
+   "size": 4011
+  },
+  "assets/lib/angular-file-reader/src/ngFileReader.min.js": {
+   "sha512": "0ed7528b5f4516ede6627fb3ec41e6e071421658086bba3c09ed1813e176c0d9",
+   "size": 1574
+  },
+  "assets/lib/angular-file-reader/vendor/filereader.swf": {
+   "sha512": "9ce3f134f888fdbd6cc2f4a8bf6b789ccbe75adc3f93c5fc6e261f08f9442065",
+   "size": 8580
+  },
+  "assets/lib/angular-file-reader/vendor/jquery.FileReader.js": {
+   "sha512": "e9af975dc2273740517f0ab07fb39ada366d088fd98047cabcfa56965c596cde",
+   "size": 8918
+  },
+  "assets/lib/angular-file-reader/vendor/jquery.FileReader.position.ver.js": {
+   "sha512": "d9e1afe53a6cc877dd0ca51816192eb9909eb4d44d975a2e374f5e28847a784a",
+   "size": 9653
+  },
+  "assets/lib/angular-file-reader/vendor/swfobject.js": {
+   "sha512": "de1984908768117cc0f2cdfaab103352ea53a343f4b46c9f02f2a99c0458739c",
+   "size": 10220
+  },
+  "assets/lib/angular-file-upload/README.md": {
+   "sha512": "89954ac5f4b8b18eefbccdb37d79d45164e23f28eca5d24abb6c44603bbb9bb0",
+   "size": 3000
+  },
+  "assets/lib/angular-file-upload/WebpackConfig.js": {
+   "sha512": "fe65d97f7613798fc9ff01fea876288747a06a3157bc1be6bd22cef11db3886c",
+   "size": 1707
+  },
+  "assets/lib/angular-file-upload/bower.json": {
+   "sha512": "8ba5fc4977e9776eaf7ebeb3d496ac2128c9c2fbdc68033b8523ad73143adaf9",
+   "size": 392
+  },
+  "assets/lib/angular-file-upload/dist/angular-file-upload.js": {
+   "sha512": "09888b4681bd3fe468866c70bf5891f2b5fb02c88188e931c2cbf8815c50361e",
+   "size": 62582
+  },
+  "assets/lib/angular-file-upload/dist/angular-file-upload.js.map": {
+   "sha512": "df15094f38a3d1520ae49da20bd1d97c9615e02e2d39397c72060747a4fabb8b",
+   "size": 77095
+  },
+  "assets/lib/angular-file-upload/dist/angular-file-upload.min.js": {
+   "sha512": "8dc333b532f9ab5ef0b2382edeac9d20dd836b0cba3082324fb505fcb43b4628",
+   "size": 20846
+  },
+  "assets/lib/angular-file-upload/dist/angular-file-upload.min.js.map": {
+   "sha512": "cb3a8dd8706296734a0968c72c4ae267a5ce94ac09cb0568c1333fcdcdd87e42",
+   "size": 143930
+  },
+  "assets/lib/angular-file-upload/examples/console-sham.js": {
+   "sha512": "ea8d05fa2e2c3bcce32aa63d07ad7325c4d94e924eeef6d2030e0e14fb26408c",
+   "size": 572
+  },
+  "assets/lib/angular-file-upload/examples/console-sham.min.js": {
+   "sha512": "92ac764ed97a0e10bf7d18d4a0de3dae018a8a9fc789714680138c8e48dc515f",
+   "size": 377
+  },
+  "assets/lib/angular-file-upload/examples/image-preview/controllers.js": {
+   "sha512": "2a8569099c82467f6e3e6bc47949d3f1d5b0c0662d6970b392ec251bcb9736d7",
+   "size": 2291
+  },
+  "assets/lib/angular-file-upload/examples/image-preview/directives.js": {
+   "sha512": "9e808b615b5f89cad39bb6a9f73bafbec9f31d7257b8452caf882aa64a245667",
+   "size": 1941
+  },
+  "assets/lib/angular-file-upload/examples/image-preview/index.html": {
+   "sha512": "563f55ac0196545206489f5e9a478d104693d5689a29e6e1a620d89ec081ce6a",
+   "size": 9147
+  },
+  "assets/lib/angular-file-upload/examples/image-preview/upload.php": {
+   "sha512": "bc3989b2819eedcbd466f144911a7a64a30945b6c0460e78ec3daa5ecafd3be5",
+   "size": 414
+  },
+  "assets/lib/angular-file-upload/examples/image-preview/uploads/gap.txt": {
+   "sha512": "cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce",
+   "size": 0
+  },
+  "assets/lib/angular-file-upload/examples/simple/controllers.js": {
+   "sha512": "9f7c2cb8b03bddf450c52a1df1cfda40039165b8537e7e5870720d3f5de2d7b8",
+   "size": 2182
+  },
+  "assets/lib/angular-file-upload/examples/simple/index.html": {
+   "sha512": "d61ac4d64d05773ff0506f460443ad54632e4144f7b40dc2aa4c15e81de3d6f9",
+   "size": 8151
+  },
+  "assets/lib/angular-file-upload/examples/simple/upload.php": {
+   "sha512": "bc3989b2819eedcbd466f144911a7a64a30945b6c0460e78ec3daa5ecafd3be5",
+   "size": 414
+  },
+  "assets/lib/angular-file-upload/examples/simple/uploads/gap.txt": {
+   "sha512": "cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce",
+   "size": 0
+  },
+  "assets/lib/angular-file-upload/examples/without-bootstrap/controllers.js": {
+   "sha512": "0cd4b3f2889b9c261014a59c8f0a0db2c874c17fd1671976a53182a510b1938b",
+   "size": 2496
+  },
+  "assets/lib/angular-file-upload/examples/without-bootstrap/directives.js": {
+   "sha512": "9e808b615b5f89cad39bb6a9f73bafbec9f31d7257b8452caf882aa64a245667",
+   "size": 1941
+  },
+  "assets/lib/angular-file-upload/examples/without-bootstrap/index.html": {
+   "sha512": "5db6bcccb3a063db3236b4bb956d2b2b641811db2347f22d050e0d76eb35710a",
+   "size": 4455
+  },
+  "assets/lib/angular-file-upload/examples/without-bootstrap/style.css": {
+   "sha512": "5e2fb65fe7952bc968fb94659649978c28c3a9d28c6a06235c76776e8cd0118a",
+   "size": 1482
+  },
+  "assets/lib/angular-file-upload/examples/without-bootstrap/upload.php": {
+   "sha512": "bc3989b2819eedcbd466f144911a7a64a30945b6c0460e78ec3daa5ecafd3be5",
+   "size": 414
+  },
+  "assets/lib/angular-file-upload/examples/without-bootstrap/uploads/gap.txt": {
+   "sha512": "cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce",
+   "size": 0
+  },
+  "assets/lib/angular-file-upload/gulpfile.js": {
+   "sha512": "fa9b951e691be380af345c193fa50693e8fd0fb5157c683f5f484d75d94df96c",
+   "size": 719
+  },
+  "assets/lib/angular-file-upload/license.txt": {
+   "sha512": "6bd4118515b32062d79df87875053aa78856f2cf5b20bda1622349a8aa066de0",
+   "size": 1092
+  },
+  "assets/lib/angular-file-upload/package.json": {
+   "sha512": "d8073d124eacf316ce086f623908b11cd2b9ee5477cf741f370ac6ad27969774",
+   "size": 704
+  },
+  "assets/lib/angular-file-upload/src/config.json": {
+   "sha512": "9e0b3bfe5e93b00a0156de5ef03ddcef0e3951991bb1a8c2e71ddd872ec2f473",
+   "size": 35
+  },
+  "assets/lib/angular-file-upload/src/directives/FileDrop.js": {
+   "sha512": "37550610b4964ede90509c06be78d23fb9fa5904c869a844624a7a26451a068d",
+   "size": 813
+  },
+  "assets/lib/angular-file-upload/src/directives/FileOver.js": {
+   "sha512": "dc9a53ca5211955b72cf644b23b98cc396d80a726a35e68969ecebeeed761545",
+   "size": 691
+  },
+  "assets/lib/angular-file-upload/src/directives/FileSelect.js": {
+   "sha512": "c1d2b2b36bbad5988cc22b45f317c7926b37106165c8de0580581daa3230d39a",
+   "size": 805
+  },
+  "assets/lib/angular-file-upload/src/index.js": {
+   "sha512": "dbd9084dc7de61ff49d628b56801ebeab4479950156190d930c1514b7992d26c",
+   "size": 1847
+  },
+  "assets/lib/angular-file-upload/src/services/FileDirective.js": {
+   "sha512": "8dce74e62d968fdda6f42d9b68fe9eb050c3606e8145463377db54c4de22ed29",
+   "size": 1796
+  },
+  "assets/lib/angular-file-upload/src/services/FileDrop.js": {
+   "sha512": "b3df894ebef82df5ed7fc1bcf1d73f8f44460ec0fdf5658b7db6d659bc12fd51",
+   "size": 3266
+  },
+  "assets/lib/angular-file-upload/src/services/FileItem.js": {
+   "sha512": "6d65376233ddc232a258c3fa494b1b49d94de916757f3ccad84bf2a52a1eb704",
+   "size": 6894
+  },
+  "assets/lib/angular-file-upload/src/services/FileLikeObject.js": {
+   "sha512": "8b268c2e650a724b4108610d173e132bbc909a5869145cd861207ff1745100a0",
+   "size": 1503
+  },
+  "assets/lib/angular-file-upload/src/services/FileOver.js": {
+   "sha512": "cb2a00cc1213862fc55b302dede86ced93231d2ee21a02bf046af42e01b27cb0",
+   "size": 1286
+  },
+  "assets/lib/angular-file-upload/src/services/FileSelect.js": {
+   "sha512": "c3d3a735cd65861ab73e3575a479fa5bd477a3a4d5f78395c5866d850a6baf2f",
+   "size": 2079
+  },
+  "assets/lib/angular-file-upload/src/services/FileUploader.js": {
+   "sha512": "a88bc42327688d55c0f7dfd9ebd640fcf7b945ac6c2798ff9e2e5d0794ac1717",
+   "size": 24050
+  },
+  "assets/lib/angular-file-upload/src/values/options.js": {
+   "sha512": "b8adae0361bce42e288932a15d5756c8a1a59bbd8e8cbc3d43b621c2be3a347c",
+   "size": 315
+  },
+  "assets/lib/angular/angular-animate.min.js": {
+   "sha512": "dff68236699f7bc995143e4f54d9122c13ee7b654086b32d70fd316b57306656",
+   "size": 25599
+  },
+  "assets/lib/angular/angular-aria.min.js": {
+   "sha512": "e2c51e87bfb2c64459dcc3194ad65ae9aa62102fda2c2b5d5c83c9d05157caa3",
+   "size": 3773
+  },
+  "assets/lib/angular/angular-route.min.js": {
+   "sha512": "aa68f619dcde2d2f356fb0ac4eef3853bc004afef41c9042d525ce151704ee3a",
+   "size": 4389
+  },
+  "assets/lib/angular/angular.min.js": {
+   "sha512": "7c60d0ded2382947ccdf961b8427717d4f30d2593f88c9fdd0a3211595bd9f42",
+   "size": 148199
+  },
+  "assets/lib/jquery/jquery.min.js": {
+   "sha512": "ab3ad9a98fe431508461ebbf8029bc536f34d16cfef8b4c62b8a62b56fe2b30a",
+   "size": 86351
+  },
+  "assets/lib/zeronet/ZeroChat.coffee": {
+   "sha512": "b4d9538aa3f09a18cb7336d20366c7e885a705a9b08583edba30ef656113625d",
+   "size": 104
+  },
+  "assets/lib/zeronet/ZeroChat.js": {
+   "sha512": "ee2130e7f7e72216a6f03d1d614c9ce80945115411ae57517ba3e65fdb5999a6",
+   "size": 615
+  },
+  "assets/lib/zeronet/ZeroFrame.coffee": {
+   "sha512": "96a11e88429e2fa26c47f5d24bf52d030d506f1dfecb2a4e2c5e034cc5d07e31",
+   "size": 1335
+  },
+  "assets/lib/zeronet/ZeroFrame.js": {
+   "sha512": "bc65f2262c309aa44e0c0a28789725fb847a3ec20a043c28fb4a29cd9973c31e",
+   "size": 2976
+  },
+  "index.html": {
+   "sha512": "00a3b770b283a9b593f221a2fa86b164163a7548139fd2db87e68c88f5c1f421",
+   "size": 1775
+  },
+  "uploads/images/77857d973c2cb56ed6d56b6afddefec2.jpg": {
+   "sha512": "779fabb683255334f6a2dd71d0bcec5f70c6b4b7b01b01a5090ba34798d3b787",
+   "size": 920830
+  }
+ },
+ "ignore": "README.md",
+ "modified": 1469647281.952981,
+ "sign": [
+  20012961478928551808543870711136285194373864544766677258665098747239794384692,
+  53127824742795113373560741852880927851696510469378430809228858833900640560296
+ ],
+ "signers_sign": "HOHbiQ+9FdapkUv9VXDWtf5xKL9k7+0y9M4R4FmrpJU8zV1SJzvgqiVBBlifp4SmgilTn2ZOy8/HhB0erkC1hPY=",
+ "signs": {
+  "1N8yMhHBPuXgS4iegJ39vaBBgSEejkaKJ7": "HAwoE97k+01bfZcJ1OIpHiq6fDIIN6/MDrnSmE7J8Fq84PF1t9Yvn3tMY++NJxZWfZkzZlRS0bUvr6sCZr7bAhA="
+ },
+ "signs_required": 1,
+ "title": "1N8yMhHBPuXgS4iegJ39vaBBgSEejkaKJ7 - ZeroNet_",
+ "zeronet_version": "0.3.6"
+}
