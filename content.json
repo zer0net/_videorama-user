@@ -2,8 +2,12 @@
  "address": "1N8yMhHBPuXgS4iegJ39vaBBgSEejkaKJ7",
  "description": "",
  "files": {
+  ".git/COMMIT_EDITMSG": {
+   "sha512": "58a0aee0524af568234b427ec4bf44d704789065fe4cc3d3b4e20afa008f2a93",
+   "size": 11
+  },
   ".git/FETCH_HEAD": {
-   "sha512": "9b34014d3374138fe61e000d3031be67d8f04a14017942a1f88ab4aa1cb190c0",
+   "sha512": "20a3e0f43bea52bd033914ef804913667b2a4cae8d67d1f7f5573563c4158240",
    "size": 97
   },
   ".git/HEAD": {
@@ -15,20 +19,172 @@
    "size": 309
   },
   ".git/index": {
-   "sha512": "dda9d779e9239200648c045df18bb11d507ca5ab3cdaa47fb3aa3ad6d7767b2e",
-   "size": 58000
+   "sha512": "58c0ab1b904781febc288c1316f0bd9e655ac19a1a46106e38857abeb5fdd88f",
+   "size": 9479
   },
   ".git/logs/HEAD": {
-   "sha512": "7ddf5138307283dd73ab6a96f7ffac5cc9a9627f4f946daf965900714fc65792",
-   "size": 186
+   "sha512": "9daa071ae789a4a18a7e82598dab4875b6001b636623cbf25ac1d2589c5192e7",
+   "size": 339
   },
   ".git/logs/refs/heads/master": {
-   "sha512": "7ddf5138307283dd73ab6a96f7ffac5cc9a9627f4f946daf965900714fc65792",
-   "size": 186
+   "sha512": "9daa071ae789a4a18a7e82598dab4875b6001b636623cbf25ac1d2589c5192e7",
+   "size": 339
   },
   ".git/logs/refs/remotes/origin/HEAD": {
    "sha512": "7ddf5138307283dd73ab6a96f7ffac5cc9a9627f4f946daf965900714fc65792",
    "size": 186
+  },
+  ".git/logs/refs/remotes/origin/master": {
+   "sha512": "bd3e0cd304a59246e658dd4d9d00b2ccc585ef065d64aeb1bd13926b06181e3a",
+   "size": 149
+  },
+  ".git/objects/09/704df3984c0be3294d3933590c316b254a6d12": {
+   "sha512": "93c29a9adcc4e4c9148308a68011b2b134cea89d7e9c63b7607cbd767c172646",
+   "size": 8601
+  },
+  ".git/objects/09/cca64ee6a1346b4996572095fccc99dc567bd9": {
+   "sha512": "35a932c013a747b2553dab60162513156c02e0fa196ec63d713be70b95a8921c",
+   "size": 177
+  },
+  ".git/objects/10/3893634936ce3f0dc0ecaca9311fb906d0d2c7": {
+   "sha512": "4e1104906e4430f16365353eda83b6efecbfaeed0accb4e0fa8b0ae6ef576119",
+   "size": 663
+  },
+  ".git/objects/14/7513af3c210d64bb152963fd5229c69c3d6618": {
+   "sha512": "a408c757ff803f22268650a5244572754965f61f665a8ae27cece14fc7aa912a",
+   "size": 215
+  },
+  ".git/objects/1a/60902ffc4fbd61c1f29a449ef9a344eab23c08": {
+   "sha512": "bfd67817e91139174186ebe384e496ba613366dfb1258de564e335d862742c8f",
+   "size": 87
+  },
+  ".git/objects/1b/d722694bd9ffbec46d4952f4f4b53007554335": {
+   "sha512": "95d73c2175979879f9f67528fe9ba568482d6adb0ecaa58167bcbb15c2dc22f1",
+   "size": 35
+  },
+  ".git/objects/1e/d08082555d1b38cceb42d9f0e3ecac8de9be47": {
+   "sha512": "6833ac5f0e52d171eb4b17874c9aa350a01576be7a2f6f7a3db5783bac75d873",
+   "size": 81
+  },
+  ".git/objects/1f/2977b6b3bcbf0438271cb4e8a51010365900b2": {
+   "sha512": "0137eef7edd6529015802887575d076228cb5861c2c19aee29aa90dff390f5bf",
+   "size": 3550
+  },
+  ".git/objects/21/3f131766035834ba1a5d1b7ef672c052138d85": {
+   "sha512": "600cbe641b19b1326f35372f74f6f58ca987496121059b794916a6d59c8fd333",
+   "size": 837
+  },
+  ".git/objects/27/29ee2f031c07823cb4b5e0e6461b5a67cf84ae": {
+   "sha512": "b9be9fc9238f377eb7e177cc67b99a5dee0f2dc191adf255f88579811bbb794b",
+   "size": 1161
+  },
+  ".git/objects/2a/a8b8287ccab65371186cc5f0210f8cf1069628": {
+   "sha512": "a90f553dde3df4b51d2725efa50bb0c1e0930ce9ac512e48e8fd74f9e95a952f",
+   "size": 55
+  },
+  ".git/objects/36/3c3db74ce0f2803df95b70621e2d223471ff90": {
+   "sha512": "32d1eac04505beb64d7c02170c7e3043de7f6eadf1d98a2a0f91bfd0f7df0218",
+   "size": 46
+  },
+  ".git/objects/39/a4ec1112149016cb97da2ad9964ca0d55e0f2a": {
+   "sha512": "e56a092ff7f9970ddd6e4ec2bacb6827228555ae2d17ca390d415099949d99d8",
+   "size": 59
+  },
+  ".git/objects/4c/2a15a763a76f6ff9e2a31ae2a3b6c0c4f6d9b4": {
+   "sha512": "18929074b03793b2a46733a59b6cac8c87d879108b473c4cb2b430e19bb7561d",
+   "size": 854
+  },
+  ".git/objects/4d/142b80e284c53389e7572a074882a6a6aba783": {
+   "sha512": "9ed6ce2e5b9e26b47a3312c4b8af2364b8e2562d21ed2c6a175b372172b9a608",
+   "size": 377
+  },
+  ".git/objects/50/8c2002596cab027935cbe8398503e126ea8490": {
+   "sha512": "c32eee9e484ad8dca5bd1c16e96c22e7e0f0ed006218e77a6cfc9b15d3e151ed",
+   "size": 486
+  },
+  ".git/objects/54/d6294fa80a58d751f0c6609a10b258c32cc4b0": {
+   "sha512": "0ab7528ccf7efa1b3757f430ab896351cbecd9e1c504c21ac8f4728fe2827af2",
+   "size": 3220
+  },
+  ".git/objects/57/8598e286afd306c8202901ccf853ebd2bc5ff9": {
+   "sha512": "f916499b96b813f3a2fd229ffe7cfbc40190167d1447bc3d85e5811fb0238f7e",
+   "size": 50
+  },
+  ".git/objects/5c/27a3b66e80594436eee54856808f9f20db8c8b": {
+   "sha512": "6c1a27c7aa26e2ca4046fa921b1dfe44198cf61dfabbefaa129dc19abb5c6fe1",
+   "size": 341
+  },
+  ".git/objects/65/36214b0dd2eed6d5d451dc528978d9a5948238": {
+   "sha512": "de3e7ab35e616ec211f1bb0979f940a42d0c3435d9a94a13e2f6d39f34ddb001",
+   "size": 648
+  },
+  ".git/objects/66/f5fc53652e26e4dc8725941e0b5ed1ac78e5af": {
+   "sha512": "f1f78cc930974b64425a5ffce1f14db6df19eff8fec4a1c8c0fa63148eee75b0",
+   "size": 276
+  },
+  ".git/objects/67/f90eaf80a1ec7167f6982ef4a886350c435fe1": {
+   "sha512": "3eb629751381c5e89f1691cc0149806e704fd1aa5361dffdcc5f9cb78f842f3f",
+   "size": 68
+  },
+  ".git/objects/8e/afe9dd83f91b52c2decd532db81527bb98e488": {
+   "sha512": "d0e0cb3ad6ccc551aa944dc3ebad354a08bb57945351864d124c534f252d4c37",
+   "size": 4271
+  },
+  ".git/objects/97/78e5aa07bf5ade64dbdcf317a59c24d50caa32": {
+   "sha512": "5eb97fa1d5a4ba3f5ac11b8de6041b6b0a3167856fee456a0f0bf228e684d924",
+   "size": 90
+  },
+  ".git/objects/a1/2b9340876aaa5dd0114e74f98eeaf6bf083c78": {
+   "sha512": "7fa0cca77152eb1313bc3353fe7b6ed78add9b2db25a73efcde02bd3024a1437",
+   "size": 58
+  },
+  ".git/objects/b2/09c260dfc465dc983ac84e18b76c77720ec447": {
+   "sha512": "e237737ab844102c70bd598d8cb8c1a60adaa06ec4bf45d7aeec1599bac1e218",
+   "size": 57
+  },
+  ".git/objects/b4/903154f8310b79377f5f4f3f0fa6dbe9d91123": {
+   "sha512": "6cf223844ae9279e3f174af2aa9cb8e9aec5b993348f018f5cc8c7f824b5934d",
+   "size": 89
+  },
+  ".git/objects/bc/743d26e9f1cd2af9042f79bee9582d2b9d8b69": {
+   "sha512": "49a7ce6599ff2dd73da3e0b8182516da6d50725b628fa0691dceffa764f2af6c",
+   "size": 4892
+  },
+  ".git/objects/bc/fdf096e0ae466a0839f30ab2615cf56d1b6847": {
+   "sha512": "7f3e0e177b9804144bd0e7cc3c9ee58d69d7ec6ef5b0b48bfaddd5559f5d668c",
+   "size": 169
+  },
+  ".git/objects/c0/75068fd6dfa39c52779648a32cc18c4900d3fd": {
+   "sha512": "c2a192dcd50e9018d4279a03d02d1095c1f885f03e8a303a78efd0179d1aa299",
+   "size": 916881
+  },
+  ".git/objects/c8/6ddcf6bf34f0947262d5cb9035e299edc8d1d8": {
+   "sha512": "9a6050ed07c7ad6a98b795321bf57f6fe28b995a552a637fe91c316254e5f5f0",
+   "size": 48
+  },
+  ".git/objects/cc/92093c720a4f9782dcad996321447b5ca30e18": {
+   "sha512": "4a4c112177a6a8065d07853e0a34d392bac67988f345e91d18cb3eb824eed456",
+   "size": 277
+  },
+  ".git/objects/d5/9886b75081393cb79678e934f193f1772a8458": {
+   "sha512": "8f439b341d9f1ed555c8a601b62f0881da945fe5612be994fcc7d69c9d66be8c",
+   "size": 1376
+  },
+  ".git/objects/d9/f956e082b8d6fd7e4917d0e38709e6257a09e0": {
+   "sha512": "18982f06c0ec714af39c25b3b6acd573984e0485b63c567b00ed89d2700b4e7b",
+   "size": 156
+  },
+  ".git/objects/f6/a6a99e60ee9a5ce4d0922a3a82c6d81c1db7f2": {
+   "sha512": "b8c119ef41efba69c008f7871450224b9d7a9f142274622b8fe395f80fce64e6",
+   "size": 35038
+  },
+  ".git/objects/fd/60ff7b77a7650c0a9fd2392e8cad8513cccdcb": {
+   "sha512": "e29e361d0279ac088ee0a28cf7e45361c1992336980f34b82574d1695c57f5fb",
+   "size": 256
+  },
+  ".git/objects/fd/c097c7c0428298f8e32ec1f77853157a964fb6": {
+   "sha512": "1011890ec43f31b9795b13ef05bb62cb77ae2df74c598952fd7fa96496d2ea04",
+   "size": 24121
   },
   ".git/objects/pack/pack-ca0bb53b65624b9d84e7ded5a46b48ed1201c92f.idx": {
    "sha512": "d3aea711fb6e34f053c084fbb82a53a170006b7616da18bddded53bf0953a26e",
@@ -43,240 +199,96 @@
    "size": 107
   },
   ".git/refs/heads/master": {
-   "sha512": "c37006778380d8b348ac0a22ab5a82fac8182c7c46adf8fb5748b649d4c70f18",
+   "sha512": "49483a3ffe9831e2edd45d6ae90e630f6029f1ca5271bf2ac6220a5a916faa5d",
    "size": 41
   },
   ".git/refs/remotes/origin/HEAD": {
    "sha512": "0d686b330d5704fdbb9588d62bbddda273f86b24db52ddbdb73c0c304aabb8e6",
    "size": 32
   },
+  ".git/refs/remotes/origin/master": {
+   "sha512": "49483a3ffe9831e2edd45d6ae90e630f6029f1ca5271bf2ac6220a5a916faa5d",
+   "size": 41
+  },
   ".git/sourcetreeconfig": {
-   "sha512": "80421203aa7694acf009aac80bfbd6f2c0ffb7d00deeeae2ef23b8382917a733",
+   "sha512": "35bb6d1179fc56591e8444eb2372832a50902d1c51f0914124eff2e30078393a",
    "size": 353
   },
   "app/application.js": {
-   "sha512": "8e543fb77050c75eb154027b03a7e94b10610fed89a9e9abd0ac87215ea7a7fb",
-   "size": 34
+   "sha512": "4432b1df2cf00935445621e30c4430e4cd6ea5c658f37ed75b08a11fa1ec0076",
+   "size": 220
   },
   "app/core/controllers/main.ctrl.js": {
-   "sha512": "0f1ae4f0b127a00b37609c92401056ad9eb24ae5763fdbbf4fbd4ac115227ad5",
-   "size": 627
+   "sha512": "b6b8532b35233751fc8579e379c53686cbb2b497c4fb3c578d87e2ebc5ea3247",
+   "size": 1669
   },
   "app/core/directives/file-model.directive.js": {
-   "sha512": "925c41c1a0ceb8d5c5a5e0008b731af15ddc53f75253fcde7a2ac290b6136689",
-   "size": 481
+   "sha512": "6d12ac73d7d860c0c68bfae428a8694d887b641183b5a8e15e212f2f424bbad9",
+   "size": 771
   },
-  "assets/lib/angular-file-reader/Gruntfile.js": {
-   "sha512": "36b7fae7878da93b72147bea39048da58472422c9327b12cdf63e8d3f07de359",
-   "size": 927
+  "app/core/directives/video-upload.directive.js": {
+   "sha512": "84b886475637de3a8c16a1f88f48acf875832974284dabce1da880e89b3230e1",
+   "size": 5016
   },
-  "assets/lib/angular-file-reader/LICENSE": {
-   "sha512": "a833d4c964058e92f563d5bc84cfbf2e42d63cb74179b6f26cc8750f17ac8043",
-   "size": 1079
+  "assets/lib/SHA-1/LICENSE": {
+   "sha512": "863aafd0cd3b3bf296b21ccc22ff7296f04d715b77fc5843eaee005f69ac3081",
+   "size": 1074
   },
-  "assets/lib/angular-file-reader/README.md": {
-   "sha512": "8ad54f81e9877551c57f0535c15d6ef0295859cf750158a351b0248cfcdbd3b2",
-   "size": 2309
+  "assets/lib/SHA-1/README.md": {
+   "sha512": "0a4bf973d1fa351675d0e333e3bb605b11eb424dc31908ac4013c6a5dddd8dcf",
+   "size": 608
   },
-  "assets/lib/angular-file-reader/bower.json": {
-   "sha512": "2d9d6401eb88dce290aa7a90c5f921575503ea3545b83235c09651c8d53836f1",
-   "size": 449
+  "assets/lib/SHA-1/bower.json": {
+   "sha512": "2a8305e321e1f4f6bd99fa43f94a3ac0d0079078aecd250730483195c12d5958",
+   "size": 427
   },
-  "assets/lib/angular-file-reader/example/index.html": {
-   "sha512": "1b238d57f277190b72fe35cf9aa7f0d6752547c13b44dc014a32f573080e15a6",
-   "size": 1371
+  "assets/lib/SHA-1/package.json": {
+   "sha512": "0d506f3c13c117a152bd28591a67a4eb5d30fff68de1aa8a683b22ed103973c0",
+   "size": 532
   },
-  "assets/lib/angular-file-reader/images/screenprint.png": {
-   "sha512": "8fc64ffdcf05e49d099b98833bb379e365ca22964eacce325621317ed632b279",
-   "size": 131157
+  "assets/lib/SHA-1/sha1.js": {
+   "sha512": "6bb8f0c086e0bd590c810a27708562ee4a5fb6a9aabb5a22c6e3918f9d616c70",
+   "size": 4078
   },
-  "assets/lib/angular-file-reader/package.json": {
-   "sha512": "3a6f6f369dfdb65ff36660c450816967e923ded0bf721ead4083d398222af013",
-   "size": 458
+  "assets/lib/angular-material/angular-material.css": {
+   "sha512": "c527b85044267f8ba9f9204be48d7c3b00ce76d5e5bbc6e180e77f7817928335",
+   "size": 426902
   },
-  "assets/lib/angular-file-reader/src/ngFileReader.js": {
-   "sha512": "15ffd0caaf1f674b8ab9ccd261a66e1dbf0c37c56b2375eb117122375a67143e",
-   "size": 4011
+  "assets/lib/angular-material/angular-material.min.js": {
+   "sha512": "ee2935c75e3b0bfa5286013af076f58655f02d16d3a45442e0a867c3bd4b4a44",
+   "size": 291954
   },
-  "assets/lib/angular-file-reader/src/ngFileReader.min.js": {
-   "sha512": "0ed7528b5f4516ede6627fb3ec41e6e071421658086bba3c09ed1813e176c0d9",
-   "size": 1574
+  "assets/lib/angular-sanitize/LICENSE.md": {
+   "sha512": "88795f3408d70f5a78e04c399351731ff161a49f0727f0cf3d048964a8aa14cb",
+   "size": 1074
   },
-  "assets/lib/angular-file-reader/vendor/filereader.swf": {
-   "sha512": "9ce3f134f888fdbd6cc2f4a8bf6b789ccbe75adc3f93c5fc6e261f08f9442065",
-   "size": 8580
+  "assets/lib/angular-sanitize/README.md": {
+   "sha512": "fcb21f8dfd4818893f89f1cc6b97c35472809e7f86c8a1c1c65dc0d158b2b156",
+   "size": 2051
   },
-  "assets/lib/angular-file-reader/vendor/jquery.FileReader.js": {
-   "sha512": "e9af975dc2273740517f0ab07fb39ada366d088fd98047cabcfa56965c596cde",
-   "size": 8918
+  "assets/lib/angular-sanitize/angular-sanitize.js": {
+   "sha512": "877ed70e08e6fa8e5e3be35492cc3f71628e54f46f8e49d1209e320b6921313f",
+   "size": 26833
   },
-  "assets/lib/angular-file-reader/vendor/jquery.FileReader.position.ver.js": {
-   "sha512": "d9e1afe53a6cc877dd0ca51816192eb9909eb4d44d975a2e374f5e28847a784a",
-   "size": 9653
+  "assets/lib/angular-sanitize/angular-sanitize.min.js": {
+   "sha512": "24f4da1b52cb36fd0ff96c65d38be6b30d7728620b19f6b39307d983fdd35509",
+   "size": 5861
   },
-  "assets/lib/angular-file-reader/vendor/swfobject.js": {
-   "sha512": "de1984908768117cc0f2cdfaab103352ea53a343f4b46c9f02f2a99c0458739c",
-   "size": 10220
+  "assets/lib/angular-sanitize/angular-sanitize.min.js.map": {
+   "sha512": "49bd2b153c58635160bad1bba67f085d8d650636401c93d862c0d082a7024b2c",
+   "size": 10301
   },
-  "assets/lib/angular-file-upload/README.md": {
-   "sha512": "89954ac5f4b8b18eefbccdb37d79d45164e23f28eca5d24abb6c44603bbb9bb0",
-   "size": 3000
+  "assets/lib/angular-sanitize/bower.json": {
+   "sha512": "1dab18606047e845c1f9a79faefb877d2c545eecf73ea5a2bd7c9790b4046ee2",
+   "size": 174
   },
-  "assets/lib/angular-file-upload/WebpackConfig.js": {
-   "sha512": "fe65d97f7613798fc9ff01fea876288747a06a3157bc1be6bd22cef11db3886c",
-   "size": 1707
+  "assets/lib/angular-sanitize/index.js": {
+   "sha512": "7ce6e41231b923681e3ea023eddc0eb98b0a66ad87673cd2018b3b06bc73f138",
+   "size": 62
   },
-  "assets/lib/angular-file-upload/bower.json": {
-   "sha512": "8ba5fc4977e9776eaf7ebeb3d496ac2128c9c2fbdc68033b8523ad73143adaf9",
-   "size": 392
-  },
-  "assets/lib/angular-file-upload/dist/angular-file-upload.js": {
-   "sha512": "09888b4681bd3fe468866c70bf5891f2b5fb02c88188e931c2cbf8815c50361e",
-   "size": 62582
-  },
-  "assets/lib/angular-file-upload/dist/angular-file-upload.js.map": {
-   "sha512": "df15094f38a3d1520ae49da20bd1d97c9615e02e2d39397c72060747a4fabb8b",
-   "size": 77095
-  },
-  "assets/lib/angular-file-upload/dist/angular-file-upload.min.js": {
-   "sha512": "8dc333b532f9ab5ef0b2382edeac9d20dd836b0cba3082324fb505fcb43b4628",
-   "size": 20846
-  },
-  "assets/lib/angular-file-upload/dist/angular-file-upload.min.js.map": {
-   "sha512": "cb3a8dd8706296734a0968c72c4ae267a5ce94ac09cb0568c1333fcdcdd87e42",
-   "size": 143930
-  },
-  "assets/lib/angular-file-upload/examples/console-sham.js": {
-   "sha512": "ea8d05fa2e2c3bcce32aa63d07ad7325c4d94e924eeef6d2030e0e14fb26408c",
-   "size": 572
-  },
-  "assets/lib/angular-file-upload/examples/console-sham.min.js": {
-   "sha512": "92ac764ed97a0e10bf7d18d4a0de3dae018a8a9fc789714680138c8e48dc515f",
-   "size": 377
-  },
-  "assets/lib/angular-file-upload/examples/image-preview/controllers.js": {
-   "sha512": "2a8569099c82467f6e3e6bc47949d3f1d5b0c0662d6970b392ec251bcb9736d7",
-   "size": 2291
-  },
-  "assets/lib/angular-file-upload/examples/image-preview/directives.js": {
-   "sha512": "9e808b615b5f89cad39bb6a9f73bafbec9f31d7257b8452caf882aa64a245667",
-   "size": 1941
-  },
-  "assets/lib/angular-file-upload/examples/image-preview/index.html": {
-   "sha512": "563f55ac0196545206489f5e9a478d104693d5689a29e6e1a620d89ec081ce6a",
-   "size": 9147
-  },
-  "assets/lib/angular-file-upload/examples/image-preview/upload.php": {
-   "sha512": "bc3989b2819eedcbd466f144911a7a64a30945b6c0460e78ec3daa5ecafd3be5",
-   "size": 414
-  },
-  "assets/lib/angular-file-upload/examples/image-preview/uploads/gap.txt": {
-   "sha512": "cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce",
-   "size": 0
-  },
-  "assets/lib/angular-file-upload/examples/simple/controllers.js": {
-   "sha512": "9f7c2cb8b03bddf450c52a1df1cfda40039165b8537e7e5870720d3f5de2d7b8",
-   "size": 2182
-  },
-  "assets/lib/angular-file-upload/examples/simple/index.html": {
-   "sha512": "d61ac4d64d05773ff0506f460443ad54632e4144f7b40dc2aa4c15e81de3d6f9",
-   "size": 8151
-  },
-  "assets/lib/angular-file-upload/examples/simple/upload.php": {
-   "sha512": "bc3989b2819eedcbd466f144911a7a64a30945b6c0460e78ec3daa5ecafd3be5",
-   "size": 414
-  },
-  "assets/lib/angular-file-upload/examples/simple/uploads/gap.txt": {
-   "sha512": "cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce",
-   "size": 0
-  },
-  "assets/lib/angular-file-upload/examples/without-bootstrap/controllers.js": {
-   "sha512": "0cd4b3f2889b9c261014a59c8f0a0db2c874c17fd1671976a53182a510b1938b",
-   "size": 2496
-  },
-  "assets/lib/angular-file-upload/examples/without-bootstrap/directives.js": {
-   "sha512": "9e808b615b5f89cad39bb6a9f73bafbec9f31d7257b8452caf882aa64a245667",
-   "size": 1941
-  },
-  "assets/lib/angular-file-upload/examples/without-bootstrap/index.html": {
-   "sha512": "5db6bcccb3a063db3236b4bb956d2b2b641811db2347f22d050e0d76eb35710a",
-   "size": 4455
-  },
-  "assets/lib/angular-file-upload/examples/without-bootstrap/style.css": {
-   "sha512": "5e2fb65fe7952bc968fb94659649978c28c3a9d28c6a06235c76776e8cd0118a",
-   "size": 1482
-  },
-  "assets/lib/angular-file-upload/examples/without-bootstrap/upload.php": {
-   "sha512": "bc3989b2819eedcbd466f144911a7a64a30945b6c0460e78ec3daa5ecafd3be5",
-   "size": 414
-  },
-  "assets/lib/angular-file-upload/examples/without-bootstrap/uploads/gap.txt": {
-   "sha512": "cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce",
-   "size": 0
-  },
-  "assets/lib/angular-file-upload/gulpfile.js": {
-   "sha512": "fa9b951e691be380af345c193fa50693e8fd0fb5157c683f5f484d75d94df96c",
-   "size": 719
-  },
-  "assets/lib/angular-file-upload/license.txt": {
-   "sha512": "6bd4118515b32062d79df87875053aa78856f2cf5b20bda1622349a8aa066de0",
-   "size": 1092
-  },
-  "assets/lib/angular-file-upload/package.json": {
-   "sha512": "d8073d124eacf316ce086f623908b11cd2b9ee5477cf741f370ac6ad27969774",
+  "assets/lib/angular-sanitize/package.json": {
+   "sha512": "1d914dfa8ee2f07fd0d5973d95d710fc9fe95d2fc6166991f4923a7d632005dc",
    "size": 704
-  },
-  "assets/lib/angular-file-upload/src/config.json": {
-   "sha512": "9e0b3bfe5e93b00a0156de5ef03ddcef0e3951991bb1a8c2e71ddd872ec2f473",
-   "size": 35
-  },
-  "assets/lib/angular-file-upload/src/directives/FileDrop.js": {
-   "sha512": "37550610b4964ede90509c06be78d23fb9fa5904c869a844624a7a26451a068d",
-   "size": 813
-  },
-  "assets/lib/angular-file-upload/src/directives/FileOver.js": {
-   "sha512": "dc9a53ca5211955b72cf644b23b98cc396d80a726a35e68969ecebeeed761545",
-   "size": 691
-  },
-  "assets/lib/angular-file-upload/src/directives/FileSelect.js": {
-   "sha512": "c1d2b2b36bbad5988cc22b45f317c7926b37106165c8de0580581daa3230d39a",
-   "size": 805
-  },
-  "assets/lib/angular-file-upload/src/index.js": {
-   "sha512": "dbd9084dc7de61ff49d628b56801ebeab4479950156190d930c1514b7992d26c",
-   "size": 1847
-  },
-  "assets/lib/angular-file-upload/src/services/FileDirective.js": {
-   "sha512": "8dce74e62d968fdda6f42d9b68fe9eb050c3606e8145463377db54c4de22ed29",
-   "size": 1796
-  },
-  "assets/lib/angular-file-upload/src/services/FileDrop.js": {
-   "sha512": "b3df894ebef82df5ed7fc1bcf1d73f8f44460ec0fdf5658b7db6d659bc12fd51",
-   "size": 3266
-  },
-  "assets/lib/angular-file-upload/src/services/FileItem.js": {
-   "sha512": "6d65376233ddc232a258c3fa494b1b49d94de916757f3ccad84bf2a52a1eb704",
-   "size": 6894
-  },
-  "assets/lib/angular-file-upload/src/services/FileLikeObject.js": {
-   "sha512": "8b268c2e650a724b4108610d173e132bbc909a5869145cd861207ff1745100a0",
-   "size": 1503
-  },
-  "assets/lib/angular-file-upload/src/services/FileOver.js": {
-   "sha512": "cb2a00cc1213862fc55b302dede86ced93231d2ee21a02bf046af42e01b27cb0",
-   "size": 1286
-  },
-  "assets/lib/angular-file-upload/src/services/FileSelect.js": {
-   "sha512": "c3d3a735cd65861ab73e3575a479fa5bd477a3a4d5f78395c5866d850a6baf2f",
-   "size": 2079
-  },
-  "assets/lib/angular-file-upload/src/services/FileUploader.js": {
-   "sha512": "a88bc42327688d55c0f7dfd9ebd640fcf7b945ac6c2798ff9e2e5d0794ac1717",
-   "size": 24050
-  },
-  "assets/lib/angular-file-upload/src/values/options.js": {
-   "sha512": "b8adae0361bce42e288932a15d5756c8a1a59bbd8e8cbc3d43b621c2be3a347c",
-   "size": 315
   },
   "assets/lib/angular/angular-animate.min.js": {
    "sha512": "dff68236699f7bc995143e4f54d9122c13ee7b654086b32d70fd316b57306656",
@@ -294,9 +306,1193 @@
    "sha512": "7c60d0ded2382947ccdf961b8427717d4f30d2593f88c9fdd0a3211595bd9f42",
    "size": 148199
   },
-  "assets/lib/jquery/jquery.min.js": {
+  "assets/lib/angulartics/CHANGELOG.md": {
+   "sha512": "35c44d51e0ea73d9885220178f3ff6ad42a74f2bd6bf6689241498d07e845289",
+   "size": 6061
+  },
+  "assets/lib/angulartics/Gruntfile.js": {
+   "sha512": "dd14d374376132176a31f0f0d2b44e27d5fc957ae7ede03c653772aa3a886fb4",
+   "size": 2236
+  },
+  "assets/lib/angulartics/LICENSE": {
+   "sha512": "630ad982c50fb7ca5a2f82344c965c59288e226d2400557a9e2e2148479f156e",
+   "size": 1055
+  },
+  "assets/lib/angulartics/README.md": {
+   "sha512": "fc34a7462b375d2a766fc02d3d0b028bc50702056422dac1ff629fbe980920fb",
+   "size": 9577
+  },
+  "assets/lib/angulartics/bower.json": {
+   "sha512": "3aec48b4d0b87e8c37b98e9919cad6c4e60fcad7a8887b1a3c5254ee7c5ea589",
+   "size": 848
+  },
+  "assets/lib/angulartics/dist/angulartics-adobe.min.js": {
+   "sha512": "5d5a8a943d947248f775e7da57fb46025354b10c1f58bdc63e65cb5acc9601f2",
+   "size": 573
+  },
+  "assets/lib/angulartics/dist/angulartics-baidu.min.js": {
+   "sha512": "c2e04db21d031052d23e1da756669a9b32abc08580b27a92469104473a60bb91",
+   "size": 601
+  },
+  "assets/lib/angulartics/dist/angulartics-chartbeat.min.js": {
+   "sha512": "0f47e28fc5747e49db4919d8d2423e3651b35082b098f713d8917e50ced758b6",
+   "size": 523
+  },
+  "assets/lib/angulartics/dist/angulartics-cnzz.min.js": {
+   "sha512": "0db1e4293b59ef31d91beda7140c00d1ee1cc5c1cafad393af2bc4d612905b5a",
+   "size": 349
+  },
+  "assets/lib/angulartics/dist/angulartics-debug.min.js": {
+   "sha512": "070712799b6376f46eb9ee02bb5f3423af7477118978f63a143d1bbeb16f4a58",
+   "size": 388
+  },
+  "assets/lib/angulartics/dist/angulartics-flurry.min.js": {
+   "sha512": "c5a3543fefa146f539d83bd3c4f21fdd3ab3a02c133c48a8b66f214da7a08860",
+   "size": 394
+  },
+  "assets/lib/angulartics/dist/angulartics-ga-cordova-google-analytics-plugin.min.js": {
+   "sha512": "173ad6ed4d3c23c6f6cbdc86869634e306b190dfc093ead10b7ea1f274526e4e",
+   "size": 1220
+  },
+  "assets/lib/angulartics/dist/angulartics-ga-cordova.min.js": {
+   "sha512": "e149dee8f0db75c1457c5c22e95b9450c95d5ca9068676f683b445d0b1e7f998",
+   "size": 1233
+  },
+  "assets/lib/angulartics/dist/angulartics-ga.min.js": {
+   "sha512": "196927104108a62a65d4fcaa2051c5a9932a5cb8a90604ed4e1066d49c11d29f",
+   "size": 1275
+  },
+  "assets/lib/angulartics/dist/angulartics-gtm-cordova.min.js": {
+   "sha512": "4c818e31d349f979cd3a895d420c7a5708f96cf9ff748c3782fe893942203c52",
+   "size": 1359
+  },
+  "assets/lib/angulartics/dist/angulartics-gtm.min.js": {
+   "sha512": "344a378e8eb14cdfde93718a3f47e70984414f0639a26e38ac848b02716a08b2",
+   "size": 674
+  },
+  "assets/lib/angulartics/dist/angulartics-hubspot.min.js": {
+   "sha512": "80947fab5edbf11b5ffa468f1a243f5b3dbb3af643577245b00e17dc5734b3d8",
+   "size": 434
+  },
+  "assets/lib/angulartics/dist/angulartics-intercom.min.js": {
+   "sha512": "7d382b1f4e4994ac762b81b23e8c32f2a6495fda60be2a373ad5c935da58953a",
+   "size": 508
+  },
+  "assets/lib/angulartics/dist/angulartics-kissmetrics.min.js": {
+   "sha512": "4b5a7d081a605d596e73967e4ca8a30be9e34a67090a321fdc9426a504641d88",
+   "size": 591
+  },
+  "assets/lib/angulartics/dist/angulartics-localytics.min.js": {
+   "sha512": "f6901ea73271794091f3fc0fddf2ba2a866e7c8bd3aac113adda5b942266d6bb",
+   "size": 527
+  },
+  "assets/lib/angulartics/dist/angulartics-loggly.min.js": {
+   "sha512": "22efb6da83dc0fa65222cf7065e9d67cd1e1f52072c3129d61773149e7bb6413",
+   "size": 524
+  },
+  "assets/lib/angulartics/dist/angulartics-marketo.min.js": {
+   "sha512": "3eb0b037bead525b250f2a27fefe2183a980bc97c7aca2a6f3cbb22362fefa80",
+   "size": 1286
+  },
+  "assets/lib/angulartics/dist/angulartics-mixpanel.min.js": {
+   "sha512": "2896f1ad824683b912c59a3a9e56838df53006d26409ee47b543a3bfe71781c6",
+   "size": 1167
+  },
+  "assets/lib/angulartics/dist/angulartics-piwik.min.js": {
+   "sha512": "e5f833a039be0b054bb47d1fb96c1e0d78d898b7795a3be0aa0f84265453ddb3",
+   "size": 619
+  },
+  "assets/lib/angulartics/dist/angulartics-scroll.min.js": {
+   "sha512": "12f5392a3684078bcbcff021e29139efbaba61d76bc655330fa4adebbfceec22",
+   "size": 668
+  },
+  "assets/lib/angulartics/dist/angulartics-segmentio.min.js": {
+   "sha512": "761db4a28e72233175f5009f44a0b65212418acee23310148d2296339f182b30",
+   "size": 751
+  },
+  "assets/lib/angulartics/dist/angulartics-splunk.min.js": {
+   "sha512": "ebcc0317cc7030f988702e452c2a74a380d99acbad58f8efff51e89d4fa2be80",
+   "size": 440
+  },
+  "assets/lib/angulartics/dist/angulartics-woopra.min.js": {
+   "sha512": "3688b1a2c063b0ee99307cef8aec63c2d5fa91f6d4a5e7d45519c116ab5c7f0b",
+   "size": 365
+  },
+  "assets/lib/angulartics/dist/angulartics.min.js": {
+   "sha512": "f041da0ee3c87fe008bd7d97965b86c6834c9d6c7d4edc97d8d85353877fa84d",
+   "size": 4001
+  },
+  "assets/lib/angulartics/karma.conf.js": {
+   "sha512": "71c0c2d143779a17c9a49418974853f7ff1781c7d57a98293f47feb94ec71ffa",
+   "size": 453
+  },
+  "assets/lib/angulartics/nuget/angular.analytics.adobe.nuspec": {
+   "sha512": "5557ccd5dba07d3fb59a20e2e06d4e51aae710e9cef3986ab571461a7c560505",
+   "size": 1240
+  },
+  "assets/lib/angulartics/nuget/angular.analytics.baidu.nuspec": {
+   "sha512": "17af2af223da4f0b471a98bfe90995f266cbe2de78a967e496574ef8a4291035",
+   "size": 1211
+  },
+  "assets/lib/angulartics/nuget/angular.analytics.chartbeat.nuspec": {
+   "sha512": "beb83489f34b28ed1cd95a7b90c69ab3c367ae9d063c78c5843e5126dc252990",
+   "size": 1246
+  },
+  "assets/lib/angulartics/nuget/angular.analytics.cnzz.nuspec": {
+   "sha512": "e52ef7f1afbaad3f5d116c208a418c40efb0a4c163b3e8dd6727b65bd1fb3d2a",
+   "size": 1201
+  },
+  "assets/lib/angulartics/nuget/angular.analytics.core.nuspec": {
+   "sha512": "d6362c9730c73066b2692ce516383300fab1067edc299044201ce93157a0a4fa",
+   "size": 1612
+  },
+  "assets/lib/angulartics/nuget/angular.analytics.debug.nuspec": {
+   "sha512": "123abcbff61f087b4d042d9a412b95d4c9eff7fb814e54473621ee700757f0e6",
+   "size": 1208
+  },
+  "assets/lib/angulartics/nuget/angular.analytics.flurry.nuspec": {
+   "sha512": "0ca0ba2060d5fa32f2059fa9fb44120de2e1ee8d450db4d31d5bba59a514b4f1",
+   "size": 1217
+  },
+  "assets/lib/angulartics/nuget/angular.analytics.ga.cordova-google-analytics-plugin.nuspec": {
+   "sha512": "b6fe599bc345321cb09da9f1786fa261daf982642e3948538dcf6ffc392a5ee2",
+   "size": 1415
+  },
+  "assets/lib/angulartics/nuget/angular.analytics.ga.cordova.nuspec": {
+   "sha512": "1f663de8edd4534636ec61d32c16de75c181a2cf5113d094eb8ad69ec2c00d4d",
+   "size": 1308
+  },
+  "assets/lib/angulartics/nuget/angular.analytics.ga.nuspec": {
+   "sha512": "5c4324dcca1c66d251defbf7ced07409eac173415265c01e1ea5188e46689acd",
+   "size": 1236
+  },
+  "assets/lib/angulartics/nuget/angular.analytics.gtm.nuspec": {
+   "sha512": "d15653a0163c0d3487f3db4fbe315d2db53dbe5c39d9b9fc4ccd89583b7b771c",
+   "size": 1261
+  },
+  "assets/lib/angulartics/nuget/angular.analytics.hubspot.nuspec": {
+   "sha512": "972c8b0a5d9e80f95e01d0872b26c8ddb42b0858630852a573f125d1025c63fe",
+   "size": 1226
+  },
+  "assets/lib/angulartics/nuget/angular.analytics.intercom.nuspec": {
+   "sha512": "4cbba69e678d4049dcdaf585279b167dd21c2fdbdb911a69b013ba6964d7da9b",
+   "size": 1235
+  },
+  "assets/lib/angulartics/nuget/angular.analytics.kissmetrics.nuspec": {
+   "sha512": "a893cbb4b17e14558cb7f16a514ec92cbf59fe43b76c40f48a8e49cbd0e375c5",
+   "size": 1262
+  },
+  "assets/lib/angulartics/nuget/angular.analytics.localytics.nuspec": {
+   "sha512": "4f748344775562e6abfe95b53ca844cd4dc749d08b279b9eb9a97265c9228cd6",
+   "size": 1253
+  },
+  "assets/lib/angulartics/nuget/angular.analytics.loggly.nuspec": {
+   "sha512": "387cff67d74e0b5f5b8cce41b30720326f1bd1b9f05f1c36fe4d1df551a327ad",
+   "size": 1217
+  },
+  "assets/lib/angulartics/nuget/angular.analytics.marketo.nuspec": {
+   "sha512": "4ded5f13b75f189d6644bfa35b534f58d357062b81c944499eba54e4692cc246",
+   "size": 1226
+  },
+  "assets/lib/angulartics/nuget/angular.analytics.mixpanel.nuspec": {
+   "sha512": "c342a109e7994bc8166a766bd5de919eea827a12c69b28a6a57de8c85c2ec4a9",
+   "size": 1235
+  },
+  "assets/lib/angulartics/nuget/angular.analytics.piwik.nuspec": {
+   "sha512": "a98c1ae67b026ad03c8376f2ef50158f313b1fdfc790f5ca41702d543e06bc81",
+   "size": 1208
+  },
+  "assets/lib/angulartics/nuget/angular.analytics.scroll.nuspec": {
+   "sha512": "a732a056ebcf70cf7529e7a28fb84e8364c89188d81e5da002b81eaba9527438",
+   "size": 1244
+  },
+  "assets/lib/angulartics/nuget/angular.analytics.segmentio.nuspec": {
+   "sha512": "7c6c4685c41e80a29cb135ca337eaabbaaf9b3b857e12a9d9be6949f709d1986",
+   "size": 1248
+  },
+  "assets/lib/angulartics/nuget/angular.analytics.splunk.nuspec": {
+   "sha512": "9f6b2c1428babddd41819725a9d8fe62337b20d03daf0cfb6950e833f4dc91e0",
+   "size": 1217
+  },
+  "assets/lib/angulartics/nuget/angular.analytics.woopra.nuspec": {
+   "sha512": "126a1b2ebe9c8e2bf6d3ec5e585fa29c809725acaad58a76735a41e16fd95dc5",
+   "size": 1217
+  },
+  "assets/lib/angulartics/package.json": {
+   "sha512": "339c63c1e0a170951e213086733f6abb9156d3af4d28bf4452d5b7de581293ea",
+   "size": 1410
+  },
+  "assets/lib/angulartics/samples/adobe-analytics.html": {
+   "sha512": "df7fa4335ebe9b46e0052a1fb843def606f6eef3c8c5e738bb2ef32de6f07035",
+   "size": 2197
+  },
+  "assets/lib/angulartics/samples/baidu.html": {
+   "sha512": "82f97734232c9fe2b094f72513488e182ada16bd42bea3fc419d96ca26877db3",
+   "size": 2604
+  },
+  "assets/lib/angulartics/samples/chartbeat.html": {
+   "sha512": "c47dbb7ea56e7748fa5a10a3afefa91dc8753326a7e036c8ec88c7deea52419e",
+   "size": 3115
+  },
+  "assets/lib/angulartics/samples/cnzz.html": {
+   "sha512": "741ce799db30ad98f03aebde6a42e063c426cd48ad607189a277eab467151763",
+   "size": 2522
+  },
+  "assets/lib/angulartics/samples/flurry.html": {
+   "sha512": "01493f987e6062127dc609d837323a8d3b606d78f2c053c38dcd1cbe424f1768",
+   "size": 2594
+  },
+  "assets/lib/angulartics/samples/google-analytics.html": {
+   "sha512": "ab551b700498adc8b744a8710f3457379165b81b908ab3b233a121bf857f4c7e",
+   "size": 2867
+  },
+  "assets/lib/angulartics/samples/google-tag-manager.html": {
+   "sha512": "0582ed15fc920623908550b182858887437c463950afb79478fb25019e288ff9",
+   "size": 2929
+  },
+  "assets/lib/angulartics/samples/intercom.html": {
+   "sha512": "2fc11206a11c125468961b6beb4a47c29e4d9a534488ee6b3d341dccbbdd0612",
+   "size": 3186
+  },
+  "assets/lib/angulartics/samples/kissmetrics.html": {
+   "sha512": "0e58bee30007e16ba6cda0925e7e3a1d8461f4484fff94efd4c053fad7aabed2",
+   "size": 2764
+  },
+  "assets/lib/angulartics/samples/localytics.html": {
+   "sha512": "340b119ce756aa85143a913b8911af1dbf616976127e3d2bc9b565c08f60d501",
+   "size": 2553
+  },
+  "assets/lib/angulartics/samples/loggly.html": {
+   "sha512": "b92bfc056077b50654252a02d6e42cd376339de83fd8f5f1585d72617789a138",
+   "size": 2446
+  },
+  "assets/lib/angulartics/samples/loggly.tracker.js": {
+   "sha512": "731994b84fa2ae6ef4422a4b458dff4ea7e307f6678210e96d301af5f4ce9a1e",
+   "size": 4537
+  },
+  "assets/lib/angulartics/samples/marketo.html": {
+   "sha512": "4687299b664f547484837ddc1f03feecf668cd4d76a12c858febc1157b8e23e6",
+   "size": 2391
+  },
+  "assets/lib/angulartics/samples/mixpanel.html": {
+   "sha512": "8aefcf85710d22f8f4ab7e84d92775d520b48059de2de94fa14863cc8fc0eadc",
+   "size": 3490
+  },
+  "assets/lib/angulartics/samples/partials/a.tpl.html": {
+   "sha512": "3ff607b1128bc221cdaa743e437fa99f687e69b7fe1b40835ee7d4604edf1499",
+   "size": 24
+  },
+  "assets/lib/angulartics/samples/partials/b.tpl.html": {
+   "sha512": "b134e983deb9142ee7d0973f36e58c1e281f417a6f85f7f04963ce576759ed62",
+   "size": 24
+  },
+  "assets/lib/angulartics/samples/partials/c.tpl.html": {
+   "sha512": "4c4941fbc0799a538fd39d084d1dc2c2be954da495c4ad4bbfb7a3ba39c76a1d",
+   "size": 24
+  },
+  "assets/lib/angulartics/samples/partials/root.tpl.html": {
+   "sha512": "08339c3ed6f8f51fc372d3b3845a533f42cceae7e4beae1ad02fae0767586c58",
+   "size": 25
+  },
+  "assets/lib/angulartics/samples/piwik.html": {
+   "sha512": "2014967de8888b87b47fc712e553f700e0f3b4bc2849bd675b4bd6a869734b27",
+   "size": 3039
+  },
+  "assets/lib/angulartics/samples/scroll.html": {
+   "sha512": "2f690960a5804926b927be90773d77a5c59066959f150829a41efd84132074f6",
+   "size": 9450
+  },
+  "assets/lib/angulartics/samples/segmentio.html": {
+   "sha512": "c359a5f72e658519afcae0449aea9a140f69467746300f15bdb32b86ed22e67b",
+   "size": 2991
+  },
+  "assets/lib/angulartics/samples/splunk.html": {
+   "sha512": "79d313cce780b349e478dda2092fe61a0d2c6e07a772f3a2c71c451a2707a23d",
+   "size": 2832
+  },
+  "assets/lib/angulartics/samples/woopra.html": {
+   "sha512": "f1b744f76b365deea432e34938bbdcc453a0af94fc356f21d5ca744fb3212768",
+   "size": 2942
+  },
+  "assets/lib/angulartics/src/angulartics-adobe.js": {
+   "sha512": "082733e0cb0db05bbe8a76776d2bc5b7fe9ccc54b481c5b503bce1296053bf0b",
+   "size": 1167
+  },
+  "assets/lib/angulartics/src/angulartics-baidu.js": {
+   "sha512": "3c9a964db824f07f83eaf6aeec130c204defd9a98b18e1c22c3a115564a24553",
+   "size": 1145
+  },
+  "assets/lib/angulartics/src/angulartics-chartbeat.js": {
+   "sha512": "7b6632c1f62db30c3d866eafc5005ad73f7c024afb2186d741f8d2f3bb1f16cf",
+   "size": 796
+  },
+  "assets/lib/angulartics/src/angulartics-cnzz.js": {
+   "sha512": "5f43cfc7fdd812db3b3290c34ae24f78c29018f08c6947b236514e8f301fc5b6",
+   "size": 746
+  },
+  "assets/lib/angulartics/src/angulartics-debug.js": {
+   "sha512": "e36d4f697bfcbcc411afb194f8a3326a5aea7875be0eeb952155b4729ad29551",
+   "size": 682
+  },
+  "assets/lib/angulartics/src/angulartics-flurry.js": {
+   "sha512": "60517836305b74886806fe9438b006b486d6b181e800066316565fe3ab501dc4",
+   "size": 691
+  },
+  "assets/lib/angulartics/src/angulartics-ga-cordova-google-analytics-plugin.js": {
+   "sha512": "5c33a98a3238ebbcd56f7b7ac4668d6d6cffe478bc9f7e0b157bd3a3dbe63345",
+   "size": 2454
+  },
+  "assets/lib/angulartics/src/angulartics-ga-cordova.js": {
+   "sha512": "5536edcde5fb495402236bb3b88705b4dfaca75750341b83b25d52d09eb83ff5",
+   "size": 2473
+  },
+  "assets/lib/angulartics/src/angulartics-ga.js": {
+   "sha512": "59b9e659df0d0e4e3f61dfe90b7827f8b0a620685ae3a9508ca49f34217f676e",
+   "size": 3419
+  },
+  "assets/lib/angulartics/src/angulartics-gtm-cordova.js": {
+   "sha512": "faea80bc48b07caf7fc5f6b0b31003e23be60e9b9efc458105aab22250ec0ec9",
+   "size": 4271
+  },
+  "assets/lib/angulartics/src/angulartics-gtm.js": {
+   "sha512": "1493b45c623efd7f4acf58e803d719700ce66cf10f2ad28318bf979f804e2147",
+   "size": 1604
+  },
+  "assets/lib/angulartics/src/angulartics-hubspot.js": {
+   "sha512": "eee37b958e91c1c8b2be2b69b6fdff3426fd5e32849a8f87580d0ad678708227",
+   "size": 1129
+  },
+  "assets/lib/angulartics/src/angulartics-intercom.js": {
+   "sha512": "11fe66a9945e04cd7109b1a54c676380a0b2be4b65562fb6bb1b0bcc37fce08e",
+   "size": 1156
+  },
+  "assets/lib/angulartics/src/angulartics-kissmetrics.js": {
+   "sha512": "b21bdc4dc90d03228d39244cea18ad4a6a2d1f31c8577e25fd53bcf8b1b51adc",
+   "size": 1257
+  },
+  "assets/lib/angulartics/src/angulartics-localytics.js": {
+   "sha512": "33cc7bae1b06bad3fa063a6b4aa67cc6f891784350390c94e21e6f67c76f498e",
+   "size": 1314
+  },
+  "assets/lib/angulartics/src/angulartics-loggly.js": {
+   "sha512": "6b1800faba8cd97280b6e3f2b906c8f723c0d7d40ac499e76a1863d5fa73eb5f",
+   "size": 966
+  },
+  "assets/lib/angulartics/src/angulartics-marketo.js": {
+   "sha512": "c1171950fd1e2e4b9e38c3985f84e9a39722f890a2956bbcc9e948b40a645f36",
+   "size": 2469
+  },
+  "assets/lib/angulartics/src/angulartics-mixpanel.js": {
+   "sha512": "a8432da73f94e7f83f794150e6891b6aff647ca80869305d0c35261bdadbe920",
+   "size": 1905
+  },
+  "assets/lib/angulartics/src/angulartics-piwik.js": {
+   "sha512": "085efe0b72ea3b40bbf64451dcee9b3d1af96a0f47f3ce11dee5728d6d91684a",
+   "size": 1666
+  },
+  "assets/lib/angulartics/src/angulartics-scroll.js": {
+   "sha512": "ae074a3994217b33fee7d894006afba0904d53d6544a03d6caa1a5a92c5270d7",
+   "size": 1281
+  },
+  "assets/lib/angulartics/src/angulartics-segmentio.js": {
+   "sha512": "5c3193b76c348cfed9bdba4d17b4284058290a23a093a48deb8b72cf4573976f",
+   "size": 2437
+  },
+  "assets/lib/angulartics/src/angulartics-splunk.js": {
+   "sha512": "1a862e3f9dbf795e9bbf44d8bb2c80e046816f3c31bcc6ccf989ee40b05d7f46",
+   "size": 998
+  },
+  "assets/lib/angulartics/src/angulartics-woopra.js": {
+   "sha512": "503a062a0e32665307329ed0aa085916a04ee9f85c1dfc0edd431b1d48e92cdf",
+   "size": 641
+  },
+  "assets/lib/angulartics/src/angulartics.js": {
+   "sha512": "85e4967eeb96742ad3c24f4427e3cb78a36c0ad2b5ba5bcd4a6110b39153d5c0",
+   "size": 9512
+  },
+  "assets/lib/angulartics/test/angularticsSpec.js": {
+   "sha512": "062f41877ff8497ee819210bd3fffde08e103274403e1628c207be4423f29581",
+   "size": 7603
+  },
+  "assets/lib/jquery/AUTHORS.txt": {
+   "sha512": "576c722818ab54be020a6fbb2668a585b0856f5fe3cd4cd571d661a7f0a0c8d3",
+   "size": 11012
+  },
+  "assets/lib/jquery/LICENSE.txt": {
+   "sha512": "0f6e8026e73065cafb93ce1b6cc2f97639b5c5444732825d841e41d9410d47cc",
+   "size": 1606
+  },
+  "assets/lib/jquery/README.md": {
+   "sha512": "6749433f757d93f6d5ade40b08d6921119d48e8bbf0cdeeab5810a51dfd8a9c1",
+   "size": 1794
+  },
+  "assets/lib/jquery/bower.json": {
+   "sha512": "7a812e459693e4b649846e4d33d3257cebe2d185f6add6903a6bfb65d8810c74",
+   "size": 190
+  },
+  "assets/lib/jquery/dist/core.js": {
+   "sha512": "ba48a4ff9bea74da57b8d25c4d12872be000081d10efdad6cefd371a17032adc",
+   "size": 11329
+  },
+  "assets/lib/jquery/dist/jquery.js": {
+   "sha512": "8865e0afe1af87ef753921c1e1db747ee5acf35ddad7475f32e438cb2350d830",
+   "size": 263767
+  },
+  "assets/lib/jquery/dist/jquery.min.js": {
    "sha512": "ab3ad9a98fe431508461ebbf8029bc536f34d16cfef8b4c62b8a62b56fe2b30a",
    "size": 86351
+  },
+  "assets/lib/jquery/dist/jquery.min.map": {
+   "sha512": "522e9298e4c99ad3e02695ecaf556de263f9d457299509729180ef58cbcdbe4d",
+   "size": 131041
+  },
+  "assets/lib/jquery/dist/jquery.slim.js": {
+   "sha512": "5ff4eb3b99405689fc08124810c101d6162742c2acc89876fb47409b0a56c8f5",
+   "size": 210659
+  },
+  "assets/lib/jquery/dist/jquery.slim.min.js": {
+   "sha512": "c4048a578361c2c4cec371e2ab377e92f4641377a259bc3505af05f9f416db2a",
+   "size": 68952
+  },
+  "assets/lib/jquery/dist/jquery.slim.min.map": {
+   "sha512": "d37a0d4ddcc5ab175c88f43932377bc9310b69f5ea1761fe428db7d492afdc2c",
+   "size": 103382
+  },
+  "assets/lib/jquery/external/sizzle/LICENSE.txt": {
+   "sha512": "2cc29777651f1bd52d7133eeaede7248f00862431683894936f50b1297c64557",
+   "size": 1606
+  },
+  "assets/lib/jquery/external/sizzle/dist/sizzle.js": {
+   "sha512": "15d3f4628a7c6cbfe924b409d293cf75628aae8d4c9d73fd58daa72cb158b048",
+   "size": 63623
+  },
+  "assets/lib/jquery/external/sizzle/dist/sizzle.min.js": {
+   "sha512": "966ba0da7b601280f350e61c1f657d8784085fc3f3a82e39754714c6a0751177",
+   "size": 19576
+  },
+  "assets/lib/jquery/external/sizzle/dist/sizzle.min.map": {
+   "sha512": "627e2730106f70755a80f6941160c1902bb76961debe187942dd78df9d3e55a4",
+   "size": 30397
+  },
+  "assets/lib/jquery/src/ajax.js": {
+   "sha512": "31672e3df20a85fe56569b8ea87780f6897f7be8726c2c8ab5d7d319ce8c4d54",
+   "size": 22222
+  },
+  "assets/lib/jquery/src/ajax/jsonp.js": {
+   "sha512": "c35cafe243e6b9d7943313d5b3cf633d1bcaf226ac8a37e629f4398535dfa641",
+   "size": 2728
+  },
+  "assets/lib/jquery/src/ajax/load.js": {
+   "sha512": "88bab120e95dbdbd797bfbd60fef27260781d969ffe8b7457923a7082965d9f1",
+   "size": 1825
+  },
+  "assets/lib/jquery/src/ajax/parseXML.js": {
+   "sha512": "9b906ab733d2d9e5522adc2a26f1296dc3bbdc63678b3c0954bee377909c0ef6",
+   "size": 559
+  },
+  "assets/lib/jquery/src/ajax/script.js": {
+   "sha512": "eb4674385431ec96f802c681856757cd0f2948566ed4f7b6db2c2ec33b5318ba",
+   "size": 1583
+  },
+  "assets/lib/jquery/src/ajax/var/location.js": {
+   "sha512": "a7f3a683b36321d00e7d9d7e1458c2e615ebe716af044f60df0db91c9676e858",
+   "size": 67
+  },
+  "assets/lib/jquery/src/ajax/var/nonce.js": {
+   "sha512": "73b25ff83a6c48f75910a98644ee19715b412f193adbc98fc75675c6f3249d95",
+   "size": 91
+  },
+  "assets/lib/jquery/src/ajax/var/rquery.js": {
+   "sha512": "b2150ddc830332f03eb408a78323106a41a5398444cc5735cabb389cae82398a",
+   "size": 60
+  },
+  "assets/lib/jquery/src/ajax/xhr.js": {
+   "sha512": "5873d39d035ea5f68fde20c1e6ad83e067fb6ff24c09b210914450383275fbe5",
+   "size": 4298
+  },
+  "assets/lib/jquery/src/attributes.js": {
+   "sha512": "85bc994858e9bf10bb313085eb7c85d2a6df3add0a4e73f166a3ad9339cd30a6",
+   "size": 217
+  },
+  "assets/lib/jquery/src/attributes/attr.js": {
+   "sha512": "3d6b5952ae9907a15a8213c0b7c0b819da46f4100757e20a367bbec8320e619c",
+   "size": 3099
+  },
+  "assets/lib/jquery/src/attributes/classes.js": {
+   "sha512": "33f0d0191cbcd7c8c6df422d49e83a3dba9fa3f3728fc3ca3d43feaf599ca9b3",
+   "size": 4249
+  },
+  "assets/lib/jquery/src/attributes/prop.js": {
+   "sha512": "5400082358d1bbe248ff704f629e6dce16d9dcc78a2ea604d4c6898fa275b659",
+   "size": 2755
+  },
+  "assets/lib/jquery/src/attributes/support.js": {
+   "sha512": "5b5b59ff22132c6ede8b7c454d344dcbffa4ef62667bfc31580605386ebcd6bc",
+   "size": 786
+  },
+  "assets/lib/jquery/src/attributes/val.js": {
+   "sha512": "d2be2bad95f6cd93618587dafa0066f4fa56cde9bca920f608b6b05b1e914bbd",
+   "size": 4141
+  },
+  "assets/lib/jquery/src/callbacks.js": {
+   "sha512": "3fa0006bf77945ff1172e09366e89403a7c8c3227b48d58a93fb959572febd04",
+   "size": 5483
+  },
+  "assets/lib/jquery/src/core.js": {
+   "sha512": "ba48a4ff9bea74da57b8d25c4d12872be000081d10efdad6cefd371a17032adc",
+   "size": 11329
+  },
+  "assets/lib/jquery/src/core/DOMEval.js": {
+   "sha512": "e19f96cd9ca85c22e59eac85dd1a554d7e6f8aa0f3469d0b39740877df4ef989",
+   "size": 292
+  },
+  "assets/lib/jquery/src/core/access.js": {
+   "sha512": "dfd04c79a21223c400f149ef8c059344826a9c2c89939e65ed24f2935ca35811",
+   "size": 1234
+  },
+  "assets/lib/jquery/src/core/init.js": {
+   "sha512": "b674aa1729d4eb208ceba318fcaba1a4eb7b7de788eb5270c2dcc46c46e54183",
+   "size": 3316
+  },
+  "assets/lib/jquery/src/core/parseHTML.js": {
+   "sha512": "b870f2809f3299f6cdbacbd4b3e58123f4d708380fbb8191c68d838760171ae2",
+   "size": 1604
+  },
+  "assets/lib/jquery/src/core/ready-no-deferred.js": {
+   "sha512": "533a2dccf75ffdfbf1233fcd14ba2c425110e140f0fb62607ff1a3824c3718cb",
+   "size": 2498
+  },
+  "assets/lib/jquery/src/core/ready.js": {
+   "sha512": "187ce2d7b798c2a2c065ca111b448ba5df81dc336499a22a5ea18ed8117c3311",
+   "size": 2250
+  },
+  "assets/lib/jquery/src/core/readyException.js": {
+   "sha512": "11762328d5ffbfbae778f9166e69e63beea3a766e2643b828ea9c0f2604d6b8d",
+   "size": 168
+  },
+  "assets/lib/jquery/src/core/support.js": {
+   "sha512": "1a4519268da96c1ddd0f099df5b904931595a25f0bf271cc86b2a3e2a6b8712e",
+   "size": 631
+  },
+  "assets/lib/jquery/src/core/var/rsingleTag.js": {
+   "sha512": "ac18e4e7cb3c05fae2ab5ec7a0871754eef0dec4670e37c0d6423a0bf6b7d798",
+   "size": 148
+  },
+  "assets/lib/jquery/src/css.js": {
+   "sha512": "50247c164d43e9ae71eebb67cec78374c6d95278445a4c67ccebd89205d87fdb",
+   "size": 11457
+  },
+  "assets/lib/jquery/src/css/addGetHookIf.js": {
+   "sha512": "98c5b2717ea840ce1ccc295f5e4358adfc3386901323cc9e26e73ee27865c186",
+   "size": 530
+  },
+  "assets/lib/jquery/src/css/adjustCSS.js": {
+   "sha512": "4ef5d3f870b519ed9639386cad4fe8653c171137e224a967d8b55584cf9d526b",
+   "size": 1897
+  },
+  "assets/lib/jquery/src/css/curCSS.js": {
+   "sha512": "cc3b07f956e595eb5495fad2df1ef68217fbdaf3137cb6d1932d6ea579fc2f63",
+   "size": 1510
+  },
+  "assets/lib/jquery/src/css/hiddenVisibleSelectors.js": {
+   "sha512": "611f48dc71d9746509144822cf333f29d0e1c523bb65e63ffe934e62a3353810",
+   "size": 317
+  },
+  "assets/lib/jquery/src/css/showHide.js": {
+   "sha512": "91c377f77c57e5b593d73a9c5d5e58327b7238e75e8b6f1d98ae460990c80565",
+   "size": 2304
+  },
+  "assets/lib/jquery/src/css/support.js": {
+   "sha512": "f909c60cf70e28557665649ed1c2b144ffcc9b9cf67ebbe2789db70dfc815fea",
+   "size": 2453
+  },
+  "assets/lib/jquery/src/css/var/cssExpand.js": {
+   "sha512": "881d72d0d90d80cc08428d0fed0d5438e480d9ab305b410b70ab1003f76b014e",
+   "size": 88
+  },
+  "assets/lib/jquery/src/css/var/getStyles.js": {
+   "sha512": "4223788d37af8742f2ffdb52c41357f94bc337bb7ebba79571c80aa86bbb4f30",
+   "size": 401
+  },
+  "assets/lib/jquery/src/css/var/isHiddenWithinTree.js": {
+   "sha512": "230adef5889d8fa00ce582ccdb991ad385b8adb592ba147acc92befe8714af1a",
+   "size": 1290
+  },
+  "assets/lib/jquery/src/css/var/rmargin.js": {
+   "sha512": "f624e09454bbbf9ee6407e963d0e6b0794a7ede662cfa1804cf4decaed03dfe8",
+   "size": 65
+  },
+  "assets/lib/jquery/src/css/var/rnumnonpx.js": {
+   "sha512": "1be7a2b41421e1ca6934304f166ecb1d9e246ad109f8ead6bebcfada630737ae",
+   "size": 131
+  },
+  "assets/lib/jquery/src/css/var/swap.js": {
+   "sha512": "f57e91d168674c6a21f0e01c627e6e5b41fe43c5d00e7f901a338ef706286daa",
+   "size": 520
+  },
+  "assets/lib/jquery/src/data.js": {
+   "sha512": "1051c40e825c50ee80c1c1a5bb793469678155db6fdfaa680c00fd563ec60ff7",
+   "size": 4171
+  },
+  "assets/lib/jquery/src/data/Data.js": {
+   "sha512": "877f8e14374534ff619146e6ee817f0c42559132bd54b637d51755e9cbb14e95",
+   "size": 3943
+  },
+  "assets/lib/jquery/src/data/var/acceptData.js": {
+   "sha512": "649ffddd8a489e204deecd3fd559883e895b05ecacbbc04962e6cc95fb23dfe0",
+   "size": 318
+  },
+  "assets/lib/jquery/src/data/var/dataPriv.js": {
+   "sha512": "b68b1f407231396380a883456be97346d36f4951b533420af5a73e9163031e36",
+   "size": 84
+  },
+  "assets/lib/jquery/src/data/var/dataUser.js": {
+   "sha512": "b68b1f407231396380a883456be97346d36f4951b533420af5a73e9163031e36",
+   "size": 84
+  },
+  "assets/lib/jquery/src/deferred.js": {
+   "sha512": "3946671c4e4cbe1e4731df5cb7f2ef86bd7f5257b9aef5cb944e0658800e4cab",
+   "size": 10729
+  },
+  "assets/lib/jquery/src/deferred/exceptionHook.js": {
+   "sha512": "31615c4d7af647b22b72c59d7222c5d088fde499206216fc5e91ca5fa84043c9",
+   "size": 640
+  },
+  "assets/lib/jquery/src/deprecated.js": {
+   "sha512": "33ff73b6d52b6ef4f75c4f82cacfb6b199f31538306b980b2ba58e31fa0faca0",
+   "size": 596
+  },
+  "assets/lib/jquery/src/dimensions.js": {
+   "sha512": "1d62c9ec4f97894088f5269479ef378dec51e65aa4aa30f6a746f69924bbf78f",
+   "size": 1729
+  },
+  "assets/lib/jquery/src/effects.js": {
+   "sha512": "cb8b7cdd263a1b4a56f4f464075d11680d2213dadef67e109e5dea38018dc7e2",
+   "size": 17234
+  },
+  "assets/lib/jquery/src/effects/Tween.js": {
+   "sha512": "2da1d566f7af6ca48c1e0476ba78c2f686db577d14b51569884cb9d00c3ed874",
+   "size": 3252
+  },
+  "assets/lib/jquery/src/effects/animatedSelector.js": {
+   "sha512": "e8898e8bdf97991f9ac41db6ed4f0e6f5e2cbd1ea67a4034b5dae23ef6a0c80d",
+   "size": 244
+  },
+  "assets/lib/jquery/src/event.js": {
+   "sha512": "cf615a9f2623803fa5d5abbee8ce866f3f1aafcc30f06a7498fe3ca80c3ff827",
+   "size": 19017
+  },
+  "assets/lib/jquery/src/event/ajax.js": {
+   "sha512": "11f547898476e25479986dc16ec2c09f7c8732d73e521920028ef8b71bdbea69",
+   "size": 346
+  },
+  "assets/lib/jquery/src/event/alias.js": {
+   "sha512": "70b93462ae9dc15742cddf9d31d56e9ef56cb09dfcaedb673a3a9451bf5a6f2c",
+   "size": 649
+  },
+  "assets/lib/jquery/src/event/focusin.js": {
+   "sha512": "b8b276aa7d6ff96c7df28a1124a518979070f76f93315cb9c7ea68de1368e522",
+   "size": 1512
+  },
+  "assets/lib/jquery/src/event/support.js": {
+   "sha512": "10adddedd5112a088fc4b042642e3dd3458fac9183f235b3660c706b7c718d8b",
+   "size": 133
+  },
+  "assets/lib/jquery/src/event/trigger.js": {
+   "sha512": "f41ef617d0553cf79337a2ffd5f00cca122209fef6bb8871007337c5eb22bdf5",
+   "size": 5002
+  },
+  "assets/lib/jquery/src/exports/amd.js": {
+   "sha512": "eab59583dc81e07d0f5c261d3c388c123d37110248d5814befb3117cdae6d66d",
+   "size": 1024
+  },
+  "assets/lib/jquery/src/exports/global.js": {
+   "sha512": "5f44a0f168a33a8626898a9f050014019edee0310c973bce00f31543f0014117",
+   "size": 706
+  },
+  "assets/lib/jquery/src/jquery.js": {
+   "sha512": "15127acb7f9b23717f74f947f7e7653fcaa5f7365e89ef41bd6805c2a706c1f1",
+   "size": 650
+  },
+  "assets/lib/jquery/src/manipulation.js": {
+   "sha512": "45b3b096ae80c02333d6a0c1b2a6b9702da6eba524d8069efe9d96dcd1a2678e",
+   "size": 12438
+  },
+  "assets/lib/jquery/src/manipulation/_evalUrl.js": {
+   "sha512": "6534365d11386331bffc8258e65591e56f92797d1b71492b9aed5ae8bc78a0f5",
+   "size": 356
+  },
+  "assets/lib/jquery/src/manipulation/buildFragment.js": {
+   "sha512": "6bac3eff59aedd744141bf0afd60fcc802a8fc8be59b21d5abe6e8c0706fd750",
+   "size": 2454
+  },
+  "assets/lib/jquery/src/manipulation/getAll.js": {
+   "sha512": "dd9029a754b1f28e9681e6b7e286ac2157e68964821cf8ee101fdaf5b2afdb23",
+   "size": 563
+  },
+  "assets/lib/jquery/src/manipulation/setGlobalEval.js": {
+   "sha512": "e6a8d56f834473e266562e6aa1e761cd7bb9a5975cbfe352c54cb857712221b0",
+   "size": 381
+  },
+  "assets/lib/jquery/src/manipulation/support.js": {
+   "sha512": "464ad5c10200fc17ab4f0846f43487d3f9c10cfc50af6efec362753ccff29513",
+   "size": 1034
+  },
+  "assets/lib/jquery/src/manipulation/var/rcheckableType.js": {
+   "sha512": "abf20ac5d6bd509ae6ba0b7cbc1e1ba2e281aa99346be5c9fecc932cec3ca42d",
+   "size": 79
+  },
+  "assets/lib/jquery/src/manipulation/var/rscriptType.js": {
+   "sha512": "ccb784e4fd4009d2ca91a24371063aecca41eb39f08af3089c5c3f3c31afd4e3",
+   "size": 83
+  },
+  "assets/lib/jquery/src/manipulation/var/rtagName.js": {
+   "sha512": "5ab4a28b0dd88a2900f356a5efc2fb70b65a214cf02a3872b724600719a164b0",
+   "size": 88
+  },
+  "assets/lib/jquery/src/manipulation/wrapMap.js": {
+   "sha512": "d2d0c6ac72656dd0e49c8e71bd38ef8c50fcbb2c47933b15021cc17965bdcc75",
+   "size": 798
+  },
+  "assets/lib/jquery/src/offset.js": {
+   "sha512": "a7a2d6af669982622fdbf31f51975c8360e7e9aba7a3b5fec3c387260c5deb9a",
+   "size": 6345
+  },
+  "assets/lib/jquery/src/queue.js": {
+   "sha512": "cafe5482902823b878987b0fbbe0fba50043bec85891c85f2ba4454e17b12fee",
+   "size": 3092
+  },
+  "assets/lib/jquery/src/queue/delay.js": {
+   "sha512": "e950512ea54fcdd39a0d435232e62f656db2ea2a8bc2d96161060735c98acf44",
+   "size": 636
+  },
+  "assets/lib/jquery/src/selector-native.js": {
+   "sha512": "ad521552d892cb98b9d4aba2d415c9afbab870a7b1c5f05b69f15adf290c9fcb",
+   "size": 6394
+  },
+  "assets/lib/jquery/src/selector-sizzle.js": {
+   "sha512": "6ddcee0cec10c44bd77d075c0ff16a92abbe1f709484a2797ab11346bdc99e16",
+   "size": 411
+  },
+  "assets/lib/jquery/src/selector.js": {
+   "sha512": "543f1bacc8c1c316f9fd40b1cf79a47fae8662a23fd9b651a0e892add6f9eea8",
+   "size": 66
+  },
+  "assets/lib/jquery/src/serialize.js": {
+   "sha512": "64844ef7fd17962a2ddab27c2277adeba42c35690499782f114e253c5e289e8e",
+   "size": 3141
+  },
+  "assets/lib/jquery/src/traversing.js": {
+   "sha512": "96127d23218c97e4e5224f2f3c867ee9e7a46b4cee2f68c58a0e9efc093779a0",
+   "size": 4166
+  },
+  "assets/lib/jquery/src/traversing/findFilter.js": {
+   "sha512": "ce857fdb30cd06fc357d3b1763777ae059d8f87eb66f4aeb8b9ad51a7211430b",
+   "size": 2334
+  },
+  "assets/lib/jquery/src/traversing/var/dir.js": {
+   "sha512": "fc5be44e327f03abb70ef6ef98c70ea2646c8500b1c2c8fd399b5d33900a1d31",
+   "size": 371
+  },
+  "assets/lib/jquery/src/traversing/var/rneedsContext.js": {
+   "sha512": "b0402f9fce37366c2ee61f92778e12f819fdc8541f1e9b800bf964dcb9faa86c",
+   "size": 128
+  },
+  "assets/lib/jquery/src/traversing/var/siblings.js": {
+   "sha512": "5a69b795bafa6e5cfd627e834e641082c6a3eb70780d59a9b03fcc617ce7fea4",
+   "size": 218
+  },
+  "assets/lib/jquery/src/var/ObjectFunctionString.js": {
+   "sha512": "eaf7ad63fea1f5401d5ab9495d0d71147fa09026962767285efde6c9795130b8",
+   "size": 110
+  },
+  "assets/lib/jquery/src/var/arr.js": {
+   "sha512": "7ca31f9bc2a8b9979ba8c82170bdd2dd50da9362cee355a6ed1751160d5aa9c5",
+   "size": 54
+  },
+  "assets/lib/jquery/src/var/class2type.js": {
+   "sha512": "17c17a53da42e555d744c2ac7b350a743846cdf802ad4c0f085293664ba41c5a",
+   "size": 82
+  },
+  "assets/lib/jquery/src/var/concat.js": {
+   "sha512": "a7a594db6cbe09f12783495471e867db956c2e02ccf170240a5eae8166fb006e",
+   "size": 81
+  },
+  "assets/lib/jquery/src/var/document.js": {
+   "sha512": "9a5d8b0f33e56eb1c89c85e2824ce0e3325d3170f2eb5d5c1949babfc288e3fd",
+   "size": 67
+  },
+  "assets/lib/jquery/src/var/documentElement.js": {
+   "sha512": "48efd04d836610573db97039f82308b25d511d49a76a6277199c0dfb77cb988a",
+   "size": 105
+  },
+  "assets/lib/jquery/src/var/fnToString.js": {
+   "sha512": "6b25b87cfaa0b02c4b90e31e447bf9a632b6c0aeef6da2fa82b1523e4d5d6f27",
+   "size": 92
+  },
+  "assets/lib/jquery/src/var/getProto.js": {
+   "sha512": "7ac8761880594e82fc6b91c54f8bab203cc5ef74d973ba5d03d33b47e58a5b1e",
+   "size": 73
+  },
+  "assets/lib/jquery/src/var/hasOwn.js": {
+   "sha512": "e44844906b5c5098befc9b1ea909e380abf87459c87eb05a426683591b73ca0e",
+   "size": 110
+  },
+  "assets/lib/jquery/src/var/indexOf.js": {
+   "sha512": "f35f6c6b5eda1a580288de518870d00f86c849ffc846d4d4f2a2e6bc0a4d3313",
+   "size": 82
+  },
+  "assets/lib/jquery/src/var/pnum.js": {
+   "sha512": "641ea8e23e34c868f6306ce7dbac6d55c31acd4f39b982069ce7d7f6a8d9b682",
+   "size": 100
+  },
+  "assets/lib/jquery/src/var/push.js": {
+   "sha512": "ab9d0c125b5c8b9367f097ce8626ac1286c2ddceb65b2090451ed34609aa1b18",
+   "size": 79
+  },
+  "assets/lib/jquery/src/var/rcssNum.js": {
+   "sha512": "11768bfb98fb45d977ac91b2004c4a833b81fa9c482ee807a1a001554f53fa42",
+   "size": 136
+  },
+  "assets/lib/jquery/src/var/rnotwhite.js": {
+   "sha512": "f1d82eeff606930952de9d348c17e167e9ec28fac2c42302abc49e7f400afff7",
+   "size": 62
+  },
+  "assets/lib/jquery/src/var/slice.js": {
+   "sha512": "8c9aef0c1c562635043eb9d508b84e7480bad2bd98d58c03e5064f93c1c5c919",
+   "size": 80
+  },
+  "assets/lib/jquery/src/var/support.js": {
+   "sha512": "0f9b1aa2b8459ba49ade717e9ecc84f4e67ed3160a453e469adaa94661699212",
+   "size": 117
+  },
+  "assets/lib/jquery/src/var/toString.js": {
+   "sha512": "25cbe3669c4fc947f769240eea7a5f24f3309176e4c33380b50dce54e79cf092",
+   "size": 104
+  },
+  "assets/lib/jquery/src/wrap.js": {
+   "sha512": "40aeb6a5ebed19e6e888fe9e55a15e34fd8ebeb044754959d3ff57f672b40616",
+   "size": 1457
+  },
+  "assets/lib/videogular-angulartics/Gruntfile.js": {
+   "sha512": "b66bf941a8b0feccf252797e2ad4cf452191e45d340c400326e8011f5089650a",
+   "size": 1177
+  },
+  "assets/lib/videogular-angulartics/LICENSE": {
+   "sha512": "00e4073e83c7c629146f9a446e0f3e40128f1ce0975d8b4e2a90e82a5c9c23c6",
+   "size": 1073
+  },
+  "assets/lib/videogular-angulartics/README.md": {
+   "sha512": "5f2098206da960d81d6e6052085fbbeaf1f806cfd3f268b44ed50b965243d8c3",
+   "size": 1903
+  },
+  "assets/lib/videogular-angulartics/bower.json": {
+   "sha512": "a056beefbc80d8e0468c33248821718c83cdc6618e401c4a8f12042363a5ad98",
+   "size": 174
+  },
+  "assets/lib/videogular-angulartics/index.js": {
+   "sha512": "63a16d54227d014ae4c854054bad350634a8fe16df3172c8a69d25bc3024370a",
+   "size": 135
+  },
+  "assets/lib/videogular-angulartics/package.json": {
+   "sha512": "7c1cc8d20e47ba610c3f4d6e1c53b951ee18b73d8476de70e6de9866fca36519",
+   "size": 282
+  },
+  "assets/lib/videogular-angulartics/vg-analytics.js": {
+   "sha512": "af50581baa2273f689242eb01ca4ecb3cbd66d8fbf11647f0a8bb0446ac40e9b",
+   "size": 10306
+  },
+  "assets/lib/videogular-angulartics/vg-analytics.min.js": {
+   "sha512": "b10f8773b79e82bb5fa024261a092ab7dc03a3e8f74706a5e196566019b8dcea",
+   "size": 2268
+  },
+  "assets/lib/videogular-buffering/Gruntfile.js": {
+   "sha512": "b66bf941a8b0feccf252797e2ad4cf452191e45d340c400326e8011f5089650a",
+   "size": 1177
+  },
+  "assets/lib/videogular-buffering/LICENSE": {
+   "sha512": "00e4073e83c7c629146f9a446e0f3e40128f1ce0975d8b4e2a90e82a5c9c23c6",
+   "size": 1073
+  },
+  "assets/lib/videogular-buffering/README.md": {
+   "sha512": "678739d9d3ae7b144f1cfb29fd1d00c993d1c032fdfd09ea2e614f75a24d68b9",
+   "size": 1901
+  },
+  "assets/lib/videogular-buffering/bower.json": {
+   "sha512": "7d2546ae0ab228afb9ed046e576b2bf3d3a5b19facb2009233c420e8ebc4acf2",
+   "size": 142
+  },
+  "assets/lib/videogular-buffering/index.js": {
+   "sha512": "8e717234d6f9076e5f225f8b8a1393167b00028c209b40cc2638506d8777b50c",
+   "size": 111
+  },
+  "assets/lib/videogular-buffering/package.json": {
+   "sha512": "c4899b4a39773133b3de0453914260fe651f28bc45d3618d8061171622002920",
+   "size": 239
+  },
+  "assets/lib/videogular-buffering/vg-buffering.js": {
+   "sha512": "533e77be67cefb731f4b72d701aa581acabbdf7b510cf4cb328e96cb3845cc27",
+   "size": 3777
+  },
+  "assets/lib/videogular-buffering/vg-buffering.min.js": {
+   "sha512": "5b2b6cba164ec58df42dbdc59167699efe859ef23b4e24776b2a72747f145152",
+   "size": 1122
+  },
+  "assets/lib/videogular-controls/Gruntfile.js": {
+   "sha512": "b66bf941a8b0feccf252797e2ad4cf452191e45d340c400326e8011f5089650a",
+   "size": 1177
+  },
+  "assets/lib/videogular-controls/LICENSE": {
+   "sha512": "00e4073e83c7c629146f9a446e0f3e40128f1ce0975d8b4e2a90e82a5c9c23c6",
+   "size": 1073
+  },
+  "assets/lib/videogular-controls/README.md": {
+   "sha512": "2c020e197b867bde1446d170b8843e05340e259b45e8d6eff6b4137a6a3025b1",
+   "size": 1897
+  },
+  "assets/lib/videogular-controls/bower.json": {
+   "sha512": "c25390dd917eb1aa18cfc99b1abe93de483cfee42308b6dd614a9fa61903083c",
+   "size": 140
+  },
+  "assets/lib/videogular-controls/index.js": {
+   "sha512": "3a622f82c57c374a402d8bdd2d5c498dd9c67be64ef330fa5d1cc699aeca1f54",
+   "size": 109
+  },
+  "assets/lib/videogular-controls/package.json": {
+   "sha512": "75efb697976e488cf8ed04ea9ee71d97a6389f0381314e83f430b73f650d142c",
+   "size": 238
+  },
+  "assets/lib/videogular-controls/vg-controls.js": {
+   "sha512": "9ecbca93a0ceab8130fa79878d4e6e1d90bc9167fa46cb97e0f9cc83021ae835",
+   "size": 53147
+  },
+  "assets/lib/videogular-controls/vg-controls.min.js": {
+   "sha512": "b894b8d8cf8a0741ede20319ef30d964bad362377dae8371d3ca1de399dcc988",
+   "size": 16496
+  },
+  "assets/lib/videogular-ima-ads/Gruntfile.js": {
+   "sha512": "b66bf941a8b0feccf252797e2ad4cf452191e45d340c400326e8011f5089650a",
+   "size": 1177
+  },
+  "assets/lib/videogular-ima-ads/LICENSE": {
+   "sha512": "f05cbcc531d57a5aab5553a3960edeb27b6eed10ded42bb0c544525615b3461e",
+   "size": 1073
+  },
+  "assets/lib/videogular-ima-ads/README.md": {
+   "sha512": "3a876a98d5244d000295e486f69e2827b4f9e6abeabfccedbf94a804f7b29f54",
+   "size": 2482
+  },
+  "assets/lib/videogular-ima-ads/bower.json": {
+   "sha512": "9d92d226b287e972b04ce5bc24ab1ede21966909def86d1db74f423aee200090",
+   "size": 138
+  },
+  "assets/lib/videogular-ima-ads/index.js": {
+   "sha512": "b5d76b3449acd8980c431701ea08ca00d9563ad34911e2275db5ae35bbb1baa9",
+   "size": 106
+  },
+  "assets/lib/videogular-ima-ads/package.json": {
+   "sha512": "87bbafb6d001022e9eb66a28bdd9c143cb293f6f2fb92587211561e67993c7f8",
+   "size": 237
+  },
+  "assets/lib/videogular-ima-ads/vg-ima-ads.js": {
+   "sha512": "ee4c68978233fc9db94129160644a0ceae7b8e57cf6d0f2056cdda719bf73022",
+   "size": 10948
+  },
+  "assets/lib/videogular-ima-ads/vg-ima-ads.min.js": {
+   "sha512": "17c64df3c4d9f858b46d12dc3dabe85538cad216e00b1e81b48d2dc8724d29b9",
+   "size": 4002
+  },
+  "assets/lib/videogular-overlay-play/Gruntfile.js": {
+   "sha512": "b66bf941a8b0feccf252797e2ad4cf452191e45d340c400326e8011f5089650a",
+   "size": 1177
+  },
+  "assets/lib/videogular-overlay-play/LICENSE": {
+   "sha512": "00e4073e83c7c629146f9a446e0f3e40128f1ce0975d8b4e2a90e82a5c9c23c6",
+   "size": 1073
+  },
+  "assets/lib/videogular-overlay-play/README.md": {
+   "sha512": "855b75571eba286166de018714a22a18843f6c9100e15aeb00c9c48eb7a73036",
+   "size": 1913
+  },
+  "assets/lib/videogular-overlay-play/bower.json": {
+   "sha512": "ddd5da22fc579f637094b315c790f4c0de63a1544875219a6006f6f77a40463d",
+   "size": 148
+  },
+  "assets/lib/videogular-overlay-play/index.js": {
+   "sha512": "4874f94d80dde215c1ea27cdb1eace5d6084a25cc0f75be5e6bd2d3cfbb85211",
+   "size": 116
+  },
+  "assets/lib/videogular-overlay-play/package.json": {
+   "sha512": "1b2f2105984ffa894e67fe7a4d541686c04322e90bc07abe399a7b5b4944c8fe",
+   "size": 242
+  },
+  "assets/lib/videogular-overlay-play/vg-overlay-play.js": {
+   "sha512": "9367947d62a853dac2e88a328a6f7e48764913194147520eb38bf9c1176d7675",
+   "size": 2568
+  },
+  "assets/lib/videogular-overlay-play/vg-overlay-play.min.js": {
+   "sha512": "9a1c98346395e7d0611f8cfe721ad83d00741b2585d02e9c3cb2bb287c8802b8",
+   "size": 846
+  },
+  "assets/lib/videogular-poster/Gruntfile.js": {
+   "sha512": "b66bf941a8b0feccf252797e2ad4cf452191e45d340c400326e8011f5089650a",
+   "size": 1177
+  },
+  "assets/lib/videogular-poster/LICENSE": {
+   "sha512": "00e4073e83c7c629146f9a446e0f3e40128f1ce0975d8b4e2a90e82a5c9c23c6",
+   "size": 1073
+  },
+  "assets/lib/videogular-poster/README.md": {
+   "sha512": "ea16ea4791176699db1f0ee8e8d6733c780cbe42d04bde14e3e6e705ef58a887",
+   "size": 1889
+  },
+  "assets/lib/videogular-poster/bower.json": {
+   "sha512": "ecdcc18fde77d0345e9fac992c0a4a94bb6495170d7d37acbc9fe7ec0a346909",
+   "size": 136
+  },
+  "assets/lib/videogular-poster/index.js": {
+   "sha512": "7bff4fbf11dfb1b2a4e1617dc5563ab81123a8bafda78a5b82c81d8e3524dd26",
+   "size": 105
+  },
+  "assets/lib/videogular-poster/package.json": {
+   "sha512": "02440018c0ab7cae9c0553259782f1558861325f0b88e942b61eacfbe387e0b1",
+   "size": 236
+  },
+  "assets/lib/videogular-poster/vg-poster.js": {
+   "sha512": "cba2a9155bfae750bfbf4887fb1e2827c573c708be5b35e6ab16b29add145495",
+   "size": 1798
+  },
+  "assets/lib/videogular-poster/vg-poster.min.js": {
+   "sha512": "a2875381aa96d16c66332fce7c501dffdd80cf4e5571fd40166a5fe3914f7c21",
+   "size": 528
+  },
+  "assets/lib/videogular-themes-default/Gruntfile.js": {
+   "sha512": "b66bf941a8b0feccf252797e2ad4cf452191e45d340c400326e8011f5089650a",
+   "size": 1177
+  },
+  "assets/lib/videogular-themes-default/LICENSE": {
+   "sha512": "00e4073e83c7c629146f9a446e0f3e40128f1ce0975d8b4e2a90e82a5c9c23c6",
+   "size": 1073
+  },
+  "assets/lib/videogular-themes-default/README.md": {
+   "sha512": "97b398dea1bde39c80c4c9f12630c072ab19fb613672e0623ddf2c41d025acd5",
+   "size": 1801
+  },
+  "assets/lib/videogular-themes-default/bower.json": {
+   "sha512": "d54c0f170974843e8985a54c5e711b3a51a9e4313be1f763315203f76ba8aed5",
+   "size": 311
+  },
+  "assets/lib/videogular-themes-default/fonts/videogular.dev.svg": {
+   "sha512": "fdd6592253a996beee0cde7ec796ffbd21740448fc08d16b11426ab9f1498ec6",
+   "size": 5639
+  },
+  "assets/lib/videogular-themes-default/fonts/videogular.eot": {
+   "sha512": "c75112b0d88a2b14c6e30cc99865d1394d4e4f608513e474329c39f5c2df97cd",
+   "size": 2544
+  },
+  "assets/lib/videogular-themes-default/fonts/videogular.svg": {
+   "sha512": "7e98167c67730bde8f041e9e4ffea3797732fec50bc46561806838952ef6044d",
+   "size": 5127
+  },
+  "assets/lib/videogular-themes-default/fonts/videogular.ttf": {
+   "sha512": "f7b136395bae1cd8069dc65cda033e756a7fc30158d41a30e859167edc835893",
+   "size": 2380
+  },
+  "assets/lib/videogular-themes-default/fonts/videogular.woff": {
+   "sha512": "73ef31a2844e8df48ef52416073f60c295f3d0698f121ce10fdc30ba03f73849",
+   "size": 1948
+  },
+  "assets/lib/videogular-themes-default/package.json": {
+   "sha512": "624b062d6a62b16962e2e84a33601abe422ff5154f2f4910f3f034ae04cc6dab",
+   "size": 250
+  },
+  "assets/lib/videogular-themes-default/videogular.css": {
+   "sha512": "92b4542588932616cf19ad59da2c58122bd0b0ec13d9d8a15793f9dca1548e75",
+   "size": 14913
+  },
+  "assets/lib/videogular-themes-default/videogular.css.map": {
+   "sha512": "92815a730865699a4556a2be12c52c2844781259d548d81b2bcad6424a34b7f2",
+   "size": 8021
+  },
+  "assets/lib/videogular-themes-default/videogular.min.css": {
+   "sha512": "57afacf328adbb85743073e86dae0ae0db895d471fe5d42fe5e1680db92cf1e1",
+   "size": 11264
+  },
+  "assets/lib/videogular/Gruntfile.js": {
+   "sha512": "b66bf941a8b0feccf252797e2ad4cf452191e45d340c400326e8011f5089650a",
+   "size": 1177
+  },
+  "assets/lib/videogular/LICENSE": {
+   "sha512": "00e4073e83c7c629146f9a446e0f3e40128f1ce0975d8b4e2a90e82a5c9c23c6",
+   "size": 1073
+  },
+  "assets/lib/videogular/README.md": {
+   "sha512": "84631604ebf76bfed1929cee8fdb599682bce999e1badd2f9ab715858ac10550",
+   "size": 1757
+  },
+  "assets/lib/videogular/bower.json": {
+   "sha512": "bb6ed7ce0422eb2292f96b4ebcd0ea0e461e70f7dcd928545af102650061ce5e",
+   "size": 161
+  },
+  "assets/lib/videogular/index.js": {
+   "sha512": "4cedcb5f5f2beebe22fdea6abbe935151617770c558640c700ebe268b2eeb77c",
+   "size": 119
+  },
+  "assets/lib/videogular/package.json": {
+   "sha512": "997cef1e558447fc40dcf35959ea02462752242df0b30a806c48b300418f02cb",
+   "size": 258
+  },
+  "assets/lib/videogular/videogular.js": {
+   "sha512": "bd26f26a02dddec74e9c4ef77add6b0a20aa471fcf100df182cba70213136ee0",
+   "size": 63473
+  },
+  "assets/lib/videogular/videogular.min.js": {
+   "sha512": "aa498c5e99a5da70528db42f037391a831904230fef39dc547ba756f9a27eb9b",
+   "size": 20513
+  },
+  "assets/lib/waypoints/CHANGELOG.md": {
+   "sha512": "1037cc40bb7cd4ce18ad17fb5a9518893edaae4cc0b8dd03a1e326d23f9df98b",
+   "size": 4116
+  },
+  "assets/lib/waypoints/README.markdown": {
+   "sha512": "6e2291c60e1cd74ed0a93099895c5fd071f380f456a9a7421d501c536fc17d9b",
+   "size": 2620
+  },
+  "assets/lib/waypoints/bower.json": {
+   "sha512": "279289ad00264813961eabcfe40041c1bd7ec534484c183e76181aae6fddc762",
+   "size": 396
+  },
+  "assets/lib/waypoints/licenses.txt": {
+   "sha512": "2d7f88bde43c659abed1ca0d67440f7cabe0c84f4a342df9059e7641bf4e9c05",
+   "size": 1153
+  },
+  "assets/lib/waypoints/package.json": {
+   "sha512": "8e96094d033a1f026f6f4972bb1be81aa1ffef669936cbc1b7dbf19e8a310afc",
+   "size": 490
+  },
+  "assets/lib/waypoints/shortcuts/infinite-scroll/waypoints-infinite.js": {
+   "sha512": "1e7c36ea88b7be2208b2170cd1ece1ffaa2b1566147b1d28766981c849e0c4c7",
+   "size": 2081
+  },
+  "assets/lib/waypoints/shortcuts/infinite-scroll/waypoints-infinite.min.js": {
+   "sha512": "370922cfd7cd907e5766c559988e8f662572060d6c9acea64e8fcaf83237cce4",
+   "size": 1233
+  },
+  "assets/lib/waypoints/shortcuts/sticky-elements/waypoints-sticky.js": {
+   "sha512": "542a503eb2a02024791ccb5d4e78623632cc7d8c11b3997acac5a3283cb4f731",
+   "size": 1956
+  },
+  "assets/lib/waypoints/shortcuts/sticky-elements/waypoints-sticky.min.js": {
+   "sha512": "84faa44fcccf0bb2d6003c76f81374bbfbe8b1e9be927fa6a6e52de787494154",
+   "size": 1188
+  },
+  "assets/lib/waypoints/waypoints.js": {
+   "sha512": "89cb344db2f2f5857931bea363701683eca320f13e2a9e656481f5c4b3c928c0",
+   "size": 16795
+  },
+  "assets/lib/waypoints/waypoints.min.js": {
+   "sha512": "3ed54e3cc1d7cdddaaa53ae6f34c2534527fb0c00b300f146f44627e6e98515c",
+   "size": 8044
   },
   "assets/lib/zeronet/ZeroChat.coffee": {
    "sha512": "b4d9538aa3f09a18cb7336d20366c7e885a705a9b08583edba30ef656113625d",
@@ -314,24 +1510,48 @@
    "sha512": "bc65f2262c309aa44e0c0a28789725fb847a3ec20a043c28fb4a29cd9973c31e",
    "size": 2976
   },
+  "data.json": {
+   "sha512": "04744d114c63853def6d3275ed64105124a016b67cdc63a0f40d3da55ca85784",
+   "size": 1052
+  },
   "index.html": {
-   "sha512": "00a3b770b283a9b593f221a2fa86b164163a7548139fd2db87e68c88f5c1f421",
-   "size": 1775
+   "sha512": "54300158b7fb1a00021a001eba6c219a0b40d77106965da894bf24efc0cde233",
+   "size": 4320
+  },
+  "uploads/images/2963571735_b3388ae726_o.jpg": {
+   "sha512": "eea60e84151eb790ffb66d09871968186c92bef6d5f9c347ffeb4b856526f6f8",
+   "size": 241790
   },
   "uploads/images/77857d973c2cb56ed6d56b6afddefec2.jpg": {
    "sha512": "779fabb683255334f6a2dd71d0bcec5f70c6b4b7b01b01a5090ba34798d3b787",
    "size": 920830
+  },
+  "uploads/images/download.mp4": {
+   "sha512": "396be8dc1233e430cbe7423c0cddfb1c6444f8df2666603eb4298227eeabe3f6",
+   "size": 575773
+  },
+  "uploads/posters/asdasdasdsa.png": {
+   "sha512": "c0415a7bd2060c9c592d14ceed86370b2933ef1f5fc3697eaac5c5115f0e041b",
+   "size": 28637
+  },
+  "uploads/posters/bearz.png": {
+   "sha512": "864bbf1befebe58bbc3fad8e10af693c0380db5cb1c1dc2879864ba905b23df6",
+   "size": 46063
+  },
+  "uploads/videos/download.mp4": {
+   "sha512": "396be8dc1233e430cbe7423c0cddfb1c6444f8df2666603eb4298227eeabe3f6",
+   "size": 575773
   }
  },
  "ignore": "README.md",
- "modified": 1469647281.952981,
+ "modified": 1469727934.45076,
  "sign": [
-  20012961478928551808543870711136285194373864544766677258665098747239794384692,
-  53127824742795113373560741852880927851696510469378430809228858833900640560296
+  110153847300253750825539448613416438659835027839894319746641782744418839928085,
+  68523340992331758929297053680276705401082363019749650820502642919027231502062
  ],
  "signers_sign": "HOHbiQ+9FdapkUv9VXDWtf5xKL9k7+0y9M4R4FmrpJU8zV1SJzvgqiVBBlifp4SmgilTn2ZOy8/HhB0erkC1hPY=",
  "signs": {
-  "1N8yMhHBPuXgS4iegJ39vaBBgSEejkaKJ7": "HAwoE97k+01bfZcJ1OIpHiq6fDIIN6/MDrnSmE7J8Fq84PF1t9Yvn3tMY++NJxZWfZkzZlRS0bUvr6sCZr7bAhA="
+  "1N8yMhHBPuXgS4iegJ39vaBBgSEejkaKJ7": "HDV+CsQzH0Zd8v/y2b2HqXk8FtkG/TXECYLti7Sm6qR1o19zpQEkyM58U5utdCyHml4K2/6yK6NaexE45Y46NOY="
  },
  "signs_required": 1,
  "title": "1N8yMhHBPuXgS4iegJ39vaBBgSEejkaKJ7 - ZeroNet_",

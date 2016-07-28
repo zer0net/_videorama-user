@@ -7,7 +7,13 @@ angular.module('ZeroVidzUser').directive('fileModel', ['$parse', function ($pars
             
             element.bind('change', function(){
                 scope.$apply(function(){
-                    modelSetter(scope, element[0].files[0]);
+                    var File = element[0].files[0];
+                    modelSetter(scope, File);
+                    if (File.type.indexOf('image') > -1){
+                        scope.showPreviewImage(File);
+                    } else if (File.type.indexOf('video') > -1){
+                        scope.showPreviewVideo(File);
+                    }
                 });
             });
         }
