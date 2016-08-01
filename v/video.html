@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html ng-app="ZeroVidzUser" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+	<title>ZeroVidz User</title>
+
+	<!-- CSS -->
+		<!-- lib -->
+		<link href="../assets/lib/angular-material/angular-material.css" rel="stylesheet" type="text/css"/>
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+		<!-- ../app -->
+		<link href="../assets/css/style.css" rel="stylesheet" type="text/css"/>
+	<!-- /CSS -->
+
+	<!-- HTML5 Shim -->
+	<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<!--<base href="/">-->
+
+</head>
+
+<body class="ng-cloak" ng-controller="MainCtrl" ng-init="init()">
+
+	<md-toolbar layout-padding class="md-hue-2 header" layout="row">
+		<div class="pull-left col-xs-10">
+		<h3><a href="/{{site_address}}">ZeroVidz User Interface</a></h3>
+		</div>
+		<div class="pull-right col-xs-2">
+        <md-button class="md-primary md-raised edgePadding">
+        	<a href="/{{site_address}}/v/upload.html">Upload</a>
+        </md-button>
+        </div>
+	</md-toolbar>
+
+	<section layout="row"  class="container">
+
+	    <!-- MAIN -->
+	    <md-content flex layout-padding layout="row" class="main-content">
+
+		    <!--  video page section -->
+		    <section id="video-page-section" video-view ng-init="getVideo()" flex="60">
+		    	<md-content  class="md-whiteframe-1dp" layout-padding>
+					<videogular vg-auto-play="player.autoPlay" vg-player-ready="onPlayerReady($API)" vg-theme="player.theme" ng-if="player" class="{{screenSize}}">
+						<vg-media vg-src="player.sources"
+								vg-tracks="player.tracks">
+						</vg-media>
+						<vg-controls>
+							<vg-play-pause-button></vg-play-pause-button>
+							<vg-time-display>{{ currentTime | date:"mm:ss" }}</vg-time-display>
+							<vg-scrub-bar>
+								<vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+							</vg-scrub-bar>
+							<vg-time-display>{{ timeLeft | date:"mm:ss" }}</vg-time-display>
+							<vg-volume>
+								<vg-mute-button></vg-mute-button>
+								<vg-volume-bar></vg-volume-bar>
+							</vg-volume>
+							<vg-fullscreen-button ng-click="onFullScreenClick()"></vg-fullscreen-button>
+						</vg-controls>
+						<vg-overlay-play></vg-overlay-play>
+						<vg-poster vg-url="player.plugins.poster" ng-if="player.plugins"></vg-poster>
+					</videogular>
+				</md-content>
+				<md-content class="md-whiteframe-1dp" layout-padding>
+			    	<h1 ng-bind="video.title"></h1>
+			    	<p>
+			    		<span ng-bind="video.views"></span> views
+			    	</p>
+			    	<hr/>
+		 			<div layout="row" flex>
+			 			<figure flex="10">
+			 				<img ng-src="../uploads/images/{{channel.img}}" class="md-whiteframe-1dp" style="width:100%;"/>
+			 			</figure>
+			 			<div class="channel-info" flex="90" layout-padding>
+			 				<h4 ng-bind="channel.name"></h4>
+			 			</div>
+		 			</div>
+				</md-content>
+				<md-content class="md-whiteframe-1dp" layout-padding>
+					<span am-time-ago="video.date_added"></span>
+					<article ng-bind="video.description"></article>
+					<p ng-bind="video.tags"></p>
+				</md-content>
+				<md-content class="md-whiteframe-1dp" layout-padding ng-if="video" comments >
+					<form layout="row">
+						<div flex="15">
+		                	<identicon class="md-whiteframe-1dp" username="user" size="64"></identicon>
+						</div>
+						<div flex="85">
+								<md-input-container class="md-block" flex-gt-sm>
+					              	<label>Add comment as {{user}}...</label>
+									<textarea ng-model="comment"></textarea>
+					            </md-input-container>
+						        <md-button class="md-primary md-raised edgePadding pull-right" ng-click="postComment(comment,video)">
+						        	<label>Post</label>
+						        </md-button>
+					    </div>
+				    </form>
+				    <hr/>
+					<ul ng-init="getComments(video)" ng-show="comments.length > 0">
+						<li ng-repeat="comment in comments" layout="row" style="margin-bottom:8px;">
+							<div flex="15">
+			                	<identicon class="md-whiteframe-1dp" username="comment.user_id" size="56"></identicon>
+							</div>
+							<div flex="85">
+								<p ng-bind="comment.comment"></p>
+								<span am-time-ago="comment.date_added"></span>
+						    </div>
+						</li>
+					</ul>
+				</md-content>
+		    </section>
+		    <!-- /video page section -->
+
+		    <section id="video-list" ng-init="getVideos()" flex="40">
+			    <md-content class="md-whiteframe-1dp" layout-padding>
+					<ul class="sidebar-video-list">
+				    	<li ng-repeat="vid in videos" ng-if="vid.video_id !== video.video_id" ng-init="renderVideo(vid)">
+				    		<figure>
+				    			<a href="/{{site_address}}/v/video.html?w={{vid.video_id}}">
+				    				<img ng-src="../{{vid.imgSrc}}"/>
+				    			</a>
+				    		</figure>
+				    		<div class="video-info">
+						    	<h4>
+						    		<a href="/{{site_address}}/v/video.html?w={{vid.video_id}}">{{vid.title}}</a>
+						    	</h4>
+						    	<span>{{vid.user_id}}</span>
+						    	<span am-time-ago="vid.date_added"></span>
+					    	</div>
+				    	</li>
+				    </ul>
+			    </md-content>
+		    </section>
+
+	    </md-content>
+	    <!-- /MAIN -->
+
+	</section>
+
+	<!-- JS -->
+
+		<!-- angular -->
+		<script type="text/javascript" src="../assets/lib/angular/angular.min.js"></script>
+	    <script type="text/javascript" src="../assets/lib/angular/angular-route.min.js"></script>
+	    <script type="text/javascript" src="../assets/lib/angular/angular-animate.min.js"></script>
+	    <script type="text/javascript" src="../assets/lib/angular/angular-aria.min.js"></script>
+		<script type="text/javascript" src="../assets/lib/angular-sanitize/angular-sanitize.min.js"></script>
+		<script type="text/javascript" src="../assets/lib/angular-material/angular-material.min.js"></script>
+		<script type="text/javascript" src="../assets/lib/angular-sanitize/angular-sanitize.min.js"></script>
+		<script type="text/javascript" src="../assets/lib/videogular/videogular.js"></script>
+		<script type="text/javascript" src="../assets/lib/videogular-controls/vg-controls.js"></script>
+		<script type="text/javascript" src="../assets/lib/videogular-overlay-play/vg-overlay-play.js"></script>
+		<script type="text/javascript" src="../assets/lib/videogular-poster/vg-poster.js"></script>
+		<script type="text/javascript" src="../assets/lib/videogular-buffering/vg-buffering.js"></script>
+		<script type="text/javascript" src="../assets/lib/dropzone/dropzone.js"></script>
+		<script type="text/javascript" src="../assets/lib/moment/moment.js"></script>
+		<script type="text/javascript" src="../assets/lib/angular-moment/angular-moment.min.js"></script>
+	    <script type="text/javascript" src="../assets/lib/identicon/pnglib.js"></script>
+	    <script type="text/javascript" src="../assets/lib/identicon/identicon.js"></script>
+	    <script type="text/javascript" src="../assets/lib/angular-identicon/dist/angular-identicon.min.js"></script>
+
+		<!-- zeronet -->
+		<script type="text/javascript" src="../assets/lib/zeronet/ZeroFrame.js"></script>
+		<script type="text/javascript" src="../assets/lib/zeronet/ZeroChat.js"></script>
+
+		<!-- ../app -->
+		<script type="text/javascript" src="../app/application.js"></script>		
+		<script type="text/javascript" src="../app/core/controllers/main.ctrl.js"></script>
+		<script type="text/javascript" src="../app/core/directives/video-view.directive.js"></script>
+		<script type="text/javascript" src="../app/core/directives/comments.directive.js"></script>
+
+	<!-- /JS -->  
+
+</body>
+
+</html>

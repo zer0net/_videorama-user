@@ -8,6 +8,7 @@
 	<!-- CSS -->
 		<!-- lib -->
 		<link href="assets/lib/angular-material/angular-material.css" rel="stylesheet" type="text/css"/>
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
 		<!-- app -->
 		<link href="assets/css/style.css" rel="stylesheet" type="text/css"/>
 	<!-- /CSS -->
@@ -20,74 +21,89 @@
 
 </head>
 
-<body class="ng-cloak" ng-view ng-controller="MainCtrl" ng-init="init()">
+<body class="ng-cloak" ng-controller="MainCtrl" ng-init="init()">
 
-	<md-toolbar layout-padding class="md-hue-2">
-		<h3>ZeroVidz User Interface</h3>
+	<md-toolbar layout-padding class="md-hue-2 header" layout="row">
+		<div class="pull-left col-xs-10">
+		<h3><a href="/{{site_address}}">ZeroVidz User Interface</a></h3>
+		</div>
+		<div class="pull-right col-xs-2">
+        <md-button class="md-primary md-raised edgePadding">
+        	<a href="v/upload.html">Upload</a>
+        </md-button>
+        </div>
 	</md-toolbar>
 
-	<section layout="row" flex>
-
-		<!-- SIDE NAV -->
-	    <md-sidenav
-        class="md-sidenav-left"
-        md-component-id="left"
-        md-is-locked-open="$mdMedia('gt-sm')"
-        md-disable-backdrop
-        md-whiteframe="4">
-			<md-content layout-padding>
-				<ul>
-					<li ng-repeat="item in navigation">
-						<a ng-click="navigate(item.section)" ng-bind="item.label"></a>
-					</li>
-				</ul>
-			</md-content>
-	    </md-sidenav>
-	    <!-- /SIDE NAV -->
+	<section layout="row"  class="container">
 
 	    <!-- MAIN -->
-	    <md-content flex layout-padding>
+	    <md-content flex layout-padding class="main-content">
 
-	    	<!-- home section -->
-		    <section id="home" ng-if="section === 'home'">
-		    	<p>this is the home section</p>
-				<form name="userDetails">
-					<h3>Upload Image</h3>
-	                <md-input-container class="md-block" flex-gt-sm>
-	                  	<label>Image</label>
-						<input type="file" accept="image/*" file-model="myFile"><br>
-	                  	<img src="{{previewImage}}" ng-show="previewImage" />
-	                </md-input-container>
-	                <md-button class="md-primary md-raised edgePadding pull-right" ng-click="uploadFile(myFile)" >
-	                	<label>Upload Image</label>
-	                </md-button>
-				</form>
-		    </section>
-		    <!-- /home section -->
+	    	<md-content class="md-whiteframe-1dp" id="my-channel-section" my-channel ng-init="init()">
+	 			<h2>My Channel</h2>
+	 			<a ng-hide="mode === 'edit'" ng-click="editChannel()">edit</a>
+	 			<a ng-show="mode === 'edit'" ng-click="cancelEditChannel()">cancel</a>
+	 			<hr/>
+	 			<div layout="row" flex ng-show="mode === 'view'">
+		 			<figure flex="20">
+		 				<img class="md-whiteframe-1dp" ng-src="uploads/images/{{channel.img}}" style="width:100%;"/>
+		 			</figure>
+		 			<div class="channel-info" flex="80" layout-padding>
+		 				<h1 ng-bind="channel.name"></h1>
+		 				<article ng-bind="channel.description"></article>
+		 			</div>
+	 			</div>
+	 			<div layout="row" flex ng-show="mode === 'edit'">
+		 			<figure flex="20">
+						<button style="width:100%;height:200px; background-image:url('uploads/images/{{channel.img}}'); background-size:cover;" dropzone="dropzoneConfig" ng-hide="imgSrc">
+						<p style="background: rgba(0,0,0,0.5);color: white;"> Drag and drop files here or click to upload</p></button>
+						<img style="width:100%;" ng-src="{{imgSrc}}" ng-show="imgSrc" id="image"/>
+		 			</figure>
+		 			<div class="channel-info" flex="80" layout-padding>
+			            <md-input-container class="md-block" flex-gt-sm>
+			              	<label>Channel Name</label>
+							<input type="text" ng-model="channel.name">
+			            </md-input-container>
+			            <md-input-container class="md-block" flex-gt-sm>
+			              	<label>Channel Description</label>
+							<textarea ng-model="channel.description"></textarea>
+			            </md-input-container>
+						<md-button class="md-primary md-raised edgePadding pull-right" ng-click="updateChannel(channel)">
+				        	<label>Update Channel</label>
+				        </md-button> 
+		 			</div>
+	 			</div>
+	    	</md-content>
 
 		    <!-- my videos section -->
-		    <section id="my-video-section" ng-if="section === 'videos'" ng-init="myVideos()">
-		    	<p>hi</p>
-		    	<ul>
-		    		<li ng-repeat="video in videos">
-		    			<figure>
-		    				<img ng-src="uploads/posters/{{video.title}}.png"/>
-		    			</figure>
-		    			<div>
-		    				{{video.title}}
-		    				{{video.description}}
-		    				{{video.user_id}}
-		    			</div>
-		    		</li>
-		    	</ul>
-		    </section>
-		    <!-- /my videos section -->
+		    <md-content id="my-videos-section" ng-init="getVideos()" class="md-whiteframe-1dp">
+		    	<h2>Videos</h2>
+		    	<hr/>
+				<md-grid-list
+			        md-cols-xs="1" md-cols-sm="3" md-cols-md="4" md-cols-gt-md="5" md-row-height="4:3"
+			        md-gutter="12px" md-gutter-gt-sm="8px" >
+					<md-grid-tile ng-repeat="video in videos" ng-init="renderVideo(video)" class="video-list-item">
+						<div class="inner-wrap">
+							<a href="v/video.html?w={{video.video_id}}">
+								<div class="video-img" style="background-image:url('{{video.imgSrc}}');">
+			               			<a ng-click="deleteVideo(video)">delete</a>
+									<span class="video-time">{{video.total_time | date:"mm:ss"}}</span>
+								</div>
+							</a>
+							<md-grid-tile-footer>
+			    				<h3><a href="v/video.html?w={{video.video_id}}">{{video.title}}</a></h3>
+			    				<span>{{video.user_id}}</span>
+			    				<span>{{video.views}} views</span>
+			               		<span am-time-ago="video.date_added"></span>
+							</md-grid-tile-footer>
+						</div>
+					</md-grid-tile>
+			    </md-grid-list>
 
-		    <!-- video upload section -->
-			<section id="video-upload-section" ng-if="section === 'upload'">
-				<video-upload></video-upload>
-			</section>
-			<!-- /video upload section -->
+			    <a ng-show="message" href="v/upload.html">{{message}}</a>
+
+		    </md-content>
+		    <!-- /my videos section -->
 
 	    </md-content>
 	    <!-- /MAIN -->
@@ -96,7 +112,7 @@
 
 	<!-- JS -->
 
-		<!-- lib -->
+		<!-- angular -->
 		<script type="text/javascript" src="assets/lib/angular/angular.min.js"></script>
 	    <script type="text/javascript" src="assets/lib/angular/angular-route.min.js"></script>
 	    <script type="text/javascript" src="assets/lib/angular/angular-animate.min.js"></script>
@@ -109,16 +125,24 @@
 		<script type="text/javascript" src="assets/lib/videogular-overlay-play/vg-overlay-play.js"></script>
 		<script type="text/javascript" src="assets/lib/videogular-poster/vg-poster.js"></script>
 		<script type="text/javascript" src="assets/lib/videogular-buffering/vg-buffering.js"></script>
-
+		<script type="text/javascript" src="assets/lib/dropzone/dropzone.js"></script>
+		<script type="text/javascript" src="assets/lib/moment/moment.js"></script>
+		<script type="text/javascript" src="assets/lib/angular-moment/angular-moment.min.js"></script>
+	    <script type="text/javascript" src="assets/lib/identicon/pnglib.js"></script>
+	    <script type="text/javascript" src="assets/lib/identicon/identicon.js"></script>
+	    <script type="text/javascript" src="assets/lib/angular-identicon/dist/angular-identicon.min.js"></script>
+    
 		<!-- zeronet -->
 		<script type="text/javascript" src="assets/lib/zeronet/ZeroFrame.js"></script>
 		<script type="text/javascript" src="assets/lib/zeronet/ZeroChat.js"></script>
 
 		<!-- app -->
-		<script type="text/javascript" src="app/application.js"></script>
+		<script type="text/javascript" src="app/application.js"></script>		
 		<script type="text/javascript" src="app/core/controllers/main.ctrl.js"></script>
 		<script type="text/javascript" src="app/core/directives/file-model.directive.js"></script>
+		<script type="text/javascript" src="app/core/directives/dropzone.directive.js"></script>
 		<script type="text/javascript" src="app/core/directives/video-upload.directive.js"></script>
+		<script type="text/javascript" src="app/core/directives/my-channel.directive.js"></script>
 
 	<!-- /JS -->  
 

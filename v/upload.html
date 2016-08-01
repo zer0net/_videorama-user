@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html ng-app="ZeroVidzUser" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+	<title>ZeroVidz User</title>
+
+	<!-- CSS -->
+		<!-- lib -->
+		<link href="../assets/lib/angular-material/angular-material.css" rel="stylesheet" type="text/css"/>
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+		<!-- ../app -->
+		<link href="../assets/css/style.css" rel="stylesheet" type="text/css"/>
+	<!-- /CSS -->
+
+	<!-- HTML5 Shim -->
+	<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<!--<base href="/">-->
+
+</head>
+
+<body class="ng-cloak" ng-controller="MainCtrl" ng-init="init()">
+
+	<md-toolbar layout-padding class="md-hue-2 header" layout="row">
+		<div class="pull-left col-xs-10">
+		<h3><a href="/{{site_address}}">ZeroVidz User Interface</a></h3>
+		</div>
+		<div class="pull-right col-xs-2">
+        <md-button class="md-primary md-raised edgePadding">
+        	<a href="/{{site_address}}/v/upload.html">Upload</a>
+        </md-button>
+        </div>
+	</md-toolbar>
+
+	<section layout="row"  class="container">
+
+	    <!-- MAIN -->
+	    <md-content flex layout-padding>
+
+		    <!-- video upload section -->
+			<section id="video-upload-section">
+			<div id="video-upload"  video-upload ng-init="init()">
+				
+				<button style="width:100%;height:400px;" dropzone="dropzoneConfig" ng-hide="video.file"> Drag and drop files here or click to upload </button>
+
+				<div flex layout="row" ng-show="video.file">
+					<div flex="25">
+						<div class="video-upload-top">
+							<canvas id="canvas" ng-show="previewImage" class="md-whiteframe-1dp"></canvas>
+							<md-progress-circular ng-hide="previewImage" md-mode="indeterminate"></md-progress-circular>
+							<a ng-click="capturePreviewImage(video)" id="capture-image">capture</a>
+							<br/>
+							<i>*play video to capture frame</i>
+							<ul>
+								<li>file size:{{video.file.size}}</li>
+								<li>file name:{{video.file.name}}</li>
+							</ul>
+						</div>
+					</div>
+					<form flex="75" name="videoUpload" id="video-upload-form">
+						<div class="upload-summary video-upload-top">
+							<div layout="row" ng-show="loading"  layout-sm="column" layout-align="space-around">
+								<md-progress-circular md-mode="indeterminate"></md-progress-circular>
+							</div>
+				            <md-button class="md-primary md-raised edgePadding pull-right" ng-click="uploadVideo(video)" ng-hide="loading">
+				            	<label>Upload Video</label>
+				            </md-button>
+						</div>
+						<md-tabs md-dynamic-height md-border-bottom flex="100">
+							<md-tab label="video">
+								<videogular vg-player-ready="onPlayerReady($API,video)" vg-theme="player.theme" ng-if="player">
+									<vg-media vg-src="player.sources"
+											vg-tracks="player.tracks">
+									</vg-media>
+									<vg-controls>
+										<vg-play-pause-button></vg-play-pause-button>
+										<vg-time-display>{{ currentTime | date:"mm:ss" }}</vg-time-display>
+										<vg-scrub-bar>
+											<vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+										</vg-scrub-bar>
+										<vg-time-display>{{ timeLeft | date:"mm:ss" }}</vg-time-display>
+										<vg-volume>
+											<vg-mute-button></vg-mute-button>
+											<vg-volume-bar></vg-volume-bar>
+										</vg-volume>
+										<vg-fullscreen-button></vg-fullscreen-button>
+									</vg-controls>
+									<vg-overlay-play></vg-overlay-play>
+									<vg-poster vg-url="player.plugins.poster" ng-if="player.plugins"></vg-poster>
+								</videogular>							
+							</md-tab>
+							<md-tab label="basic info">
+								<div class="video-info" ng-show="video.file">
+						            <md-input-container class="md-block" flex-gt-sm>
+						              	<label>Title</label>
+										<input type="text" ng-model="video.title">
+						            </md-input-container>
+						            <md-input-container class="md-block" flex-gt-sm>
+						              	<label>description</label>
+										<textarea ng-model="video.description"></textarea>
+						            </md-input-container>
+						            <md-input-container class="md-block" flex-gt-sm>
+						              	<label>Tags</label>
+										<input type="text" ng-model="video.tags" tag-input>
+						            </md-input-container>
+						            <div class="tags-container">
+						            	<span ng-repeat="tag in tags" class="tag">
+						            		{{tag}}
+						            		<span class="glyphicon glyphicon-remove md-whiteframe-1dp" ng-click="removeTag($index)"></span>
+						            	</span>
+						            </div>
+					            </div>
+							</md-tab>
+						</md-tabs>
+					</form>
+				</div>
+			</div>
+			</section>
+			<!-- /video upload section -->
+
+	    </md-content>
+	    <!-- /MAIN -->
+
+	</section>
+
+	<!-- JS -->
+
+		<!-- angular -->
+		<script type="text/javascript" src="../assets/lib/angular/angular.min.js"></script>
+	    <script type="text/javascript" src="../assets/lib/angular/angular-route.min.js"></script>
+	    <script type="text/javascript" src="../assets/lib/angular/angular-animate.min.js"></script>
+	    <script type="text/javascript" src="../assets/lib/angular/angular-aria.min.js"></script>
+		<script type="text/javascript" src="../assets/lib/angular-sanitize/angular-sanitize.min.js"></script>
+		<script type="text/javascript" src="../assets/lib/angular-material/angular-material.min.js"></script>
+		<script type="text/javascript" src="../assets/lib/angular-sanitize/angular-sanitize.min.js"></script>
+		<script type="text/javascript" src="../assets/lib/videogular/videogular.js"></script>
+		<script type="text/javascript" src="../assets/lib/videogular-controls/vg-controls.js"></script>
+		<script type="text/javascript" src="../assets/lib/videogular-overlay-play/vg-overlay-play.js"></script>
+		<script type="text/javascript" src="../assets/lib/videogular-poster/vg-poster.js"></script>
+		<script type="text/javascript" src="../assets/lib/videogular-buffering/vg-buffering.js"></script>
+		<script type="text/javascript" src="../assets/lib/dropzone/dropzone.js"></script>
+		<script type="text/javascript" src="../assets/lib/moment/moment.js"></script>
+		<script type="text/javascript" src="../assets/lib/angular-moment/angular-moment.min.js"></script>
+	    <script type="text/javascript" src="../assets/lib/identicon/pnglib.js"></script>
+	    <script type="text/javascript" src="../assets/lib/identicon/identicon.js"></script>
+	    <script type="text/javascript" src="../assets/lib/angular-identicon/dist/angular-identicon.min.js"></script>
+	    
+		<!-- zeronet -->
+		<script type="text/javascript" src="../assets/lib/zeronet/ZeroFrame.js"></script>
+		<script type="text/javascript" src="../assets/lib/zeronet/ZeroChat.js"></script>
+
+		<!-- ../app -->
+		<script type="text/javascript" src="../app/application.js"></script>		
+		<script type="text/javascript" src="../app/core/controllers/main.ctrl.js"></script>
+		<script type="text/javascript" src="../app/core/directives/file-model.directive.js"></script>
+		<script type="text/javascript" src="../app/core/directives/dropzone.directive.js"></script>
+		<script type="text/javascript" src="../app/core/directives/video-upload.directive.js"></script>
+		<script type="text/javascript" src="../app/core/directives/tag-input.directive.js"></script>
+
+	<!-- /JS -->  
+
+</body>
+
+</html>

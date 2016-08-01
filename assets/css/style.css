@@ -1,0 +1,202 @@
+@import url('http://fonts.googleapis.com/css?family=Oswald:400,700');
+/*---------------------------------------------------
+    LESS Elements 0.9
+  ---------------------------------------------------
+    A set of useful LESS mixins
+    More info at: http://lesselements.com
+  ---------------------------------------------------*/
+/* MIXINS */
+/* /MIXINS */
+/* COLORS */
+/* /COLORS */
+*,
+*:focus {
+  outline: none !important;
+}
+html {
+  background-color: #f7f7f7;
+}
+body {
+  background-color: #f7f7f7;
+  color: #333;
+}
+h1,
+h2,
+h3,
+h4 {
+  padding: 0;
+  margin: 0;
+}
+hr {
+  margin-top: 8px;
+  padding: 0;
+}
+videogular {
+  padding: 0 !important;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+videogular.full-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+}
+md-content + md-content {
+  margin-top: 16px;
+}
+.main-content {
+  background-color: #f7f7f7;
+}
+#my-channel-section {
+  margin-bottom: 16px;
+}
+section#video-upload-section .video-upload-top {
+  height: 90px;
+}
+section#video-upload-section form {
+  padding-left: 16px;
+}
+section#video-upload-section canvas {
+  width: 100%;
+}
+section#video-upload-section .tags-container {
+  padding-bottom: 16px;
+}
+section#video-upload-section .tags-container .tag {
+  display: block;
+  padding: 5px 25px 5px 5px;
+  background: #337ab7;
+  float: left;
+  color: white;
+  position: relative;
+  margin-right: 8px;
+}
+section#video-upload-section .tags-container .tag .glyphicon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 20px;
+  display: block;
+  text-align: center;
+  line-height: 30px;
+  background: white;
+  color: #337ab7;
+  cursor: pointer;
+}
+.header button.md-button a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.header a {
+  color: white;
+}
+.header a:hover {
+  text-decoration: none;
+}
+.header h3 {
+  margin: 11px;
+  padding: 0;
+}
+.header .pull-right {
+  float: right;
+}
+section.container {
+  margin-top: 8px;
+}
+.video-list-item .inner-wrap {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 70px;
+}
+.video-list-item .video-img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  position: relative;
+}
+.video-list-item .video-img .video-time {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  display: block;
+  padding: 4px;
+  width: auto;
+  float: left;
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  font-weight: bold;
+}
+.video-list-item md-grid-tile-footer {
+  height: 70px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  color: #333;
+}
+.video-list-item md-grid-tile-footer h3,
+.video-list-item md-grid-tile-footer span {
+  display: block;
+  float: left;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.video-list-item md-grid-tile-footer h3 {
+  font-size: 18px;
+  margin-bottom: 4px;
+  font-weight: bold;
+}
+.video-list-item md-grid-tile-footer span {
+  font-size: 12px;
+  line-height: 14px;
+}
+.sidebar-video-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.sidebar-video-list li {
+  width: 100%;
+  float: left;
+}
+.sidebar-video-list li figure {
+  width: 35%;
+  height: auto;
+  float: left;
+}
+.sidebar-video-list li figure img {
+  width: 100%;
+  height: auto;
+}
+.sidebar-video-list li div.video-info {
+  float: left;
+  width: 65%;
+  padding: 0 12px;
+}
+.sidebar-video-list li div.video-info h4,
+.sidebar-video-list li div.video-info span {
+  display: block;
+  float: left;
+  width: 100%;
+}
+.sidebar-video-list li div.video-info h4 {
+  font-size: 14px;
+  margin: 0;
+  margin-bottom: 4px;
+  padding: 0;
+}
+.sidebar-video-list li div.video-info span {
+  font-size: 12px;
+}
+.sidebar-video-list li + li {
+  margin-top: 8px;
+}

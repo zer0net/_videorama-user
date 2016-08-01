@@ -1,0 +1,74 @@
+
+
+	<section layout="row" flex>
+
+		<!-- SIDE NAV -->
+	    <md-sidenav
+        class="md-sidenav-left"
+        md-component-id="left"
+        md-is-locked-open="$mdMedia('gt-sm')"
+        md-disable-backdrop
+        md-whiteframe="4">
+			<md-content layout-padding>
+				<ul>
+					<li ng-repeat="item in navigation">
+						<a ng-click="navigate(item.section)" ng-bind="item.label"></a>
+					</li>
+				</ul>
+			</md-content>
+	    </md-sidenav>
+	    <!-- /SIDE NAV -->
+
+	    <!-- MAIN -->
+	    <md-content flex layout-padding>
+
+	    	<!-- home section -->
+		    <section id="home" ng-if="section === 'home'">
+		    	<p>this is the home section</p>
+				<form name="userDetails">
+					<h3>Upload Image</h3>
+	                <md-input-container class="md-block" flex-gt-sm>
+	                  	<label>Image</label>
+						<input type="file" accept="image/*" file-model="myFile"><br>
+	                  	<img src="{{previewImage}}" ng-show="previewImage" />
+	                </md-input-container>
+	                <md-button class="md-primary md-raised edgePadding pull-right" ng-click="uploadFile(myFile)" >
+	                	<label>Upload Image</label>
+	                </md-button>
+				</form>
+		    </section>
+		    <!-- /home section -->
+
+		    <!-- my videos section -->
+		    <section id="my-video-section" ng-if="section === 'videos'" ng-init="myVideos()">
+
+				<md-grid-list
+			        md-cols-xs="1" md-cols-sm="2" md-cols-md="4" md-cols-gt-md="8"
+			        md-row-height-gt-md="1:1" md-row-height="3:2"
+			        md-gutter="12px" md-gutter-gt-sm="8px" >
+					<md-grid-tile ng-repeat="video in videos" ng-init="renderVideo(video)">
+						<div style="background-image:url('{{video.imgSrc}}');width:100%;height:100%; background-size:cover;" 
+							class="md-whiteframe-1dp">
+							<span class="video-time">{{video.total_time | date:"mm:ss"}}</span>
+						</div>
+						<md-grid-tile-footer>
+		    				{{video.title}}<br/>
+		    				{{video.user_id}}<br/>
+		    				{{video.date_added}}
+						</md-grid-tile-footer>
+					</md-grid-tile>
+			    </md-grid-list>
+
+		    </section>
+		    <!-- /my videos section -->
+
+		    <!-- video upload section -->
+			<section id="video-upload-section" ng-if="section === 'upload'">
+				<video-upload></video-upload>
+			</section>
+			<!-- /video upload section -->
+
+	    </md-content>
+	    <!-- /MAIN -->
+
+	</section>
