@@ -40,7 +40,7 @@ angular.module('ZeroVidzUser').directive('videoList', ['$sce','$location',
 			// delet video
 			$scope.deleteVideo = function(vid) {
 
-				var inner_path = 'data.json'
+				var inner_path = 'data/data.json'
 				Page.cmd("fileGet", { "inner_path": inner_path, "required": false },function(data) {
 
 					if (data) { 

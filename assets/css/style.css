@@ -77,28 +77,28 @@ videogular.full-screen {
   height: 100%;
   z-index: 10000;
 }
-md-content + md-content {
-  margin-top: 16px;
-}
 .main-content {
   background-color: #f7f7f7;
+}
+.main-content md-content + md-content {
+  margin-top: 16px;
 }
 #my-channel-section {
   margin-bottom: 16px;
 }
-section#video-upload-section .video-upload-top {
+#video-upload-section .video-upload-top {
   height: 90px;
 }
-section#video-upload-section form {
+#video-upload-section form {
   padding-left: 16px;
 }
-section#video-upload-section canvas {
+#video-upload-section canvas {
   width: 100%;
 }
-section#video-upload-section .tags-container {
+#video-upload-section .tags-container {
   padding-bottom: 16px;
 }
-section#video-upload-section .tags-container .tag {
+#video-upload-section .tags-container .tag {
   display: block;
   padding: 5px 25px 5px 5px;
   background: #337ab7;
@@ -107,7 +107,7 @@ section#video-upload-section .tags-container .tag {
   position: relative;
   margin-right: 8px;
 }
-section#video-upload-section .tags-container .tag .glyphicon {
+#video-upload-section .tags-container .tag .glyphicon {
   position: absolute;
   right: 0;
   top: 0;
@@ -287,4 +287,20 @@ section.container {
 }
 #videos-section .video-list-item md-grid-tile-footer i {
   font-style: normal;
+}
+#comments-section ul {
+  padding: 0;
+  margin: 0;
+}
+#comments-section ul li {
+  margin-top: 8px;
+}
+#comments-section ul li span.user-name {
+  color: #337ab7;
+}
+#comments-section ul li span.time-ago {
+  font-size: 12px;
+}
+#comments-section ul li + li {
+  margin-top: 12px;
 }

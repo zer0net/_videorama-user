@@ -41,7 +41,7 @@
 
 		    <!--  video page section -->
 		    <section id="video-page-section" video-view ng-init="getVideo()" flex="60">
-		    	<md-content  class="md-whiteframe-1dp" layout-padding>
+		    	<md-content  class="md-whiteframe-1dp section" layout-padding>
 					<videogular vg-auto-play="player.autoPlay" vg-player-ready="onPlayerReady($API)" vg-theme="player.theme" ng-if="player" class="{{screenSize}}">
 						<vg-media vg-src="player.sources"
 								vg-tracks="player.tracks">
@@ -63,7 +63,7 @@
 						<vg-poster vg-url="player.plugins.poster" ng-if="player.plugins"></vg-poster>
 					</videogular>
 				</md-content>
-				<md-content class="md-whiteframe-1dp" layout-padding>
+				<md-content class="md-whiteframe-1dp section" layout-padding>
 			    	<h1 ng-bind="video.title"></h1>
 			    	<p>
 			    		<span ng-bind="video.views"></span> views
@@ -78,39 +78,45 @@
 			 			</div>
 		 			</div>
 				</md-content>
-				<md-content class="md-whiteframe-1dp" layout-padding>
+				<md-content class="md-whiteframe-1dp section" layout-padding>
 					<span am-time-ago="video.date_added"></span>
 					<article ng-bind="video.description"></article>
 					<p ng-bind="video.tags"></p>
 				</md-content>
-				<md-content class="md-whiteframe-1dp" layout-padding ng-if="video" comments >
-					<form layout="row">
-						<div flex="15">
-		                	<identicon class="md-whiteframe-1dp" username="user" size="64"></identicon>
-						</div>
-						<div flex="85">
-								<md-input-container class="md-block" flex-gt-sm>
-					              	<label>Add comment as {{user}}...</label>
-									<textarea ng-model="comment"></textarea>
-					            </md-input-container>
-						        <md-button class="md-primary md-raised edgePadding pull-right" ng-click="postComment(comment,video)">
-						        	<label>Post</label>
-						        </md-button>
-					    </div>
-				    </form>
-				    <hr/>
-					<ul ng-init="getComments(video)" ng-show="comments.length > 0">
-						<li ng-repeat="comment in comments" layout="row" style="margin-bottom:8px;">
+				<comments ng-if="video">
+					<md-content class="md-whiteframe-1dp section"  style="margin-top:16px;" layout-padding>
+						<form layout="row">
 							<div flex="15">
-			                	<identicon class="md-whiteframe-1dp" username="comment.user_id" size="56"></identicon>
+			                	<identicon class="md-whiteframe-1dp" username="user" size="64"></identicon>
 							</div>
 							<div flex="85">
-								<p ng-bind="comment.comment"></p>
-								<span am-time-ago="comment.date_added"></span>
+									<md-input-container class="md-block" flex-gt-sm>
+						              	<label>Add comment as {{user}}...</label>
+										<textarea ng-model="comment"></textarea>
+						            </md-input-container>
+							        <md-button class="md-primary md-raised edgePadding pull-right" ng-click="postComment(comment,video)">
+							        	<label>Post</label>
+							        </md-button>
 						    </div>
-						</li>
-					</ul>
-				</md-content>
+					    </form>
+					</md-content>
+					<md-content class="md-whiteframe-1dp section" id="comments-section" layout-padding ng-init="getComments(video)" ng-show="comments.length > 0">
+					   <h2>Comments</h2>
+					   <hr/>
+						<ul>
+							<li ng-repeat="comment in comments | orderBy:'-date_added'" layout="row">
+								<div flex="15">
+				                	<identicon class="md-whiteframe-1dp" username="comment.user_id" size="56"></identicon>
+								</div>
+								<div flex="85">
+									<span ng-bind="comment.user_id" class="user-name"></span> • 
+									<span am-time-ago="comment.date_added" class="time-ago"></span>
+									<p ng-bind="comment.comment"></p>
+							    </div>
+							</li>
+						</ul>
+					</md-content>
+				</comments>
 		    </section>
 		    <!-- /video page section -->
 

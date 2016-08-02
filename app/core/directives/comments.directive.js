@@ -28,9 +28,10 @@ angular.module('ZeroVidzUser').directive('comments', [
 
 					// write to file
 					Page.cmd("fileWrite", [inner_path, btoa(json_raw)], function(res) {
-						Page.cmd("wrapperNotification", ["done", "comment posted!", 10000]);
-						$scope.comments.push(comment);
-						$scope.$apply();
+						$scope.$apply(function() {
+							$scope.comments.push(comment);
+							$scope.comment = '';
+						});
 					});
 			    });
 

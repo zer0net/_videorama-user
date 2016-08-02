@@ -57,23 +57,20 @@ videogular {
 	}
 }
 
-md-content + md-content {
-	margin-top: 16px;
-}
 
 .main-content {
 	background-color: #f7f7f7;
-}
 
-section.inner-section {
-
+	md-content + md-content {
+		margin-top: 16px;
+	}
 }
 
 #my-channel-section {
 	margin-bottom: 16px;
 }
 
-section#video-upload-section {
+#video-upload-section {
 
 	.video-upload-top {
 		height: 90px;
@@ -115,6 +112,7 @@ section#video-upload-section {
 		}
 	}
 }
+
 .header {
 
 	a {
@@ -334,4 +332,26 @@ section.container {
 		}
 	}
 
+}
+
+
+#comments-section {
+
+	ul {
+		padding: 0;
+		margin: 0;
+		li {
+			margin-top: 8px;
+			span.user-name {
+				color: #337ab7;
+			}
+			span.time-ago {
+				font-size: 12px;
+			}
+		}
+
+		li + li {
+			margin-top: 12px;
+		}
+	}
 }
