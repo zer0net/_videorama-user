@@ -17,7 +17,12 @@ angular.module('ZeroVidzUser').controller('MainCtrl', ['$scope','$sce','$locatio
 			// site info
 			Page.cmd("siteInfo", {}, (function(_this) {
 				return function(site_info) {
-					if (site_info.cert_user_id) $scope.user = site_info.cert_user_id;
+					if (site_info.cert_user_id) {
+						$scope.user = site_info.cert_user_id;
+					} else {
+						$scope.selectUser();
+					}
+
 					$scope.page = Page;
 					$scope.$apply();
 					return _this.site_info = site_info;
