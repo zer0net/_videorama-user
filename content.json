@@ -1,11 +1,8 @@
 {
  "address": "1CRFBc4Tn8vvYdNBQCLRbuRwLZkNaHY8kz",
+ "cloneable": true,
  "description": "",
  "files": {
-  "README.md": {
-   "sha512": "e6192596022f2737aecf0dd6d83db8726735f66f710ae01b80d9615bb001b388",
-   "size": 10
-  },
   "app/application.js": {
    "sha512": "31be37c03f50f576395ab5623660cc81fe247a3d0c96830dbb6d6a0373fd6c61",
    "size": 255
@@ -15,8 +12,8 @@
    "size": 381
   },
   "app/core/controllers/main.ctrl.js": {
-   "sha512": "afdeb4594124704aa4141be133a3dbd61f33daad1949da52bc2bd58bc94df7f4",
-   "size": 902
+   "sha512": "af736f93098a2bd4463546b095df5dcad785a6bcf7187a4917dbd83a8a429871",
+   "size": 959
   },
   "app/core/directives/comments.directive.js": {
    "sha512": "13817d464faa90306e219381ec88176b8121de4a7dcaa6cc8dba00860ab52ba9",
@@ -31,8 +28,8 @@
    "size": 771
   },
   "app/core/directives/my-channel.directive.js": {
-   "sha512": "bd4674c2b20c2f5966468e1410d03affb6ec9a4d5599a8b3906bd2a72b57bc88",
-   "size": 2956
+   "sha512": "59c23866a47d610d2b9ea57698287aa0a286ffbc1d1cf59d5df355f6fcd78aed",
+   "size": 2964
   },
   "app/core/directives/tag-input.directive.js": {
    "sha512": "a254457f69b1380c1454438e9dde4b9f47cf506cbafc4ce8df7fd4f9acffec34",
@@ -2654,6 +2651,14 @@
    "sha512": "bc65f2262c309aa44e0c0a28789725fb847a3ec20a043c28fb4a29cd9973c31e",
    "size": 2976
   },
+  "data/data.json": {
+   "sha512": "cbdd46610595f0a05435aee71abb3d5e207695bce2fabcbb603abd6813b1e41e",
+   "size": 839
+  },
+  "data/views.json": {
+   "sha512": "60df1bdecf7643aa9026e291199039f2f34b2441c71797319554d1abc5ccaded",
+   "size": 1658
+  },
   "index.html": {
    "sha512": "8c1037a0169fc1451ee1b08118fd6b495146289329dfb8032c3d443981aca937",
    "size": 6828
@@ -2662,22 +2667,30 @@
    "sha512": "f2ee33148196df67b543db0b8c7763d0ba7f7792047218615dd4a6a06e8cad22",
    "size": 7293
   },
+  "uploads/posters/sdsdsowls.png": {
+   "sha512": "f22cf31d0a6854cd34699fd0823c190e82fe82cec054c93c97ce27a6b70e456d",
+   "size": 18366
+  },
+  "uploads/videos/sdsdsowls.mp4": {
+   "sha512": "21291cc893712195e6f80edf430e83914d75d1db6bd2723443b6dad0a381e337",
+   "size": 3667884
+  },
   "video.html": {
    "sha512": "cbd62b53425f794ba3aa2b256201b466cf26b90746a9cc7fc668907a59c94dae",
    "size": 7838
   }
  },
- "ignore": "",
- "modified": 1470148681.54777,
+ "ignore": "(.git|data/users|node_modules|js/index.js|data/0chan.db|webpack.config.js|update_files.rb|package.json|content.example.json|data/settings.example.json|LICENSE|README.md|js/engine/.*|js/templates|js/libs)",
+ "modified": 1470149425.135361,
  "sign": [
-  20452868068764105435341434070453505976780190703404029539895038196086709374616,
-  776567325927789819645891026737104360200543583060548374461718176497858304361
+  35467375145027455439209286098098565109532820208428286984386563682684081663395,
+  5197883855032036981482335790451040205255132203087925813636756284906970742082
  ],
  "signers_sign": "HGuiO6CvkCKeWb8cz0WDxgpH+GjEs1T+Bxso0T+rd0PjnwkTveD8z4lGl091rrPumwvVfuv99W4N4p6RRer+Oy0=",
  "signs": {
-  "1CRFBc4Tn8vvYdNBQCLRbuRwLZkNaHY8kz": "HPGPLCulop0ClOg2TRYnrEtUOfQ0PV3NwMCbu87X7WuF8meOxcAfUEDonEOTJ+2lbW2rfws6AWRq3R8/WNnYj9w="
+  "1CRFBc4Tn8vvYdNBQCLRbuRwLZkNaHY8kz": "HDDMN5KPL9S/AcuiSjikJpLrUXuxtCPMYd6tLdAI/nw20++XcO7dSWsnd98w9Vhjo0EvT8hb2LmtPl2F9N9SR0g="
  },
  "signs_required": 1,
- "title": "1CRFBc4Tn8vvYdNBQCLRbuRwLZkNaHY8kz - ZeroNet_",
+ "title": "1N8yMhHBPuXgS4iegJ39vaBBgSEejkaKJ7 - ZeroNet_",
  "zeronet_version": "0.3.6"
 }
