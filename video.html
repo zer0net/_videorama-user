@@ -7,10 +7,10 @@
 
 	<!-- CSS -->
 		<!-- lib -->
-		<link href="../assets/lib/angular-material/angular-material.css" rel="stylesheet" type="text/css"/>
+		<link href="assets/lib/angular-material/angular-material.css" rel="stylesheet" type="text/css"/>
 		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-		<!-- ../app -->
-		<link href="../assets/css/style.css" rel="stylesheet" type="text/css"/>
+		<!-- app -->
+		<link href="assets/css/style.css" rel="stylesheet" type="text/css"/>
 	<!-- /CSS -->
 
 	<!-- HTML5 Shim -->
@@ -29,7 +29,7 @@
 		</div>
 		<div class="pull-right col-xs-2">
         <md-button class="md-primary md-raised edgePadding">
-        	<a href="/{{site_address}}/v/upload.html">Upload</a>
+        	<a href="/{{site_address}}/upload.html">Upload</a>
         </md-button>
         </div>
 	</md-toolbar>
@@ -71,7 +71,7 @@
 			    	<hr/>
 		 			<div layout="row" flex>
 			 			<figure flex="10">
-			 				<img ng-src="../uploads/images/{{channel.img}}" class="md-whiteframe-1dp" style="width:100%;"/>
+			 				<img ng-src="uploads/images/{{channel.img}}" class="md-whiteframe-1dp" style="width:100%;"/>
 			 			</figure>
 			 			<div class="channel-info" flex="90" layout-padding>
 			 				<h4 ng-bind="channel.name"></h4>
@@ -114,18 +114,18 @@
 		    </section>
 		    <!-- /video page section -->
 
-		    <section id="video-list" ng-init="getVideos()" flex="40">
+		    <section id="video-list" video-list ng-init="getVideos()" flex="40">
 			    <md-content class="md-whiteframe-1dp" layout-padding>
 					<ul class="sidebar-video-list">
 				    	<li ng-repeat="vid in videos" ng-if="vid.video_id !== video.video_id" ng-init="renderVideo(vid)">
 				    		<figure>
-				    			<a href="/{{site_address}}/v/video.html?w={{vid.video_id}}">
-				    				<img ng-src="../{{vid.imgSrc}}"/>
+				    			<a href="/{{site_address}}/video.html?w={{vid.video_id}}">
+				    				<img ng-src="{{vid.imgSrc}}"/>
 				    			</a>
 				    		</figure>
 				    		<div class="video-info">
 						    	<h4>
-						    		<a href="/{{site_address}}/v/video.html?w={{vid.video_id}}">{{vid.title}}</a>
+						    		<a href="/{{site_address}}/video.html?w={{vid.video_id}}">{{vid.title}}</a>
 						    	</h4>
 						    	<span>{{vid.user_id}}</span>
 						    	<span am-time-ago="vid.date_added"></span>
@@ -143,34 +143,35 @@
 	<!-- JS -->
 
 		<!-- angular -->
-		<script type="text/javascript" src="../assets/lib/angular/angular.min.js"></script>
-	    <script type="text/javascript" src="../assets/lib/angular/angular-route.min.js"></script>
-	    <script type="text/javascript" src="../assets/lib/angular/angular-animate.min.js"></script>
-	    <script type="text/javascript" src="../assets/lib/angular/angular-aria.min.js"></script>
-		<script type="text/javascript" src="../assets/lib/angular-sanitize/angular-sanitize.min.js"></script>
-		<script type="text/javascript" src="../assets/lib/angular-material/angular-material.min.js"></script>
-		<script type="text/javascript" src="../assets/lib/angular-sanitize/angular-sanitize.min.js"></script>
-		<script type="text/javascript" src="../assets/lib/videogular/videogular.js"></script>
-		<script type="text/javascript" src="../assets/lib/videogular-controls/vg-controls.js"></script>
-		<script type="text/javascript" src="../assets/lib/videogular-overlay-play/vg-overlay-play.js"></script>
-		<script type="text/javascript" src="../assets/lib/videogular-poster/vg-poster.js"></script>
-		<script type="text/javascript" src="../assets/lib/videogular-buffering/vg-buffering.js"></script>
-		<script type="text/javascript" src="../assets/lib/dropzone/dropzone.js"></script>
-		<script type="text/javascript" src="../assets/lib/moment/moment.js"></script>
-		<script type="text/javascript" src="../assets/lib/angular-moment/angular-moment.min.js"></script>
-	    <script type="text/javascript" src="../assets/lib/identicon/pnglib.js"></script>
-	    <script type="text/javascript" src="../assets/lib/identicon/identicon.js"></script>
-	    <script type="text/javascript" src="../assets/lib/angular-identicon/dist/angular-identicon.min.js"></script>
+		<script type="text/javascript" src="assets/lib/angular/angular.min.js"></script>
+	    <script type="text/javascript" src="assets/lib/angular/angular-route.min.js"></script>
+	    <script type="text/javascript" src="assets/lib/angular/angular-animate.min.js"></script>
+	    <script type="text/javascript" src="assets/lib/angular/angular-aria.min.js"></script>
+		<script type="text/javascript" src="assets/lib/angular-sanitize/angular-sanitize.min.js"></script>
+		<script type="text/javascript" src="assets/lib/angular-material/angular-material.min.js"></script>
+		<script type="text/javascript" src="assets/lib/angular-sanitize/angular-sanitize.min.js"></script>
+		<script type="text/javascript" src="assets/lib/videogular/videogular.js"></script>
+		<script type="text/javascript" src="assets/lib/videogular-controls/vg-controls.js"></script>
+		<script type="text/javascript" src="assets/lib/videogular-overlay-play/vg-overlay-play.js"></script>
+		<script type="text/javascript" src="assets/lib/videogular-poster/vg-poster.js"></script>
+		<script type="text/javascript" src="assets/lib/videogular-buffering/vg-buffering.js"></script>
+		<script type="text/javascript" src="assets/lib/dropzone/dropzone.js"></script>
+		<script type="text/javascript" src="assets/lib/moment/moment.js"></script>
+		<script type="text/javascript" src="assets/lib/angular-moment/angular-moment.min.js"></script>
+	    <script type="text/javascript" src="assets/lib/identicon/pnglib.js"></script>
+	    <script type="text/javascript" src="assets/lib/identicon/identicon.js"></script>
+	    <script type="text/javascript" src="assets/lib/angular-identicon/dist/angular-identicon.min.js"></script>
 
 		<!-- zeronet -->
-		<script type="text/javascript" src="../assets/lib/zeronet/ZeroFrame.js"></script>
-		<script type="text/javascript" src="../assets/lib/zeronet/ZeroChat.js"></script>
+		<script type="text/javascript" src="assets/lib/zeronet/ZeroFrame.js"></script>
+		<script type="text/javascript" src="assets/lib/zeronet/ZeroChat.js"></script>
 
-		<!-- ../app -->
-		<script type="text/javascript" src="../app/application.js"></script>		
-		<script type="text/javascript" src="../app/core/controllers/main.ctrl.js"></script>
-		<script type="text/javascript" src="../app/core/directives/video-view.directive.js"></script>
-		<script type="text/javascript" src="../app/core/directives/comments.directive.js"></script>
+		<!-- app -->
+		<script type="text/javascript" src="app/application.js"></script>		
+		<script type="text/javascript" src="app/core/controllers/main.ctrl.js"></script>
+		<script type="text/javascript" src="app/core/directives/comments.directive.js"></script>
+		<script type="text/javascript" src="app/core/directives/video-view.directive.js"></script>
+		<script type="text/javascript" src="app/core/directives/video-list.directive.js"></script>
 
 	<!-- /JS -->  
 

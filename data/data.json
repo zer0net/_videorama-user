@@ -1,0 +1,88 @@
+{
+	"next_item_id": 23,
+	"channel": {
+		"name": "The Zer0vdZ Channel",
+		"description": "some description bla bla bla some description bla bla bla some description bla bla bla some description bla bla bla some description bla bla bla some description bla bla bla some description bla bla bla some description bla bla bla some description bla bla bla some description bla bla bla some description bla bla bla some description bla bla bla some description bla bla bla some description bla bla bla some description bla bla bla some description bla bla bla some description bla bla bla",
+		"img": "77857d973c2cb56ed6d56b6afddefec2.jpg"
+	},
+	"videos": [
+		{
+			"video_id": 17,
+			"user_id": "davidnelband@zeroid.bit",
+			"channel": "1N8yMhHBPuXgS4iegJ39vaBBgSEejkaKJ7",
+			"title": "a suitable title for a video",
+			"description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+			"tags": "lorem, ipsum, dolor, sit, amet,",
+			"file_name": "12356.mp4",
+			"file_type": "video/mp4",
+			"file_size": 575773,
+			"total_time": 24640,
+			"date_added": 1470079084373
+		},
+		{
+			"video_id": 18,
+			"user_id": "davidnelband@zeroid.bit",
+			"channel": "1N8yMhHBPuXgS4iegJ39vaBBgSEejkaKJ7",
+			"title": "jhkjhkhlhkhkhkhk fkfjlas",
+			"description": "fjdsk fjado faiof aofjas ljfl ajf lajs",
+			"tags": "dsdsds, sds, dsd, sd, s, ds, ds, ds,",
+			"file_name": "dsdsdsds12356.mp4",
+			"file_type": "video/mp4",
+			"file_size": 575773,
+			"total_time": 24640,
+			"date_added": 1470134748449
+		},
+		{
+			"video_id": 19,
+			"user_id": "davidnelband@zeroid.bit",
+			"channel": "1N8yMhHBPuXgS4iegJ39vaBBgSEejkaKJ7",
+			"title": "asdsadsadsa",
+			"description": "asdsadsadsadsa",
+			"tags": "dsadsadsad, dsadsadsadsadsadsadsa, dsdsds, dsds,",
+			"file_name": "121212dsdsdsds12356.mp4",
+			"file_type": "video/mp4",
+			"file_size": 575773,
+			"total_time": 24640,
+			"date_added": 1470135324881
+		},
+		{
+			"video_id": 20,
+			"user_id": "davidnelband@zeroid.bit",
+			"channel": "1N8yMhHBPuXgS4iegJ39vaBBgSEejkaKJ7",
+			"title": "gwdgsgdsg",
+			"description": "sdgsdgdsg",
+			"tags": "sdgsdgds, g, sdg, sd, gsd,",
+			"file_name": "121212dsdsdsds12356.mp4",
+			"file_type": "video/mp4",
+			"file_size": 575773,
+			"total_time": 24640,
+			"date_added": 1470136116024
+		},
+		{
+			"video_id": 21,
+			"user_id": "davidnelband@zeroid.bit",
+			"channel": "1N8yMhHBPuXgS4iegJ39vaBBgSEejkaKJ7",
+			"title": "owls",
+			"description": "this video is 3.8 mbs",
+			"tags": "owls, simon-cowell, whateveaerre,",
+			"file_name": "owls.mp4",
+			"file_type": "video/mp4",
+			"file_size": 3667884,
+			"total_time": 66316.19,
+			"date_added": 1470139520682
+		},
+		{
+			"video_id": 22,
+			"user_id": "davidnelband@zeroid.bit",
+			"channel": "1N8yMhHBPuXgS4iegJ39vaBBgSEejkaKJ7",
+			"title": "asfasf",
+			"description": "asfasfsafsa",
+			"tags": "safsafsafsa sfa asf sa ,asfsafsalfsla fklsaj flasj fas,fjaslfjsalf jsal jfsal jfas,",
+			"file_name": "sdsdsowls.mp4",
+			"file_type": "video/mp4",
+			"file_size": 3667884,
+			"total_time": 66316.19,
+			"date_added": 1470140538656
+		}
+	]
+}

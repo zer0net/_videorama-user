@@ -29,7 +29,7 @@
 		</div>
 		<div class="pull-right col-xs-2">
         <md-button class="md-primary md-raised edgePadding">
-        	<a href="v/upload.html">Upload</a>
+        	<a href="/{{site_address}}/upload.html">Upload</a>
         </md-button>
         </div>
 	</md-toolbar>
@@ -39,44 +39,53 @@
 	    <!-- MAIN -->
 	    <md-content flex layout-padding class="main-content">
 
-	    	<md-content class="md-whiteframe-1dp" id="my-channel-section" my-channel ng-init="init()">
-	 			<h2>My Channel</h2>
-	 			<a ng-hide="mode === 'edit'" ng-click="editChannel()">edit</a>
-	 			<a ng-show="mode === 'edit'" ng-click="cancelEditChannel()">cancel</a>
-	 			<hr/>
-	 			<div layout="row" flex ng-show="mode === 'view'">
-		 			<figure flex="20">
-		 				<img class="md-whiteframe-1dp" ng-src="uploads/images/{{channel.img}}" style="width:100%;"/>
-		 			</figure>
-		 			<div class="channel-info" flex="80" layout-padding>
-		 				<h1 ng-bind="channel.name"></h1>
-		 				<article ng-bind="channel.description"></article>
-		 			</div>
+	    	<md-content class="md-whiteframe-1dp section" id="my-channel-section" my-channel ng-init="init()">
+	    		<div class="section-title">
+		 			<h2 ng-bind="channel.name"></h2>
+		 			<a ng-hide="mode === 'edit'" ng-click="editChannel()">
+		 				<span class="glyphicon glyphicon-pencil"></span>
+		 			</a>
+		 			<a ng-show="mode === 'edit'" ng-click="cancelEditChannel()">
+		 				<span class="glyphicon glyphicon-remove"></span>
+		 			</a>
 	 			</div>
-	 			<div layout="row" flex ng-show="mode === 'edit'">
-		 			<figure flex="20">
-						<button style="width:100%;height:200px; background-image:url('uploads/images/{{channel.img}}'); background-size:cover;" dropzone="dropzoneConfig" ng-hide="imgSrc">
-						<p style="background: rgba(0,0,0,0.5);color: white;"> Drag and drop files here or click to upload</p></button>
-						<img style="width:100%;" ng-src="{{imgSrc}}" ng-show="imgSrc" id="image"/>
-		 			</figure>
-		 			<div class="channel-info" flex="80" layout-padding>
-			            <md-input-container class="md-block" flex-gt-sm>
-			              	<label>Channel Name</label>
-							<input type="text" ng-model="channel.name">
-			            </md-input-container>
-			            <md-input-container class="md-block" flex-gt-sm>
-			              	<label>Channel Description</label>
-							<textarea ng-model="channel.description"></textarea>
-			            </md-input-container>
-						<md-button class="md-primary md-raised edgePadding pull-right" ng-click="updateChannel(channel)">
-				        	<label>Update Channel</label>
-				        </md-button> 
+	 			<hr/>
+	 			<div class="section-body">
+		 			<div layout="row" flex ng-show="mode === 'view'">
+			 			<figure flex="20">
+			 				<img class="md-whiteframe-1dp" ng-src="uploads/images/{{channel.img}}"/>
+			 			</figure>
+			 			<div class="channel-info" flex="80" layout-padding>
+			 				<article ng-bind="channel.description"></article>
+			 			</div>
+		 			</div>
+		 			<div layout="row" flex ng-show="mode === 'edit'">
+			 			<figure flex="20">
+							<button dropzone="dropzoneConfig" ng-hide="imgSrc">
+								<img ng-src="uploads/images/{{channel.img}}"/>
+								<p> Drag and drop files here or click to upload</p>
+							</button>
+							<img style="width:100%;" ng-src="{{imgSrc}}" ng-show="imgSrc" id="image"/>
+			 			</figure>
+			 			<div class="channel-info" flex="80" layout-padding>
+				            <md-input-container class="md-block" flex-gt-sm>
+				              	<label>Channel Name</label>
+								<input type="text" ng-model="channel.name">
+				            </md-input-container>
+				            <md-input-container class="md-block" flex-gt-sm>
+				              	<label>Channel Description</label>
+								<textarea ng-model="channel.description"></textarea>
+				            </md-input-container>
+							<md-button class="md-primary md-raised edgePadding pull-right" ng-click="updateChannel(channel)">
+					        	<label>Update Channel</label>
+					        </md-button> 
+			 			</div>
 		 			</div>
 	 			</div>
 	    	</md-content>
 
-		    <!-- my videos section -->
-		    <md-content id="my-videos-section" ng-init="getVideos()" class="md-whiteframe-1dp">
+		    <!-- videos section -->
+		    <md-content id="videos-section" video-list ng-init="getVideos()" class="md-whiteframe-1dp section">
 		    	<h2>Videos</h2>
 		    	<hr/>
 				<md-grid-list
@@ -84,26 +93,26 @@
 			        md-gutter="12px" md-gutter-gt-sm="8px" >
 					<md-grid-tile ng-repeat="video in videos" ng-init="renderVideo(video)" class="video-list-item">
 						<div class="inner-wrap">
-							<a href="v/video.html?w={{video.video_id}}">
+							<a href="video.html?w={{video.video_id}}">
 								<div class="video-img" style="background-image:url('{{video.imgSrc}}');">
-			               			<a ng-click="deleteVideo(video)">delete</a>
+			               			<span ng-click="deleteVideo(video)" class="glyphicon glyphicon-trash"></span>
 									<span class="video-time">{{video.total_time | date:"mm:ss"}}</span>
 								</div>
 							</a>
 							<md-grid-tile-footer>
-			    				<h3><a href="v/video.html?w={{video.video_id}}">{{video.title}}</a></h3>
+			    				<h3><a href="video.html?w={{video.video_id}}">{{video.title}}</a></h3>
 			    				<span>{{video.user_id}}</span>
-			    				<span>{{video.views}} views</span>
-			               		<span am-time-ago="video.date_added"></span>
+			    				<span>{{video.views}} views • <i am-time-ago="video.date_added"></i></span>
+			               		
 							</md-grid-tile-footer>
 						</div>
 					</md-grid-tile>
 			    </md-grid-list>
 
-			    <a ng-show="message" href="v/upload.html">{{message}}</a>
+			    <a ng-show="message" href="upload.html">{{message}}</a>
 
 		    </md-content>
-		    <!-- /my videos section -->
+		    <!-- / videos section -->
 
 	    </md-content>
 	    <!-- /MAIN -->
@@ -141,8 +150,8 @@
 		<script type="text/javascript" src="app/core/controllers/main.ctrl.js"></script>
 		<script type="text/javascript" src="app/core/directives/file-model.directive.js"></script>
 		<script type="text/javascript" src="app/core/directives/dropzone.directive.js"></script>
-		<script type="text/javascript" src="app/core/directives/video-upload.directive.js"></script>
 		<script type="text/javascript" src="app/core/directives/my-channel.directive.js"></script>
+		<script type="text/javascript" src="app/core/directives/video-list.directive.js"></script>
 
 	<!-- /JS -->  
 

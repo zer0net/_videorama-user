@@ -5,7 +5,7 @@ angular.module('ZeroVidzUser').directive('comments', [
 
 			$scope.postComment = function(comment,video) {
 
-				var inner_path = 'comments.json'
+				var inner_path = 'data/comments.json'
 				// get file
 				Page.cmd("fileGet", { "inner_path": inner_path, "required": false },function(data) {
 		        	// data
@@ -38,7 +38,7 @@ angular.module('ZeroVidzUser').directive('comments', [
 
 			$scope.getComments = function(video) {
 				// TEMP FUNCTION!!
-				var inner_path = 'comments.json';
+				var inner_path = 'data/comments.json';
 				Page.cmd("fileGet", { "inner_path": inner_path, "required": false },function(data) {
 					data = JSON.parse(data); 
 					$scope.comments = [];

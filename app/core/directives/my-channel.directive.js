@@ -29,7 +29,7 @@ angular.module('ZeroVidzUser').directive('myChannel', ['$sce','$location',
 
 			// get channel info
 			$scope.getChannelInfo = function() {
-				Page.cmd("fileGet", { "inner_path": "data.json", "required": false },function(data) {
+				Page.cmd("fileGet", { "inner_path": "data/data.json", "required": false },function(data) {
 		        	// data
 					if (data) { 
 						data = JSON.parse(data); 
@@ -86,7 +86,7 @@ angular.module('ZeroVidzUser').directive('myChannel', ['$sce','$location',
 			// update channel
 			$scope.updateChannel = function() {
 	    		var inner_path = 'data.json';
-				Page.cmd("fileGet", { "inner_path": "data.json", "required": false },function(data) {
+				Page.cmd("fileGet", { "inner_path": "data/data.json", "required": false },function(data) {
 					console.log('saved');
 		        	// data
 					if (data) { 

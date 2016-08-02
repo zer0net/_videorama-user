@@ -81,7 +81,7 @@ angular.module('ZeroVidzUser').directive('videoUpload', ['$sce','$location','$ti
 					// video player
 					$scope.player = {
 						sources: [{src:src,type:'video/' + file.type.split('/')[1]}],
-						theme: "../assets/lib/videogular-themes-default/videogular.css"
+						theme: "assets/lib/videogular-themes-default/videogular.css"
 					};
 
 					// apply to scope
@@ -117,7 +117,7 @@ angular.module('ZeroVidzUser').directive('videoUpload', ['$sce','$location','$ti
 			// create video
 			$scope.createVideo = function(video){
 
-				var inner_path = "data.json";
+				var inner_path = "data/data.json";
 				// get file
 				Page.cmd("fileGet", { "inner_path": inner_path, "required": false },function(data) {
 		        	// data

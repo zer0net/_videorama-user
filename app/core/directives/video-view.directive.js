@@ -7,7 +7,7 @@ angular.module('ZeroVidzUser').directive('videoView', ['$sce','$location',
 			$scope.getVideo = function () {
 				var videoId = $location.$$absUrl.split('w=')[1].split('&')[0];
 				videoId = parseInt(videoId);
-				var inner_path = 'data.json';
+				var inner_path = 'data/data.json';
 				Page.cmd("fileGet", { "inner_path": inner_path, "required": false },function(data) {
 					data = JSON.parse(data); 
 		        	data.videos.forEach(function(video,index) {
@@ -28,7 +28,7 @@ angular.module('ZeroVidzUser').directive('videoView', ['$sce','$location',
 			// get channel
 			$scope.getChannel = function(channelId) {
 				// TEMP FUNCTION!!
-				var inner_path = 'data.json';
+				var inner_path = 'data/data.json';
 				Page.cmd("fileGet", { "inner_path": inner_path, "required": false },function(data) {
 					data = JSON.parse(data); 
 					$scope.channel = data.channel;
@@ -41,10 +41,9 @@ angular.module('ZeroVidzUser').directive('videoView', ['$sce','$location',
 			$scope.countViews = function(video) {
 				// TEMP FUNCTION!!
 				video.views = 0;
-				var inner_path = 'views.json';
+				var inner_path = 'data/views.json';
 				Page.cmd("fileGet", { "inner_path": inner_path, "required": false },function(data) {
 					data = JSON.parse(data);
-					console.log(data);
 					data.views.forEach(function(view,index){
 						if (view.video_id === video.video_id){
 							video.views += 1;
@@ -60,18 +59,18 @@ angular.module('ZeroVidzUser').directive('videoView', ['$sce','$location',
 					autoPlay:true,
 					sources: [
 						{
-							src:'../uploads/videos/' + $scope.video.file_name,
+							src:'uploads/videos/' + $scope.video.file_name,
 							type:'video/' + $scope.video.file_type.split('/')[1]
 						}
 					],
-					theme: "../assets/lib/videogular-themes-default/videogular.css"
+					theme: "assets/lib/videogular-themes-default/videogular.css"
 				};
 			};
 
 			// create video view
 			$scope.createVideoView = function(video) {
 
-				var inner_path = 'views.json'
+				var inner_path = 'data/views.json'
 				// get file
 				Page.cmd("fileGet", { "inner_path": inner_path, "required": false },function(data) {
 		        	// data
