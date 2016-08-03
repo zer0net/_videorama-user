@@ -28,8 +28,8 @@
    "size": 771
   },
   "app/core/directives/my-channel.directive.js": {
-   "sha512": "59c23866a47d610d2b9ea57698287aa0a286ffbc1d1cf59d5df355f6fcd78aed",
-   "size": 2964
+   "sha512": "efcf619eb82ec50dddf4b57acdd4467e946bcc2e61f06a2c8a2c1792e290eae9",
+   "size": 2977
   },
   "app/core/directives/tag-input.directive.js": {
    "sha512": "a254457f69b1380c1454438e9dde4b9f47cf506cbafc4ce8df7fd4f9acffec34",
@@ -56,16 +56,16 @@
    "size": 314
   },
   "assets/css/style.css": {
-   "sha512": "e71693eca6ed7066fabae8a9c1f7426ee047fd27a9489a395a63f515418ae83f",
-   "size": 6152
+   "sha512": "03478005f77d8f3c24b81fd65f2075e2d03645b6a377bc6e0ad941d6f8c31115",
+   "size": 6173
   },
   "assets/less/elements.less": {
    "sha512": "1955f4df6b8bcea73e97a062037d91a1bfa5168c5061e26aa54d3fd5ad835318",
    "size": 6313
   },
   "assets/less/style.less": {
-   "sha512": "87030c2d7651db2d4fb946cea50fa7750bf2290230a62b1a93b021c246feb269",
-   "size": 4397
+   "sha512": "18142b60e9c9b582d205685282ddebd3790526186052d1224fa79add8873fd42",
+   "size": 4420
   },
   "assets/lib/SHA-1/LICENSE": {
    "sha512": "863aafd0cd3b3bf296b21ccc22ff7296f04d715b77fc5843eaee005f69ac3081",
@@ -2652,20 +2652,12 @@
    "size": 2976
   },
   "index.html": {
-   "sha512": "8c1037a0169fc1451ee1b08118fd6b495146289329dfb8032c3d443981aca937",
-   "size": 6828
+   "sha512": "2641de1b7d293a5a6c3f7f7139c93bef1d73755e9c5e31f6d2c0f6a2789f29dc",
+   "size": 6945
   },
   "upload.html": {
    "sha512": "f2ee33148196df67b543db0b8c7763d0ba7f7792047218615dd4a6a06e8cad22",
    "size": 7293
-  },
-  "uploads/posters/sdsdsowls.png": {
-   "sha512": "f22cf31d0a6854cd34699fd0823c190e82fe82cec054c93c97ce27a6b70e456d",
-   "size": 18366
-  },
-  "uploads/videos/sdsdsowls.mp4": {
-   "sha512": "21291cc893712195e6f80edf430e83914d75d1db6bd2723443b6dad0a381e337",
-   "size": 3667884
   },
   "video.html": {
    "sha512": "cbd62b53425f794ba3aa2b256201b466cf26b90746a9cc7fc668907a59c94dae",
@@ -2673,14 +2665,14 @@
   }
  },
  "ignore": "(.git|data|uploads|node_modules|js/index.js|data/0chan.db|webpack.config.js|update_files.rb|package.json|content.example.json|data/settings.example.json|LICENSE|README.md|js/engine/.*|js/templates|js/libs)",
- "modified": 1470153265.490665,
+ "modified": 1470221184.141965,
  "sign": [
-  3437932279481484825186047224087512428458015699002915197184942914565586558464,
-  12180990381462189948518119669160876767741169709444837413744779317855638965289
+  99230251737224271756779963763944546292775548170928612886794246357788383639725,
+  26372960831905003358727655811835748468181086195277777206969526336263593043785
  ],
  "signers_sign": "HGuiO6CvkCKeWb8cz0WDxgpH+GjEs1T+Bxso0T+rd0PjnwkTveD8z4lGl091rrPumwvVfuv99W4N4p6RRer+Oy0=",
  "signs": {
-  "1CRFBc4Tn8vvYdNBQCLRbuRwLZkNaHY8kz": "HMoaSm6Jo7jwdQNwGH7BAN3hBsJXTfPxBJ1zXF3zcZJvLA8fKIu49kl8z+2JZ7iqJO5MWIwSQzivMDiC/8sDfas="
+  "1CRFBc4Tn8vvYdNBQCLRbuRwLZkNaHY8kz": "HGSUI7zTH3t/ToKgWRilsjK2G7XmtOuQCU9O2KrqWGvSn4k6SnmBT5+8BoEr3fAC9vY5XK5tqTdECwaVBhGocWc="
  },
  "signs_required": 1,
  "title": "Zer0vidz User",
