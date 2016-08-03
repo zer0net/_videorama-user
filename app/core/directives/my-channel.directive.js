@@ -30,9 +30,10 @@ angular.module('ZeroVidzUser').directive('myChannel', ['$sce','$location',
 			// get channel info
 			$scope.getChannelInfo = function() {
 				Page.cmd("fileGet", { "inner_path": "data/data.json", "required": false },function(data) {
+					console.log(data);
 		        	// data
+					data = JSON.parse(data); 
 					if (data.channel) { 
-						data = JSON.parse(data); 
 						$scope.channel = data.channel;
 						$scope.$apply();
 					} else {
@@ -68,11 +69,8 @@ angular.module('ZeroVidzUser').directive('myChannel', ['$sce','$location',
 
 			// save channel details
 			$scope.saveChannelDetails = function() {
-				if ($scope.file) {
-					$scope.uploadPreviewImage();
-				} else {
-					$scope.updateChannel();
-				}
+				$scope.loading = true;
+				$scope.uploadPreviewImage();
 			};
 
 			// upload preview image
@@ -89,7 +87,7 @@ angular.module('ZeroVidzUser').directive('myChannel', ['$sce','$location',
 
 			// update channel
 			$scope.updateChannel = function() {
-	    		var inner_path = 'data.json';
+	    		var inner_path = 'data/data.json';
 				Page.cmd("fileGet", { "inner_path": "data/data.json", "required": false },function(data) {
 					console.log('saved');
 		        	// data
@@ -104,6 +102,7 @@ angular.module('ZeroVidzUser').directive('myChannel', ['$sce','$location',
 					Page.cmd("fileWrite", [inner_path, btoa(json_raw)], function(res) {
 						Page.cmd("wrapperNotification", ["done", "Channel Updated!", 10000]);
 						$scope.mode = 'view';
+						$scope.loading = false;
 						$scope.$apply();
 					});
 			    });

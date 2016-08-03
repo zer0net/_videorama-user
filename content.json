@@ -2651,14 +2651,6 @@
    "sha512": "bc65f2262c309aa44e0c0a28789725fb847a3ec20a043c28fb4a29cd9973c31e",
    "size": 2976
   },
-  "data/data.json": {
-   "sha512": "cbdd46610595f0a05435aee71abb3d5e207695bce2fabcbb603abd6813b1e41e",
-   "size": 839
-  },
-  "data/views.json": {
-   "sha512": "60df1bdecf7643aa9026e291199039f2f34b2441c71797319554d1abc5ccaded",
-   "size": 1658
-  },
   "index.html": {
    "sha512": "8c1037a0169fc1451ee1b08118fd6b495146289329dfb8032c3d443981aca937",
    "size": 6828
@@ -2680,17 +2672,17 @@
    "size": 7838
   }
  },
- "ignore": "(.git|data/users|node_modules|js/index.js|data/0chan.db|webpack.config.js|update_files.rb|package.json|content.example.json|data/settings.example.json|LICENSE|README.md|js/engine/.*|js/templates|js/libs)",
- "modified": 1470149455.123653,
+ "ignore": "(.git|data|uploads|node_modules|js/index.js|data/0chan.db|webpack.config.js|update_files.rb|package.json|content.example.json|data/settings.example.json|LICENSE|README.md|js/engine/.*|js/templates|js/libs)",
+ "modified": 1470153265.490665,
  "sign": [
-  61675508488595139287375888259803572286266260399361005550350782124464865886783,
-  60036501723326907529214519899318304792507332927851657355110369680897473111426
+  3437932279481484825186047224087512428458015699002915197184942914565586558464,
+  12180990381462189948518119669160876767741169709444837413744779317855638965289
  ],
  "signers_sign": "HGuiO6CvkCKeWb8cz0WDxgpH+GjEs1T+Bxso0T+rd0PjnwkTveD8z4lGl091rrPumwvVfuv99W4N4p6RRer+Oy0=",
  "signs": {
-  "1CRFBc4Tn8vvYdNBQCLRbuRwLZkNaHY8kz": "HI56UEM9g0wt3z/dPnmV1zPqHCPmOLLRcWcnYSDXfhcgEyi26E9HvD5ISi4R83KinyIXZX2C1Z3kcspdnbzf/Ec="
+  "1CRFBc4Tn8vvYdNBQCLRbuRwLZkNaHY8kz": "HMoaSm6Jo7jwdQNwGH7BAN3hBsJXTfPxBJ1zXF3zcZJvLA8fKIu49kl8z+2JZ7iqJO5MWIwSQzivMDiC/8sDfas="
  },
  "signs_required": 1,
- "title": "1N8yMhHBPuXgS4iegJ39vaBBgSEejkaKJ7 - ZeroNet_",
+ "title": "Zer0vidz User",
  "zeronet_version": "0.3.6"
 }

@@ -1,5 +1,5 @@
 {
-	"next_item_id": 12,
+	"next_item_id": 15,
 	"views": [
 		{
 			"video_id": 1,
@@ -65,6 +65,24 @@
 			"channel": "1CRFBc4Tn8vvYdNBQCLRbuRwLZkNaHY8kz",
 			"user_id": "davidnelband@zeroid.bit",
 			"date_added": 1470149411137
+		},
+		{
+			"video_id": 2,
+			"channel": "1CRFBc4Tn8vvYdNBQCLRbuRwLZkNaHY8kz",
+			"user_id": "davidnelband@zeroid.bit",
+			"date_added": 1470153119286
+		},
+		{
+			"video_id": 2,
+			"channel": "1CRFBc4Tn8vvYdNBQCLRbuRwLZkNaHY8kz",
+			"user_id": "davidnelband@zeroid.bit",
+			"date_added": 1470153239935
+		},
+		{
+			"video_id": 3,
+			"channel": "1CRFBc4Tn8vvYdNBQCLRbuRwLZkNaHY8kz",
+			"user_id": "davidnelband@zeroid.bit",
+			"date_added": 1470220660837
 		}
 	]
 }

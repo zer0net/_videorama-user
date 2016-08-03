@@ -205,6 +205,7 @@ section.container {
   position: relative;
   border: 0;
   padding: 0;
+  min-height: 100px;
 }
 #my-channel-section .section-body figure button img {
   width: 100%;

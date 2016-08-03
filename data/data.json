@@ -1,5 +1,5 @@
 {
-	"next_item_id": 3,
+	"next_item_id": 4,
 	"videos": [
 		{
 			"video_id": 1,
@@ -26,6 +26,24 @@
 			"file_size": 3667884,
 			"total_time": 66316.19,
 			"date_added": 1470148930576
+		},
+		{
+			"video_id": 3,
+			"user_id": "davidnelband@zeroid.bit",
+			"channel": "1CRFBc4Tn8vvYdNBQCLRbuRwLZkNaHY8kz",
+			"title": "some video other",
+			"description": "djlsajdflas jfls jsflaj flsa",
+			"tags": "qfsafjlsa flsa,jasflasjlf saljfsa,sajflkasjflas jlfsa jsalj,fjl asjflsa ljfsa,",
+			"file_name": "121212dsdsdsds12356.mp4",
+			"file_type": "video/mp4",
+			"file_size": 575773,
+			"total_time": 24640,
+			"date_added": 1470220659808
 		}
-	]
+	],
+	"channel": {
+		"name": "My Channel",
+		"img": "77857d973c2cb56ed6d56b6afddefec2.jpg",
+		"description": "my channel description"
+	}
 }

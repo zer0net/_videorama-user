@@ -51,7 +51,8 @@
 	 			</div>
 	 			<hr/>
 	 			<div class="section-body">
-		 			<div layout="row" flex ng-show="mode === 'view'">
+					<md-progress-circular ng-show="loading" md-mode="indeterminate"></md-progress-circular>
+		 			<div layout="row" flex  ng-hide="loading" ng-if="mode === 'view'">
 			 			<figure flex="20">
 			 				<img class="md-whiteframe-1dp" ng-src="uploads/images/{{channel.img}}"/>
 			 			</figure>
@@ -59,12 +60,10 @@
 			 				<article ng-bind="channel.description"></article>
 			 			</div>
 		 			</div>
-		 			<div layout="row" flex ng-show="mode === 'edit'">
+		 			<div layout="row" flex  ng-hide="loading" ng-if="mode === 'edit'">
 			 			<figure flex="20">
-							<button dropzone="dropzoneConfig" ng-hide="imgSrc">
-								<img ng-src="uploads/images/{{channel.img}}"/>
-								<p> Drag and drop files here or click to upload</p>
-							</button>
+							<button dropzone="dropzoneConfig" ng-hide="imgSrc"> Drag and drop files here or click to upload</button>
+							<img ng-src="uploads/images/{{channel.img}}" ng-hide="imgSrc"/>
 							<img style="width:100%;" ng-src="{{imgSrc}}" ng-show="imgSrc" id="image"/>
 			 			</figure>
 			 			<div class="channel-info" flex="80" layout-padding>
@@ -76,7 +75,7 @@
 				              	<label>Channel Description</label>
 								<textarea ng-model="channel.description"></textarea>
 				            </md-input-container>
-							<md-button class="md-primary md-raised edgePadding pull-right" ng-click="updateChannel(channel)">
+							<md-button class="md-primary md-raised edgePadding pull-right" ng-click="saveChannelDetails()">
 					        	<label>Update Channel</label>
 					        </md-button> 
 			 			</div>
