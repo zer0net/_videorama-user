@@ -8,7 +8,6 @@ angular.module('ZeroVidzUser').directive('myChannel', ['$sce','$location',
 
 			// init
 			$scope.init = function () {
-
 				// dropzone config
 				$scope.dropzoneConfig = {	
 				    'options': { // passed into the Dropzone constructor
@@ -22,55 +21,52 @@ angular.module('ZeroVidzUser').directive('myChannel', ['$sce','$location',
 						}
 					}
 				};
+				$scope.inner_path = 'data/channel.json';
 				$scope.mode = 'view';
 				$scope.getChannelInfo();
-
 			};
 
 			// get channel info
 			$scope.getChannelInfo = function() {
-				Page.cmd("fileGet", { "inner_path": "data/data.json", "required": false },function(data) {
-					console.log(data);
-		        	// data
-					data = JSON.parse(data); 
-					if (data.channel) { 
-						$scope.channel = data.channel;
-						$scope.$apply();
-					} else {
-						$scope.channel = {
-							name:'My Channel'
+				Page.cmd("fileGet", { "inner_path": $scope.inner_path, "required": false },function(data) {
+					$scope.$apply(function() {
+			        	// data
+						if (data){
+							data = JSON.parse(data);
+							$scope.channel = data.channel;
+						} else {
+							$scope.channel = {
+								name:'My Channel',
+								description:'No description yet!'
+							};
 						}
-					}
+					});
 			    });
 			};
 
-			// edit mode 
-			$scope.editChannel = function () {
-				$scope.mode = 'edit';
-			};
-
-			// cancel edit channel
-			$scope.cancelEditChannel = function() {
-				$scope.mode = 'view';
+			// toggle scope mode
+			$scope.toggleScopeMode = function() {
+				if ($scope.mode === 'edit'){
+					$scope.mode = 'view';
+				} else {
+					$scope.mode = 'edit';
+				}
 			};
 
 			// show preview image
 			$scope.showPreviewImage = function(file){
+				// reader on load
 				reader.onload = function(){
-					// file url
-					var dataURL = reader.result;
-					var src = $sce.trustAsResourceUrl(dataURL);
-					$scope.imgSrc = dataURL;
 					// apply to scope
-					$scope.$apply();
+					$scope.$apply(function() {
+						// file url
+						var dataURL = reader.result;
+						var src = $sce.trustAsResourceUrl(dataURL);
+						// temp scope var
+						$scope.imgSrc = dataURL;
+					});
 				};
 				reader.readAsDataURL(file);
-			};
-
-			// save channel details
-			$scope.saveChannelDetails = function() {
-				$scope.loading = true;
-				$scope.uploadPreviewImage();
 			};
 
 			// upload preview image
@@ -85,10 +81,19 @@ angular.module('ZeroVidzUser').directive('myChannel', ['$sce','$location',
 				});
 			};
 
+			// save channel details
+			$scope.saveChannelDetails = function() {
+				$scope.loading = true;
+				if ($scope.file){
+					$scope.uploadPreviewImage();
+				} else {
+					$scope.updateChannel();
+				}
+			};
+
 			// update channel
 			$scope.updateChannel = function() {
-	    		var inner_path = 'data/data.json';
-				Page.cmd("fileGet", { "inner_path": "data/data.json", "required": false },function(data) {
+				Page.cmd("fileGet", { "inner_path": $scope.inner_path, "required": false },function(data) {
 					console.log('saved');
 		        	// data
 					if (data) { 
@@ -99,11 +104,12 @@ angular.module('ZeroVidzUser').directive('myChannel', ['$sce','$location',
 					data.channel = $scope.channel;
 					var json_raw = unescape(encodeURIComponent(JSON.stringify(data, void 0, '\t')));
 					// write to file
-					Page.cmd("fileWrite", [inner_path, btoa(json_raw)], function(res) {
-						Page.cmd("wrapperNotification", ["done", "Channel Updated!", 10000]);
-						$scope.mode = 'view';
-						$scope.loading = false;
-						$scope.$apply();
+					Page.cmd("fileWrite", [$scope.inner_path, btoa(json_raw)], function(res) {
+						$scope.$apply(function() {
+							Page.cmd("wrapperNotification", ["done", "Channel Updated!", 10000]);
+							$scope.mode = 'view';
+							$scope.loading = false;
+						});
 					});
 			    });
 			};

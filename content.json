@@ -28,8 +28,8 @@
    "size": 771
   },
   "app/core/directives/my-channel.directive.js": {
-   "sha512": "efcf619eb82ec50dddf4b57acdd4467e946bcc2e61f06a2c8a2c1792e290eae9",
-   "size": 2977
+   "sha512": "540b1e31c38230771a2ba0010c2fd764435257763acfd1541adceb7cf928824d",
+   "size": 3175
   },
   "app/core/directives/tag-input.directive.js": {
    "sha512": "a254457f69b1380c1454438e9dde4b9f47cf506cbafc4ce8df7fd4f9acffec34",
@@ -56,16 +56,16 @@
    "size": 314
   },
   "assets/css/style.css": {
-   "sha512": "03478005f77d8f3c24b81fd65f2075e2d03645b6a377bc6e0ad941d6f8c31115",
-   "size": 6173
+   "sha512": "495a2e7fa6f9923937b1ad58d4d1dcb0a434394e01cba478e781a739b007d326",
+   "size": 6196
   },
   "assets/less/elements.less": {
    "sha512": "1955f4df6b8bcea73e97a062037d91a1bfa5168c5061e26aa54d3fd5ad835318",
    "size": 6313
   },
   "assets/less/style.less": {
-   "sha512": "18142b60e9c9b582d205685282ddebd3790526186052d1224fa79add8873fd42",
-   "size": 4420
+   "sha512": "681c964ee494f700a145ccae0f1012b3b1a53c983c80db33a80fc623d7b5a13a",
+   "size": 4449
   },
   "assets/lib/SHA-1/LICENSE": {
    "sha512": "863aafd0cd3b3bf296b21ccc22ff7296f04d715b77fc5843eaee005f69ac3081",
@@ -2652,8 +2652,8 @@
    "size": 2976
   },
   "index.html": {
-   "sha512": "2641de1b7d293a5a6c3f7f7139c93bef1d73755e9c5e31f6d2c0f6a2789f29dc",
-   "size": 6945
+   "sha512": "a231fe6b03bb79be27974ccb0f09d57ef97d25c4ed0e5df68044697658dfd9fe",
+   "size": 7032
   },
   "upload.html": {
    "sha512": "f2ee33148196df67b543db0b8c7763d0ba7f7792047218615dd4a6a06e8cad22",
@@ -2665,14 +2665,14 @@
   }
  },
  "ignore": "(.git|data|uploads|node_modules|js/index.js|data/0chan.db|webpack.config.js|update_files.rb|package.json|content.example.json|data/settings.example.json|LICENSE|README.md|js/engine/.*|js/templates|js/libs)",
- "modified": 1470221184.141965,
+ "modified": 1470256422.245607,
  "sign": [
-  99230251737224271756779963763944546292775548170928612886794246357788383639725,
-  26372960831905003358727655811835748468181086195277777206969526336263593043785
+  31539639421807866354011898585937816085637260928095291057919131553428167368866,
+  35432535755835028410082449178000576943382289415750218238394095084632426580600
  ],
  "signers_sign": "HGuiO6CvkCKeWb8cz0WDxgpH+GjEs1T+Bxso0T+rd0PjnwkTveD8z4lGl091rrPumwvVfuv99W4N4p6RRer+Oy0=",
  "signs": {
-  "1CRFBc4Tn8vvYdNBQCLRbuRwLZkNaHY8kz": "HGSUI7zTH3t/ToKgWRilsjK2G7XmtOuQCU9O2KrqWGvSn4k6SnmBT5+8BoEr3fAC9vY5XK5tqTdECwaVBhGocWc="
+  "1CRFBc4Tn8vvYdNBQCLRbuRwLZkNaHY8kz": "HN8L1eBTKCOs1A7ascB2h+guA9jHadnDuT5PSsHu59azSp7/fzAwDV7PmzJVCBM9yiqNS09hZhOJesnElRg4oKw="
  },
  "signs_required": 1,
  "title": "Zer0vidz User",

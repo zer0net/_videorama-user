@@ -42,16 +42,18 @@
 	    	<md-content class="md-whiteframe-1dp section" id="my-channel-section" my-channel ng-init="init()">
 	    		<div class="section-title">
 		 			<h2 ng-bind="channel.name"></h2>
-		 			<a ng-hide="mode === 'edit'" ng-click="editChannel()">
+		 			<a ng-hide="mode === 'edit'" ng-click="toggleScopeMode()">
 		 				<span class="glyphicon glyphicon-pencil"></span>
 		 			</a>
-		 			<a ng-show="mode === 'edit'" ng-click="cancelEditChannel()">
+		 			<a ng-show="mode === 'edit'" ng-click="toggleScopeMode()">
 		 				<span class="glyphicon glyphicon-remove"></span>
 		 			</a>
 	 			</div>
 	 			<hr/>
 	 			<div class="section-body">
-					<md-progress-circular ng-show="loading" md-mode="indeterminate"></md-progress-circular>
+					<div layout="row" ng-show="loading"  layout-sm="column" layout-align="space-around">
+						<md-progress-circular md-mode="indeterminate"></md-progress-circular>
+					</div>
 		 			<div layout="row" flex  ng-hide="loading" ng-if="mode === 'view'">
 			 			<figure flex="20">
 			 				<img class="md-whiteframe-1dp" ng-src="uploads/images/{{channel.img}}"/>
