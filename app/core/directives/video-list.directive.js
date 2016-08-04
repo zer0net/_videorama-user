@@ -6,12 +6,17 @@ angular.module('ZeroVidzUser').directive('videoList', ['$sce','$location',
 			// get videos 
 			$scope.getVideos = function(){
 				// get file
-				Page.cmd("fileGet", { "inner_path": "data/data.json", "required": false },function(data) {
+				Page.cmd("fileGet", { "inner_path": "data/channel.json", "required": false },function(data) {
 		        	// data
 					if (data) { 
 						data = JSON.parse(data); 
-						$scope.videos = data.videos;
-						$scope.$apply();
+						if (data.videos.length > 0){
+							$scope.videos = data.videos;
+							$scope.$apply();						
+						} else {
+							$scope.message = 'no videos yet. upload now!';
+							$scope.$apply();
+						}
 					} else {
 						$scope.message = 'no videos yet. upload now!';
 						$scope.$apply();
@@ -40,7 +45,7 @@ angular.module('ZeroVidzUser').directive('videoList', ['$sce','$location',
 			// delet video
 			$scope.deleteVideo = function(vid) {
 
-				var inner_path = 'data/data.json'
+				var inner_path = 'data/channel.json'
 				Page.cmd("fileGet", { "inner_path": inner_path, "required": false },function(data) {
 
 					if (data) { 

@@ -12,8 +12,8 @@
    "size": 381
   },
   "app/core/controllers/main.ctrl.js": {
-   "sha512": "af736f93098a2bd4463546b095df5dcad785a6bcf7187a4917dbd83a8a429871",
-   "size": 959
+   "sha512": "49c7fdbbf064144aec84f9aaa8800a014426db2b598d2832beeb3033bf3d8d72",
+   "size": 961
   },
   "app/core/directives/comments.directive.js": {
    "sha512": "13817d464faa90306e219381ec88176b8121de4a7dcaa6cc8dba00860ab52ba9",
@@ -36,16 +36,16 @@
    "size": 464
   },
   "app/core/directives/video-list.directive.js": {
-   "sha512": "5fef1e21dee31a2a37c64c7a7b3d0f6cf2f7d8a524e33f8ca8fce05bbb4da8b0",
-   "size": 2245
+   "sha512": "dcb82e3c55a560d6c120bf85459cc5d0d27eb36960733e63f9d96bbd52640f4f",
+   "size": 2395
   },
   "app/core/directives/video-upload.directive.js": {
-   "sha512": "243717279fc1def2c06f64f57a678e87656eac0ef31693f6c89a176410381778",
-   "size": 4587
+   "sha512": "398146b3d9a9fd1cdbb050f6becd7f0944fcfc046300ccc5849446b2be26a8d4",
+   "size": 4670
   },
   "app/core/directives/video-view.directive.js": {
-   "sha512": "7f3bf746f78455f3ef997803dee247280f44f5e0bd0d0b16550161138fd884c4",
-   "size": 3114
+   "sha512": "8b08fa4cd038cf22bc7dbd6c7d2d232493a03080c87b2072284d1c95f5c1ce6a",
+   "size": 3120
   },
   "app/core/views/home.view.html": {
    "sha512": "eef0b25b63b4dad87e0ff2d5d0f4a9e786dd099f7b737085148ccca4a5a804d5",
@@ -2665,16 +2665,17 @@
   }
  },
  "ignore": "(.git|data|uploads|node_modules|js/index.js|data/0chan.db|webpack.config.js|update_files.rb|package.json|content.example.json|data/settings.example.json|LICENSE|README.md|js/engine/.*|js/templates|js/libs)",
- "modified": 1470256422.245607,
+ "inner_path": "content.json",
+ "modified": 1470264054.407229,
  "sign": [
-  31539639421807866354011898585937816085637260928095291057919131553428167368866,
-  35432535755835028410082449178000576943382289415750218238394095084632426580600
+  9972370851754389436481201673006870495891704998495550248251902615720052995393,
+  105023119370977316274153009329874374193261531630431278585565007878202115174773
  ],
  "signers_sign": "HGuiO6CvkCKeWb8cz0WDxgpH+GjEs1T+Bxso0T+rd0PjnwkTveD8z4lGl091rrPumwvVfuv99W4N4p6RRer+Oy0=",
  "signs": {
-  "1CRFBc4Tn8vvYdNBQCLRbuRwLZkNaHY8kz": "HN8L1eBTKCOs1A7ascB2h+guA9jHadnDuT5PSsHu59azSp7/fzAwDV7PmzJVCBM9yiqNS09hZhOJesnElRg4oKw="
+  "1CRFBc4Tn8vvYdNBQCLRbuRwLZkNaHY8kz": "G1m2fPy15iVLwASYxvrs4VSEesWcczUG4CaUmh4XIf12v1Gd2o8gcqKU5MuXWWjuLFsFVxHGgJcwiQcFd66eooc="
  },
  "signs_required": 1,
  "title": "Zer0vidz User",
- "zeronet_version": "0.3.6"
+ "zeronet_version": "0.3.7"
 }

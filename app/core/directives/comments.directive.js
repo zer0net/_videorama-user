@@ -28,10 +28,15 @@ angular.module('ZeroVidzUser').directive('comments', [
 
 					// write to file
 					Page.cmd("fileWrite", [inner_path, btoa(json_raw)], function(res) {
-						$scope.$apply(function() {
-							$scope.comments.push(comment);
-							$scope.comment = '';
-						});
+						// publish site
+						//Page.cmd("sitePublish",{"inner_path": inner_path}, function(res){
+							// apply to scope
+							$scope.$apply(function() {
+								$scope.comments.push(comment);
+								$scope.comment = '';
+							});
+
+						//});
 					});
 			    });
 

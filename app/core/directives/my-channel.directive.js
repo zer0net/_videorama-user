@@ -105,10 +105,14 @@ angular.module('ZeroVidzUser').directive('myChannel', ['$sce','$location',
 					var json_raw = unescape(encodeURIComponent(JSON.stringify(data, void 0, '\t')));
 					// write to file
 					Page.cmd("fileWrite", [$scope.inner_path, btoa(json_raw)], function(res) {
-						$scope.$apply(function() {
-							Page.cmd("wrapperNotification", ["done", "Channel Updated!", 10000]);
-							$scope.mode = 'view';
-							$scope.loading = false;
+						// publish site
+						Page.cmd("sitePublish",{"inner_path": inner_path}, function(res){
+							// apply to scope
+							$scope.$apply(function() {
+								Page.cmd("wrapperNotification", ["done", "Channel Updated!", 10000]);
+								$scope.mode = 'view';
+								$scope.loading = false;
+							});
 						});
 					});
 			    });

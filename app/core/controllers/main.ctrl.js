@@ -20,7 +20,7 @@ angular.module('ZeroVidzUser').controller('MainCtrl', ['$scope','$sce','$locatio
 					if (site_info.cert_user_id) {
 						$scope.user = site_info.cert_user_id;
 					} else {
-						$scope.selectUser();
+						//$scope.selectUser();
 					}
 
 					$scope.page = Page;

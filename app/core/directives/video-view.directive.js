@@ -7,7 +7,7 @@ angular.module('ZeroVidzUser').directive('videoView', ['$sce','$location',
 			$scope.getVideo = function () {
 				var videoId = $location.$$absUrl.split('w=')[1].split('&')[0];
 				videoId = parseInt(videoId);
-				var inner_path = 'data/data.json';
+				var inner_path = 'data/channel.json';
 				Page.cmd("fileGet", { "inner_path": inner_path, "required": false },function(data) {
 					data = JSON.parse(data); 
 		        	data.videos.forEach(function(video,index) {
@@ -28,7 +28,7 @@ angular.module('ZeroVidzUser').directive('videoView', ['$sce','$location',
 			// get channel
 			$scope.getChannel = function(channelId) {
 				// TEMP FUNCTION!!
-				var inner_path = 'data/data.json';
+				var inner_path = 'data/channel.json';
 				Page.cmd("fileGet", { "inner_path": inner_path, "required": false },function(data) {
 					data = JSON.parse(data); 
 					$scope.channel = data.channel;
@@ -89,8 +89,11 @@ angular.module('ZeroVidzUser').directive('videoView', ['$sce','$location',
 
 					// write to file
 					Page.cmd("fileWrite", [inner_path, btoa(json_raw)], function(res) {
-						video.views += 1;
-						$scope.$apply();
+						// site publish
+						//Page.cmd("sitePublish",{"inner_path": inner_path}, function(res){
+							video.views += 1;
+							$scope.$apply();
+						//});
 					});
 			    });
 
