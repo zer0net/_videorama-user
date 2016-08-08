@@ -83,7 +83,7 @@ angular.module('ZeroVidzUser').directive('videoUpload', ['$sce','$location','$ti
 						sources: [{src:src,type:'video/' + file.type.split('/')[1]}],
 						theme: "assets/lib/videogular-themes-default/videogular.css"
 					};
-
+					$scope.video.title = file.name;
 					// apply to scope
 					$scope.$apply(function() {
 					    $timeout(function () {
@@ -130,10 +130,12 @@ angular.module('ZeroVidzUser').directive('videoUpload', ['$sce','$location','$ti
 					}
 
 					// break down tags array
-					var tags = '';
-					$scope.tags.forEach(function(tag,index) {
-						tags += tag + ',';
-					});
+					if ($scope.tags.length > 0){
+						var tags = '';
+						$scope.tags.forEach(function(tag,index) {
+							tags += tag + ',';
+						});					
+					}
 			    	// new video
 					video = {
 						"video_id":data.next_item_id,
@@ -158,7 +160,7 @@ angular.module('ZeroVidzUser').directive('videoUpload', ['$sce','$location','$ti
 					Page.cmd("fileWrite", [inner_path, btoa(json_raw)], function(res) {
 						console.log(res);
 						// site publish
-						Page.cmd("sitePublish",{"inner_path": inner_path}, function(res){
+						// Page.cmd("sitePublish",{"inner_path": inner_path}, function(res){
 							console.log(res);
 							// apply to scope
 							$scope.$apply(function(){
@@ -166,7 +168,7 @@ angular.module('ZeroVidzUser').directive('videoUpload', ['$sce','$location','$ti
 								var newVideoUrl  = 'video.html?w=' + video.video_id;
 								window.location.href = newVideoUrl;
 							});
-						});
+						// });
 					});
 			    });
 			};

@@ -102,18 +102,19 @@ angular.module('ZeroVidzUser').directive('myChannel', ['$sce','$location',
 						data = { "next_item_id":1,"videos": [] }
 					};
 					data.channel = $scope.channel;
+					data.channel.channel_id = $scope.site_address;
 					var json_raw = unescape(encodeURIComponent(JSON.stringify(data, void 0, '\t')));
 					// write to file
 					Page.cmd("fileWrite", [$scope.inner_path, btoa(json_raw)], function(res) {
 						// publish site
-						Page.cmd("sitePublish",{"inner_path": inner_path}, function(res){
+						// Page.cmd("sitePublish",{"inner_path": $scope.inner_path}, function(res){
 							// apply to scope
 							$scope.$apply(function() {
 								Page.cmd("wrapperNotification", ["done", "Channel Updated!", 10000]);
 								$scope.mode = 'view';
 								$scope.loading = false;
 							});
-						});
+						//});
 					});
 			    });
 			};

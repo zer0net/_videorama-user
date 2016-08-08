@@ -25,7 +25,7 @@
 
 	<md-toolbar layout-padding class="md-hue-2 header" layout="row">
 		<div class="pull-left col-xs-10">
-		<h3><a href="/{{site_address}}">ZeroVidz User Interface</a></h3>
+		<h3><a href="/{{site_address}}">ZeroVidz Local User Interface</a></h3>
 		</div>
 		<div class="pull-right col-xs-2">
         <md-button class="md-primary md-raised edgePadding">
@@ -48,11 +48,15 @@
 				<div flex layout="row" ng-show="video.file">
 					<div flex="25">
 						<div class="video-upload-top">
+
 							<canvas id="canvas" ng-show="previewImage" class="md-whiteframe-1dp"></canvas>
 							<md-progress-circular ng-hide="previewImage" md-mode="indeterminate"></md-progress-circular>
+							<span>thumb image</span>
 							<a ng-click="capturePreviewImage(video)" id="capture-image">capture</a>
 							<br/>
 							<i>*play video to capture frame</i>
+							<hr/>
+							<span>info</span>
 							<ul>
 								<li>file size:{{video.file.size}}</li>
 								<li>file name:{{video.file.name}}</li>
@@ -60,6 +64,50 @@
 						</div>
 					</div>
 					<form flex="75" name="videoUpload" id="video-upload-form">
+
+						<div class="video-info" ng-show="video.file">
+				            <md-input-container class="md-block" flex-gt-sm>
+				              	<label>Title</label>
+								<input type="text" ng-model="video.title">
+				            </md-input-container>
+				            <!--<md-input-container class="md-block" flex-gt-sm>
+				              	<label>description</label>
+								<textarea ng-model="video.description"></textarea>
+				            </md-input-container>
+				            <md-input-container class="md-block" flex-gt-sm>
+				              	<label>Tags</label>
+								<input type="text" ng-model="video.tags" tag-input>
+				            </md-input-container>
+				            <div class="tags-container">
+				            	<span ng-repeat="tag in tags" class="tag">
+				            		{{tag}}
+				            		<span class="glyphicon glyphicon-remove md-whiteframe-1dp" ng-click="removeTag($index)"></span>
+				            	</span>
+				            </div>
+			            </div>-->
+
+						<videogular vg-player-ready="onPlayerReady($API,video)" vg-theme="player.theme" ng-if="player">
+							<vg-media vg-src="player.sources"
+									vg-tracks="player.tracks">
+							</vg-media>
+							<vg-controls>
+								<vg-play-pause-button></vg-play-pause-button>
+								<vg-time-display>{{ currentTime | date:"mm:ss" }}</vg-time-display>
+								<vg-scrub-bar>
+									<vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+								</vg-scrub-bar>
+								<vg-time-display>{{ timeLeft | date:"mm:ss" }}</vg-time-display>
+								<vg-volume>
+									<vg-mute-button></vg-mute-button>
+									<vg-volume-bar></vg-volume-bar>
+								</vg-volume>
+								<vg-fullscreen-button></vg-fullscreen-button>
+							</vg-controls>
+							<vg-overlay-play></vg-overlay-play>
+							<vg-poster vg-url="player.plugins.poster" ng-if="player.plugins"></vg-poster>
+						</videogular>
+
+
 						<div class="upload-summary video-upload-top">
 							<div layout="row" ng-show="loading"  layout-sm="column" layout-align="space-around">
 								<md-progress-circular md-mode="indeterminate"></md-progress-circular>
@@ -68,52 +116,7 @@
 				            	<label>Upload Video</label>
 				            </md-button>
 						</div>
-						<md-tabs md-dynamic-height md-border-bottom flex="100">
-							<md-tab label="video">
-								<videogular vg-player-ready="onPlayerReady($API,video)" vg-theme="player.theme" ng-if="player">
-									<vg-media vg-src="player.sources"
-											vg-tracks="player.tracks">
-									</vg-media>
-									<vg-controls>
-										<vg-play-pause-button></vg-play-pause-button>
-										<vg-time-display>{{ currentTime | date:"mm:ss" }}</vg-time-display>
-										<vg-scrub-bar>
-											<vg-scrub-bar-current-time></vg-scrub-bar-current-time>
-										</vg-scrub-bar>
-										<vg-time-display>{{ timeLeft | date:"mm:ss" }}</vg-time-display>
-										<vg-volume>
-											<vg-mute-button></vg-mute-button>
-											<vg-volume-bar></vg-volume-bar>
-										</vg-volume>
-										<vg-fullscreen-button></vg-fullscreen-button>
-									</vg-controls>
-									<vg-overlay-play></vg-overlay-play>
-									<vg-poster vg-url="player.plugins.poster" ng-if="player.plugins"></vg-poster>
-								</videogular>							
-							</md-tab>
-							<md-tab label="basic info">
-								<div class="video-info" ng-show="video.file">
-						            <md-input-container class="md-block" flex-gt-sm>
-						              	<label>Title</label>
-										<input type="text" ng-model="video.title">
-						            </md-input-container>
-						            <md-input-container class="md-block" flex-gt-sm>
-						              	<label>description</label>
-										<textarea ng-model="video.description"></textarea>
-						            </md-input-container>
-						            <md-input-container class="md-block" flex-gt-sm>
-						              	<label>Tags</label>
-										<input type="text" ng-model="video.tags" tag-input>
-						            </md-input-container>
-						            <div class="tags-container">
-						            	<span ng-repeat="tag in tags" class="tag">
-						            		{{tag}}
-						            		<span class="glyphicon glyphicon-remove md-whiteframe-1dp" ng-click="removeTag($index)"></span>
-						            	</span>
-						            </div>
-					            </div>
-							</md-tab>
-						</md-tabs>
+
 					</form>
 				</div>
 			</div>
@@ -145,7 +148,7 @@
 		<script type="text/javascript" src="assets/lib/angular-moment/angular-moment.min.js"></script>
 	    <script type="text/javascript" src="assets/lib/identicon/pnglib.js"></script>
 	    <script type="text/javascript" src="assets/lib/identicon/identicon.js"></script>
-	    <script type="text/javascript" src="assets/lib/angular-identicon/dist/angular-identicon.min.js"></script>
+	    <script type="text/javascript" src="assets/lib/angular-identicon/angular-identicon.min.js"></script>
 	    
 		<!-- zeronet -->
 		<script type="text/javascript" src="assets/lib/zeronet/ZeroFrame.js"></script>

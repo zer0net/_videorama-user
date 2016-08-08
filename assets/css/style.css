@@ -63,6 +63,7 @@ button.md-button a {
   font-weight: normal;
 }
 videogular {
+  height: auto !important;
   padding: 0 !important;
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;

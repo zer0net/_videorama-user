@@ -65,7 +65,7 @@ angular.module('ZeroVidzUser').directive('videoList', ['$sce','$location',
 					var videoPath = 'uploads/videos/' + vid.file_name;
 					Page.cmd("fileDelete", [videoPath], function(res) {
 						var posterPath = 'uploads/posters' + vid.file_name.split('.')[0] + '.png';
-						Page.cmd("fileDelete", [videoPath], function(res) {
+						Page.cmd("fileDelete", [posterPath], function(res) {
 							Page.cmd("fileWrite", [inner_path, btoa(json_raw)], function (res) { 
 								Page.cmd("wrapperNotification", ["done", "video deleted!", 10000]);
 								$scope.videos.splice(videoIndex,1);
